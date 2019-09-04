@@ -1,0 +1,21 @@
+survival_look_presentable:
+  group: Survive and Thrive
+  title: Let's Look Presentable
+  reward:
+    xp: 100
+  story:
+    intro: ""
+    accept: "Okay."
+    cancel: "Maybe later."
+    begin: ""
+    incomplete: ""
+    complete: ""
+  desc: ""
+  tasks:
+    - desc:
+      events:
+        - ['chat']
+      quantity: 10
+    - desc: Return to Newton
+      events:
+        - ['return']

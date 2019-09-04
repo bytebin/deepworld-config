@@ -1,0 +1,180 @@
+discover_group:
+  - event: discover
+    data: ["group", "fungi"]
+    description: Forage for mushrooms
+    score_description: mushrooms foraged
+  - event: discover
+    data: ["group", "mineral"]
+    description: Mine ores
+    score_description: ores mined
+  - event: discover
+    data: ["group", "salt"]
+    description: Mine salt
+    score_description: salt mined
+  - event: discover
+    data: ["group", "egg"]
+    description: Scrounge for eggs
+    score_description: eggs scrounged
+  - event: discover
+    data: ["group", "gravestone"]
+    description: Break down gravestones
+    score_description: gravestones broken
+  - event: discover
+    data: ["group", "wallpaper"]
+    description: Recover wallpaper
+    score_description: wallpaper recovered
+  - event: discover
+    data: ["group", "root"]
+    description: Rip up roots
+    score_description: roots
+  - event: discover
+    data: ["group", "speleothem"]
+    description: Break up stalagmites and stalactites
+    score_description: stalagmites and stalactites
+  - event: discover
+    data: ["group", "crystal"]
+    description: Cultivate crystals
+    score_description: crystals cultivated
+  - event: discover
+    data: ["group", "enemy_protector"]
+    description: Destroy dungeon protectors
+    score_description: dungeon protectors destroyed
+  - event: discover
+    data: ["group", "door"]
+    description: Knock down doors
+    score_description: doors knocked down
+
+discover_specific:
+  - event: discover
+    data: ["id", "ground/guano"]
+    description: Scoop up some guano
+    score_description: guano gathered
+  - event: discover
+    data: ["id", "rubble/skeleton"]
+    description: Scrounge for skeletons
+    score_description: skeletons
+  - event: discover
+    data: ["id", "brain/pipe"]
+    description: Recover neurons
+    score_description: neurons recovered
+  - event: discover
+    data: ["id", "vegetation/mushrooms-tiny"]
+    description: Forage for tiny mushrooms
+    score_description: tiny mushrooms foraged
+  - event: discover
+    data: ["id", "lighting/candle"]
+    description: Reclaim candles
+    score_description: candles reclaimed
+  - event: discover
+    data: ["id", "music/phonograph"]
+    description: Salvage old phonographs
+    score_description: phonographs salvaged
+
+harvest:
+  - event: discover
+    data: ["id", "vegetation/flower-carnations"]
+    description: Harvest carnations
+    score_description: carnations harvested
+  - event: discover
+    data: ["group", "shrub"]
+    description: Harvest shrubs
+    score_description: shrubs harvested
+  - event: discover
+    data: ["id", "vegetation/pumpkin"]
+    description: Harvest pumpkins
+    score_description: pumpkins
+
+kill:
+  - event: kill
+    data: ["group", "revenant"]
+    description: Ravage revenants
+    score_description: revenants ravaged
+  - event: kill
+    data: ["group", "brains"]
+    description: Hunt down brains
+    score_description: brains bashed
+  - event: kill
+    data: ["group", "automata"]
+    description: Junk automata
+    score_description: automata junked
+  - event: kill
+    data: ["group", "turret"]
+    description: Junk turrets
+    score_description: turrets junked
+  - event: kill
+    data: ["species", "crow"]
+    description: Clobber crows
+    score_description: crows clobbered
+  - event: kill
+    data: ["species", "terrapus"]
+    description: Hunt down terrapi
+    score_description: terrapi hunted
+  - event: kill
+    data: ["subgroup", "bird"]
+    description: Bash birds
+    score_description: birds bashed
+  - event: kill
+    data: ["subgroup", "worm"]
+    description: Waste worms
+    score_description: worms wasted
+  - event: loot
+    data: ["group", "butterfly"]
+    description: Catch butterflies
+    score_description: butterflies caught
+
+misc:
+  - event: undertake
+    description: Give skeletons a proper burial
+    score_description: undertakings
+  - event: plug
+    description: Plug maws
+    score_description: maws plugged
+  - event: raid
+    description: Raid dungeons
+    score_description: dungeons raided
+  - event: trapping
+    description: Trap critters
+    score_description: critters trapped
+  - event: inhibit
+    description: Inhibit evokers
+    score_description: evokers inhibited
+  - event: loot_container
+    data: ["group", "sack"]
+    description: Loot sacks
+    score_description: sacks looted
+  - event: loot_container
+    data: ["group", "barrel"]
+    description: Loot barrels
+    score_description: barrels looted
+  - event: loot_container
+    data: ["group", "chest"]
+    description: Loot chests
+    score_description: chests looted
+  - event: loot_container
+    description: Loot everything!
+    score_description: loots looted
+  - event: teleporter_repair
+    description: Repair teleporters
+    score_description: teleporters repaired
+  - event: deliverance
+    description: Deliver lost souls
+    score_description: lost souls delivered
+  - event: place_transform
+    data: ["group", "jar"]
+    description: Fill up jars
+    score_description: jars filled
+  - event: machine_part
+    description: Recover machine parts
+    score_description: machine parts recovered
+
+consume:
+  - event: consume
+    data: ["group", "jerky"]
+    description: Eat delicious jerky
+    score_description: jerkies nommed
+  - event: consume
+    data: ["group", "filet"]
+    description: Eat hearty filets
+    score_description: filets nommed
+
+

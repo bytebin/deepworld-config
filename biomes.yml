@@ -1,0 +1,1162 @@
+# ===== PLAIN ===== #
+
+plain:
+  ocean: liquid/water
+  surface_filler: shrub-dead
+  surface_region_size: 50
+  rubble: rubble/(stone|scrap|wood)
+  gravestones: rubble/gravestone
+  speleothem: ground/stalagmite
+  spawners: terrapus-egg
+  salt: ground/salt-crystal
+  cave_fill: ['air', 'ground/earth']
+  cavern_probability: 0.6
+  dungeon_region: [80, 64]
+  dungeon_probability: 0.25
+  stone_varieties:
+    default: 17
+    sandstone: 4
+    limestone: 2
+
+  deposits:
+    ground/iron:
+      per: 2400
+      quantity: 6 - 13
+      affinity: cave walls
+      min_depth: 0.35
+    ground/copper:
+      per: 2700
+      quantity: 6 - 13
+      affinity: cave walls
+      min_depth: 0.1
+      max_depth: 0.5
+    ground/zinc:
+      per: 3600
+      quantity: 5 - 11
+      affinity: earth
+      min_depth: 0.4
+      max_depth: 0.8
+    ground/quartz:
+      per: 3200
+      quantity: 3 - 9
+      affinity: earth
+      min_depth: 0.1
+      max_depth: 0.5
+    ground/lead:
+      per: 2700
+      quantity: 4 - 9
+      affinity: earth
+      min_depth: 0.2
+    ground/sulfur:
+      per: 3700
+      quantity: 5 - 10
+      affinity: earth
+      min_depth: 0.7
+    ground/marble:
+      per: 13000
+      quantity: 3 - 10
+      affinity: earth
+      min_depth: 0.6
+      max_depth: 0.8
+
+  special:
+    zone_towers:
+      frequency: 1
+
+  surface:
+    shrubbery:
+      frequency: 5
+
+    rubble:
+      frequency: 3
+
+    graveyard:
+      frequency: 3
+
+    town:
+      frequency: 8
+      foundation: ['building/stone', 'back/scaffold-decayed']
+
+    forest:
+      frequency: 8
+
+  caves: # 65
+    cavern:
+      frequency: 9
+      min_depth: 0.25
+      min_size: 150
+      max_size: 8000
+
+    mushroom_grove:
+      min_depth: 0.1
+      max_depth: 0.7
+      frequency: 11
+
+      mushrooms:
+        portabella: 85
+        oyster: 70
+        porcini: 35
+        willow: 20
+        amanita: 11
+        chanterelle: 7
+        morel: 4
+        anbaric: 1
+
+    water:
+      max_depth: 0.7
+      max_size: 200
+      frequency: 5
+
+    acid:
+      min_depth: 0.5
+      max_depth: 0.9
+      max_size: 200
+      frequency: 4
+
+    magma:
+      min_depth: 0.85
+      max_size: 200
+      frequency: 4
+
+    hatchery:
+      max_size: 300
+      frequency: 3
+
+    crystal:
+      min_depth: 0.4
+      max_depth: 0.7
+      min_size: 30
+      max_size: 100
+      frequency: 2
+
+    rare_crystal:
+      min_depth: 0.5
+      max_depth: 0.9
+      min_size: 30
+      max_size: 80
+      frequency: 1
+      crystals:
+        ground/crystal-rainbow: 1
+        ground/onyx: 8
+        ground/crystal-red-1: 50
+        ground/crystal-purple-1: 45
+
+    ruins:
+      min_depth: 0.2
+      max_depth: 0.7
+      max_size: 170
+      frequency: 9
+
+    bat_cave:
+      max_depth: 0.5
+      frequency: 5
+
+    salt:
+      min_depth: 0.2
+      frequency: 4
+
+    graveyard:
+      min_depth: 0.1
+      max_depth: 0.4
+      min_size: 15
+      max_size: 75
+      frequency: 5
+
+
+
+# ===== ARCTIC ===== #
+
+arctic:
+  ocean: arctic/ice
+  surface_filler: rubble/(stone|scrap)
+  surface_region_size: 40
+  rubble: rubble/(stone|scrap|wood)
+  gravestones: rubble/gravestone
+  speleothem: arctic/icicle
+  spawners: terrapus-egg
+  salt: ground/salt-crystal
+  cave_fill: ['air', 'ground/earth']
+  cavern_probability: 0.6
+  dungeon_probability: 0.333
+  dungeon_region: [80, 64]
+  stone_varieties:
+    default: 6
+    limestone: 1
+
+  deposits:
+    ground/iron:
+      per: 3500
+      quantity: 5 - 9
+      affinity: cave walls
+      min_depth: 0.35
+    ground/copper:
+      per: 4100
+      quantity: 4 - 12
+      affinity: cave walls
+      min_depth: 0.1
+      max_depth: 0.5
+    ground/zinc:
+      per: 2500
+      quantity: 7 - 14
+      affinity: earth
+      min_depth: 0.4
+      max_depth: 0.8
+    ground/quartz:
+      per: 3000
+      quantity: 6 - 10
+      affinity: earth
+      min_depth: 0.1
+      max_depth: 0.5
+    ground/lead:
+      per: 8000
+      quantity: 3 - 6
+      affinity: earth
+      min_depth: 0.2
+    ground/diamond:
+      per: 100000
+      quantity: 1 - 4
+      affinity: earth
+      min_depth: 0.2
+
+  special:
+    zone_towers:
+      frequency: 1
+
+  surface:
+    rubble:
+      frequency: 10
+
+    graveyard:
+      frequency: 6
+
+    town:
+      frequency: 8
+      foundation: ['building/stone', 'back/scaffold-decayed']
+
+  caves: # 60
+    candy_cane:
+      min_size: 30
+      max_size: 70
+      frequency: 2
+
+    cavern:
+      frequency: 10
+      min_depth: 0.25
+      min_size: 150
+      max_size: 8000
+
+    mushroom_grove:
+      min_depth: 0.1
+      max_depth: 0.7
+      frequency: 5
+
+      mushrooms:
+        portabella: 55
+        oyster: 50
+        arctic: 20
+        anbaric: 1
+
+    ice:
+      max_size: 300
+      frequency: 9
+
+    snow:
+      max_depth: 0.6
+      max_size: 300
+      frequency: 9
+
+    crystal:
+      min_depth: 0.4
+      max_depth: 0.7
+      min_size: 30
+      max_size: 100
+      frequency: 2
+
+    rare_crystal:
+      min_depth: 0.5
+      max_depth: 0.9
+      min_size: 30
+      max_size: 80
+      frequency: 1
+      crystals:
+        ground/crystal-rainbow: 1
+        ground/onyx: 8
+        ground/crystal-red-1: 50
+        ground/crystal-purple-1: 45
+
+    ruins:
+      min_depth: 0.2
+      max_depth: 0.7
+      max_size: 170
+      frequency: 7
+
+    bat_cave:
+      max_depth: 0.5
+      frequency: 5
+
+    hatchery:
+      max_size: 300
+      frequency: 3
+
+    salt:
+      min_depth: 0.2
+      frequency: 3
+
+    graveyard:
+      min_depth: 0.1
+      max_depth: 0.4
+      min_size: 15
+      max_size: 75
+      frequency: 2
+
+
+
+# ===== HELL ===== #
+
+hell:
+  ocean: false
+  blackrock: true
+  surface_filler: rubble/(stone|scrap)
+  surface_region_size: 40
+  rubble: rubble/(stone|scrap)
+  gravestones: rubble/hell-gravestone
+  speleothem: ground/stalagmite
+  spawners: (terrapus-egg|hell-gravestone|geyser-small)
+  salt: ground/fire-salt-crystal
+  cave_fill: ['air', 'ground/earth']
+  cavern_probability: 0.6
+  dungeon_probability: 0.375
+  dungeon_region: [80, 64]
+  stone_varieties:
+    default: 1
+
+  deposits:
+    ground/iron:
+      per: 3100
+      quantity: 5 - 9
+      affinity: cave walls
+      min_depth: 0.35
+    ground/lead:
+      per: 2600
+      quantity: 4 - 9
+      affinity: earth
+      min_depth: 0.2
+    ground/sulfur:
+      per: 2500
+      quantity: 8 - 12
+      affinity: earth
+      min_depth: 0.2
+    ground/bloodstone:
+      per: 5200
+      quantity: 5 - 10
+      affinity: earth
+      min_depth: 0.7
+
+  special:
+    zone_towers:
+      frequency: 1
+
+  surface:
+    rubble:
+      frequency: 7
+
+    graveyard:
+      frequency: 8
+
+    town:
+      frequency: 10
+      maximum: 1
+      foundation: ['building/bloodstone', 'back/scaffold-decayed']
+      rubble: true
+
+  caves: # 61
+    cavern:
+      frequency: 9
+      min_depth: 0.25
+      min_size: 150
+      max_size: 8000
+
+    mushroom_grove:
+      min_depth: 0.5
+      max_depth: 0.9
+      max_size: 80
+      frequency: 3
+
+      mushrooms:
+        hell: 1
+
+    magma:
+      min_depth: 0
+      max_size: 300
+      frequency: 9
+
+    crystal:
+      min_depth: 0.4
+      max_depth: 0.7
+      min_size: 30
+      max_size: 100
+      frequency: 2
+
+    rare_crystal:
+      min_depth: 0.5
+      max_depth: 0.9
+      min_size: 30
+      max_size: 80
+      frequency: 1
+      crystals:
+        ground/crystal-rainbow: 1
+        ground/onyx: 8
+        ground/crystal-red-1: 45
+        ground/crystal-red-large: 5
+        ground/crystal-purple-1: 45
+
+    ruins:
+      min_depth: 0.2
+      max_depth: 0.7
+      max_size: 170
+      frequency: 10
+
+    hatchery:
+      max_size: 300
+      frequency: 2
+
+    graveyard:
+      min_depth: 0.1
+      max_depth: 0.4
+      min_size: 15
+      max_size: 75
+      frequency: 20
+
+    salt:
+      min_depth: 0.2
+      frequency: 3
+
+
+# ===== BRAIN ===== #
+
+brain:
+  ocean: liquid/acid
+  blackrock: true
+  speleothem: mechanical/spikes-brain
+  surface_filler: rubble/(stone|scrap)
+  surface_region_size: 40
+  rubble: rubble/(stone|scrap)
+  spawners: (terrapus-egg)
+  salt: ground/salt-crystal
+  cave_fill: ['air', 'ground/earth']
+  cavern_probability: 0.6
+  dungeon_probability: 0.4
+  dungeon_region: [80, 64]
+  stone_varieties:
+    default: 6
+    limestone: 1
+
+  deposits:
+    ground/iron:
+      per: 6000
+      quantity: 5 - 9
+      affinity: cave walls
+      min_depth: 0.35
+    ground/lead:
+      per: 3000
+      quantity: 4 - 9
+      affinity: earth
+      min_depth: 0.2
+    ground/sulfur:
+      per: 9000
+      quantity: 8 - 12
+      affinity: earth
+      min_depth: 0.2
+    ground/zinc:
+      per: 2400
+      quantity: 5 - 11
+      affinity: earth
+      min_depth: 0.4
+      max_depth: 0.8
+    ground/quartz:
+      per: 2200
+      quantity: 3 - 8
+      affinity: earth
+      min_depth: 0.1
+      max_depth: 0.7
+
+  special:
+    zone_towers:
+      frequency: 1
+
+  surface:
+    rubble:
+      frequency: 7
+
+
+  caves: # 61
+    cavern:
+      frequency: 12
+      min_depth: 0.25
+      min_size: 150
+      max_size: 8000
+
+    mushroom_grove:
+      min_depth: 0.5
+      max_depth: 0.9
+      max_size: 80
+      frequency: 3
+
+      mushrooms:
+        portabella: 65
+        oyster: 50
+        porcini: 25
+        willow: 20
+        amanita: 11
+        chanterelle: 7
+        anbaric: 1
+
+    acid:
+      min_depth: 0
+      max_size: 300
+      frequency: 14
+      mushroom_probability: 0.05
+
+    crystal:
+      min_depth: 0.4
+      max_depth: 0.7
+      min_size: 30
+      max_size: 100
+      frequency: 2
+
+    rare_crystal:
+      min_depth: 0.5
+      max_depth: 0.9
+      min_size: 30
+      max_size: 80
+      frequency: 1
+      crystals:
+        ground/crystal-rainbow: 1
+        ground/onyx: 8
+        ground/crystal-purple-1: 30
+        ground/crystal-purple-large: 5
+        ground/crystal-green-small: 50
+        ground/crystal-green-large: 12
+
+    ruins:
+      min_depth: 0.2
+      max_depth: 0.7
+      max_size: 170
+      frequency: 11
+
+    hatchery:
+      max_size: 300
+      frequency: 5
+
+    salt:
+      min_depth: 0.2
+      frequency: 4
+
+
+
+# ===== OCEAN ===== #
+
+ocean:
+  rubble: rubble/(stone|scrap|wood)
+  gravestones: rubble/gravestone
+  speleothem: ground/stalagmite
+  salt: ground/salt-crystal
+  mountains: false
+  underground: false
+  cave_fill: ['ground/earth', 'liquid/water']
+  cavern_probability: 0.6
+  dungeon_probability: 0.333
+  dungeon_region: [80, 64]
+  surface_region_size: 50
+
+  deposits:
+    ground/iron:
+      per: 2500
+      quantity: 6 - 13
+      affinity: cave walls
+      min_depth: 0.35
+    ground/copper:
+      per: 2850
+      quantity: 6 - 13
+      affinity: cave walls
+      min_depth: 0.1
+      max_depth: 0.5
+    ground/zinc:
+      per: 4050
+      quantity: 5 - 11
+      affinity: earth
+      min_depth: 0.4
+      max_depth: 0.8
+    ground/quartz:
+      per: 2900
+      quantity: 3 - 9
+      affinity: earth
+      min_depth: 0.1
+      max_depth: 0.5
+    ground/marble:
+      per: 12000
+      quantity: 3 - 10
+      affinity: earth
+      min_depth: 0.6
+      max_depth: 0.8
+
+  special:
+    zone_towers:
+      frequency: 1
+
+  surface:
+    shrubbery:
+      frequency: 5
+
+    rubble:
+      frequency: 3
+
+    graveyard:
+      frequency: 3
+
+    town:
+      frequency: 8
+      foundation: ['building/stone', 'back/scaffold-decayed']
+
+    forest:
+      frequency: 8
+
+  caves:
+    cavern:
+      frequency: 22
+      min_depth: 0.25
+      min_size: 150
+      max_size: 8000
+
+    mushroom_grove:
+      min_depth: 0.1
+      max_depth: 0.7
+      frequency: 22
+
+    water:
+      max_depth: 0.7
+      max_size: 200
+      frequency: 5
+
+    acid:
+      min_depth: 0.5
+      max_depth: 0.9
+      max_size: 200
+      frequency: 4
+
+    magma:
+      min_depth: 0.85
+      max_size: 200
+      frequency: 4
+
+    hatchery:
+      max_size: 300
+      frequency: 3
+
+    crystal:
+      min_depth: 0.4
+      max_depth: 0.7
+      min_size: 30
+      max_size: 100
+      frequency: 2
+
+    rare_crystal:
+      min_depth: 0.5
+      max_depth: 0.9
+      min_size: 30
+      max_size: 80
+      frequency: 1
+      crystals:
+        ground/crystal-rainbow: 1
+        ground/onyx: 8
+        ground/crystal-red-1: 50
+        ground/crystal-purple-1: 45
+
+    ruins:
+      min_depth: 0.2
+      max_depth: 0.7
+      max_size: 170
+      frequency: 9
+
+    bat_cave:
+      max_depth: 0.5
+      frequency: 5
+
+    salt:
+      min_depth: 0.2
+      frequency: 5
+
+    graveyard:
+      min_depth: 0.1
+      max_depth: 0.4
+      min_size: 15
+      max_size: 75
+      frequency: 5
+
+
+
+
+# ===== DESERT ===== #
+
+desert:
+  ocean: ground/sand
+  surface_filler: (shrub-dead|vegetation/cactus-small|vegetation/tumbleweed)
+  surface_region_size: 20
+  rubble: desert/rock
+  gravestones: rubble/gravestone
+  speleothem: ground/stalagmite
+  spawners: terrapus-egg
+  salt: ground/salt-crystal
+  cave_fill: ['air', 'ground/earth']
+  cave_misc: desert/rock
+  cavern_probability: 0.6
+  dungeon_probability: 0.333
+  dungeon_region: [80, 64]
+  stone_varieties:
+    default: 3
+    sandstone: 1
+
+  deposits:
+    ground/iron:
+      per: 3800
+      quantity: 6 - 13
+      affinity: cave walls
+      min_depth: 0.35
+    ground/copper:
+      per: 2200
+      quantity: 6 - 13
+      affinity: cave walls
+      min_depth: 0.1
+      max_depth: 0.5
+    ground/zinc:
+      per: 4200
+      quantity: 5 - 11
+      affinity: earth
+      min_depth: 0.4
+      max_depth: 0.8
+    ground/lead:
+      per: 3000
+      quantity: 4 - 9
+      affinity: earth
+      min_depth: 0.2
+    ground/sulfur:
+      per: 5500
+      quantity: 5 - 10
+      affinity: earth
+      min_depth: 0.7
+    ground/beryllium:
+      per: 27000
+      quantity: 5 - 9
+      affinity: earth
+      min_depth: 0.5
+
+  special:
+    zone_towers:
+      frequency: 1
+
+  surface:
+    shrubbery:
+      frequency: 5
+      trees: false
+
+    rubble:
+      frequency: 3
+
+    graveyard:
+      frequency: 1
+
+    town:
+      frequency: 8
+      foundation: ['building/stone', 'back/scaffold-decayed']
+
+    growth:
+      frequency: 8
+      bottom:
+        item: desert/cactus-base
+      chance: 0.25
+      rate: 0.5
+      spacing: 3
+      min_height: 2
+      max_height: 7
+      segments:
+        - item: desert/cactus-mid
+          frequency: 5
+        - item: desert/cactus-mid-left-small
+          offset: [-1, 0]
+          frequency: 2
+        - item: desert/cactus-mid-right-small
+          frequency: 2
+        - item: desert/cactus-mid-left-large
+          height: 2
+          offset: [-1, 0]
+          frequency: 2
+        - item: desert/cactus-mid-right-large
+          height: 2
+          frequency: 2
+        - item: desert/cactus-mid-right-left
+          height: 2
+          offset: [-1, 0]
+          frequency: 1
+      top:
+        item: desert/cactus-top
+
+  caves: # 65
+    cavern:
+      frequency: 10
+      min_depth: 0.25
+      min_size: 150
+      max_size: 8000
+
+    mushroom_grove:
+      min_depth: 0.1
+      max_depth: 0.7
+      frequency: 11
+
+      mushrooms:
+        portabella: 85
+        oyster: 70
+        porcini: 35
+        willow: 20
+        amanita: 11
+        chanterelle: 7
+        morel: 4
+
+    water:
+      max_depth: 0.7
+      max_size: 100
+      frequency: 1
+
+    acid:
+      min_depth: 0.5
+      max_depth: 0.9
+      max_size: 100
+      frequency: 1
+
+    hatchery:
+      max_size: 300
+      frequency: 5
+
+    crystal:
+      min_depth: 0.4
+      max_depth: 0.7
+      min_size: 30
+      max_size: 100
+      frequency: 2
+
+    rare_crystal:
+      min_depth: 0.5
+      max_depth: 0.9
+      min_size: 30
+      max_size: 80
+      frequency: 1
+      crystals:
+        ground/crystal-rainbow: 1
+        ground/onyx: 8
+        ground/crystal-red-1: 60
+        ground/crystal-purple-1: 15
+        ground/crystal-yellow: 20
+
+    ruins:
+      min_depth: 0.2
+      max_depth: 0.7
+      max_size: 170
+      frequency: 9
+
+    bat_cave:
+      max_depth: 0.5
+      frequency: 5
+
+    salt:
+      min_depth: 0.2
+      frequency: 4
+
+    graveyard:
+      min_depth: 0.1
+      max_depth: 0.4
+      min_size: 15
+      max_size: 75
+      frequency: 2
+
+
+
+# ===== DEEP ===== #
+
+deep:
+  surface: false
+  mountains: false
+  blackrock: true
+  deep_earth:
+    - ground/deep-earth
+    - ground/deep-earth-mid
+    - ground/deep-earth-deep
+    - ground/deep-earth-very-deep
+  deep_earth_levels:
+    - 0
+    - 0.25
+    - 0.5
+    - 0.75
+  rubble: rubble/(stone|scrap|wood)
+  gravestones: rubble/gravestone
+  speleothem: ground/stalagmite
+  spawners: terrapus-egg
+  salt: ground/salt-crystal
+  cave_fill: ['air', 'ground/earth']
+  cavern_probability: 0.6
+  dungeon_probability: 0.4
+  dungeon_region: [81, 85]
+  max_resources:
+    ground/crystal-blue-1: 10
+    ground/crystal-blue-2: 3
+    ground/crystal-blue-3: 10
+    ground/crystal-blue-4: 3
+    ground/crystal-red-1: 5
+    ground/crystal-purple-1: 5
+    ground/crystal-orange: 2
+  stone_varieties:
+    default: 17
+    limestone: 4
+
+  deposits:
+    ground/iron:
+      per: 2200
+      quantity: 6 - 13
+      affinity: cave walls
+    ground/quartz:
+      per: 6000
+      quantity: 3 - 9
+      affinity: earth
+    ground/lead:
+      per: 4000
+      quantity: 4 - 9
+      affinity: earth
+      min_depth: 0
+    ground/sulfur:
+      per: 3200
+      quantity: 5 - 8
+      affinity: earth
+      min_depth: 0.3
+    ground/marble:
+      per: 20000
+      quantity: 3 - 8
+      affinity: earth
+      max_depth: 0.5
+
+  special:
+    zone_towers:
+      frequency: 1
+
+  caves: # 65
+    nothing:
+      frequency: 20
+
+    cavern:
+      frequency: 24
+      min_size: 150
+      max_size: 8000
+      everywhere: true
+
+    mushroom_grove:
+      frequency: 23
+
+      mushrooms:
+        portabella: 80
+        shade: 75
+        oyster: 45
+        porcini: 35
+        apostate: 15
+        chanterelle: 9
+        devils-cigar: 3
+
+    acid:
+      max_size: 300
+      frequency: 18
+      mushroom_probability: 0.05
+
+    magma:
+      max_size: 300
+      frequency: 12
+
+    hatchery:
+      max_size: 400
+      frequency: 25
+
+    crystal:
+      min_size: 30
+      max_size: 100
+      frequency: 3
+
+    rare_crystal:
+      min_size: 30
+      max_size: 80
+      frequency: 2
+      crystals:
+        ground/crystal-rainbow: 1
+        ground/crystal-red-1: 45
+        ground/crystal-red-large: 5
+        ground/crystal-purple-1: 40
+        ground/crystal-purple-large: 5
+        ground/crystal-orange: 8
+
+    ruins:
+      max_size: 170
+      frequency: 22
+
+    bat_cave:
+      frequency: 12
+
+    salt:
+      frequency: 10
+
+space:
+  surface: false
+  mountains: false
+  blackrock: true
+  asteroids: true
+  surface_filler: rubble/(stone|scrap)
+  surface_region_size: 20
+  rubble: rubble/(stone|scrap)
+  gravestones: rubble/gravestone
+  speleothem: ground/stalagmite
+  spawners: terrapus-egg
+  salt: ground/salt-crystal
+  cave_fill: ['air', 'ground/earth']
+  cavern_probability: 0.6
+  dungeon_probability: 0.333
+  dungeon_region: [81, 81]
+  stone_varieties:
+    default: 3
+
+  deposits:
+    ground/iron:
+      per: 1900
+      quantity: 6 - 10
+      affinity: cave walls
+      min_depth: 0.2
+    ground/copper:
+      per: 2000
+      quantity: 6 - 10
+      affinity: cave walls
+      min_depth: 0.1
+      max_depth: 0.7
+    ground/zinc:
+      per: 2000
+      quantity: 5 - 11
+      affinity: earth
+      min_depth: 0.4
+      max_depth: 0.9
+    ground/quartz:
+      per: 3500
+      quantity: 5 - 12
+      affinity: earth
+      min_depth: 0.5
+      max_depth: 1.0
+    ground/platinum:
+      per: 85000
+      quantity: 3 - 5
+      affinity: earth
+      min_depth: 0.1
+      max_depth: 0.9
+
+  special:
+    zone_towers:
+      frequency: 1
+
+  surface:
+    shrubbery:
+      frequency: 1
+      trees: false
+
+    rubble:
+      frequency: 5
+
+    graveyard:
+      frequency: 1
+
+    town:
+      frequency: 0
+      foundation: ['building/stone', 'back/scaffold-decayed']
+
+  caves: # 55
+    cavern:
+      frequency: 10
+      min_size: 150
+      max_size: 8000
+
+    hatchery:
+      max_size: 300
+      frequency: 8
+
+    acid:
+      min_depth: 0.2
+      max_depth: 0.9
+      max_size: 200
+      frequency: 6
+
+    crystal:
+      min_depth: 0.3
+      max_depth: 0.7
+      min_size: 30
+      max_size: 100
+      frequency: 2
+
+    rare_crystal:
+      min_depth: 0.5
+      max_depth: 0.9
+      min_size: 30
+      max_size: 80
+      frequency: 1
+      crystals:
+        ground/crystal-rainbow: 1
+        ground/onyx: 8
+        ground/crystal-purple-1: 30
+        ground/crystal-white-small: 50
+        ground/crystal-white-large: 18
+
+    ruins:
+      min_depth: 0.2
+      max_depth: 0.7
+      max_size: 170
+      frequency: 9
+
+    bat_cave:
+      max_depth: 0.5
+      frequency: 5
+
+    salt:
+      min_depth: 0.2
+      frequency: 6
+
+    graveyard:
+      min_depth: 0.1
+      max_depth: 0.4
+      min_size: 15
+      max_size: 75
+      frequency: 2
+
+
+
+
+
+
+# ===== MIXINS ===== #
+
+cave_competition:
+  caves:
+    competition:
+      frequency: 300
+      min_size: 150
+
+sky_competition:
+  surface:
+    competition:
+      frequency: 100000
+
+all_competition:
+  surface:
+    competition:
+      frequency: 100000
+
+  caves:
+    competition:
+      frequency: 300
+      min_size: 150

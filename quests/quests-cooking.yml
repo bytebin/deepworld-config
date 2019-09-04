@@ -1,0 +1,284 @@
+cooking_begins:
+  group: Let Them Eat Cake
+  title: Salty Sustenance
+  reward:
+    xp: 250
+    crowns: 10
+  story:
+    intro: "Hello, my dear. I'm Isabella, an advanced android chef programmed with 9,000 delectable recipes. Except, none of them are really designed for, um, an acidic wasteland void of herbs and spices. I'm desperate to throw a grand feast, but I need your help to... improvise some new recipes. Interested?"
+    accept: "Sure, I'm hungry!"
+    begin: "Perfect. Let's get you in the cooking mindset by making some simple jerky. You'll just need to squish some mobs for giblets and find some salt, then craft it using the crafting menu."
+    incomplete: "Make that jerky yet?"
+    complete: "This jerky is a little chewy, but it'll do for now. 4 out of 5 stars!"
+  desc: "Find 9 giblets and 3 salt and craft jerky three times. To craft, open the crafting panel (Hammer button at top of screen), select the Accessories tab, then click the first slot."
+  tasks:
+    - desc: Craft jerky three times (makes 9 jerky)
+      events:
+        - ["craft", "code", 1131]
+      quantity: 3
+    - desc: Return to an Isabella android
+      events:
+        - ["return"]
+
+cooking_canned_food:
+  group: Let Them Eat Cake
+  title: Apocalyptic Leftovers
+  reward:
+    xp: 250
+    crowns: 10
+  story:
+    intro: "We're ready to scrounge for ingredients. There's some natural growth out there in the wilds, but it'll be easier for us to start with good ol' canned food. Ready to find some?"
+    accept: "Sure."
+    begin: "Great. Head to West Oberlin and talk to Kenneth, last I heard he was giving out free canned foods to new survivors."
+    incomplete: "Talk to Kenneth yet?"
+    complete: "Great. I'll open up these cans and see what we've got. Hopefully not just a bunch of maggots!"
+  desc: "Acquire 3 canned foods from Kenneth in West Oberlin and bring them back to Isabella."
+  actions:
+    interact:
+      - actor: player
+        method: gift_items!
+        params:
+          - containers/canned-food: 3
+      - actor: player
+        method: add_xp
+        params:
+          - 250
+      - actor: player
+        method: show_android_dialog
+        params:
+          - "Oh, hello there. Welcome to my food bunker. I assume you're looking for food? Good, because that's all I've got. Well, that and a rusty, er, nevermind. Anyway, here's a few cans of food, hope they're not too maggoty. Unless you're into maggots. Then I hope they're SUPER maggoty, mmmmm, yummy."
+          - Kenneth
+  tasks:
+    - desc: Visit the world of West Oberlin
+      events:
+        - ["entered", "zone_name", "West Oberlin"]
+    - desc: Talk to Kenneth in the Food Bunker
+      events:
+        - ["interact", "name", "Kenneth"]
+      action: interact
+    - desc: Bring 3 canned foods to an Isabella android
+      collect_inventory:
+        containers/canned-food: 3
+  zones:
+    - 555b98ee47df565ced9e7716
+
+cooking_shroom:
+  group: Let Them Eat Cake
+  title: Mooshy Mushies
+  reward:
+    xp: 500
+    crowns: 10
+  story:
+    intro: "Sooooo... yeah. Lots of maggots in these cans. I know I said we could improvise some recipes, but, well, I don't think anyone wants to eat sauteed maggots, even if they're in a nice wine sauce. So I think it's time to go au naturale."
+    accept: "What's next?"
+    begin: "Why don't you try and scrounge up some natural mushrooms for me? If there's one thing in these wastelands I know how to cook, it's definitely mushrooms."
+    incomplete: "Find those mushrooms yet? You'll find all different varities underground."
+    complete: "Nice! This is some fine fungi."
+  desc: "Explore and find mushrooms to bring back to Isabella."
+  tasks:
+    - desc: "Bring 10 portabella, 10 oyster, and 5 porcini mushrooms to an Isabella android"
+      collect_inventory:
+        vegetation/mushroom-portabella: 10
+        vegetation/mushroom-oyster: 10
+        vegetation/mushroom-porcini: 5
+
+cooking_shroom_inspection:
+  group: Let Them Eat Cake
+  title: Shroom Inspection
+  reward:
+    xp: 500
+    crowns: 10
+  story:
+    intro: "These mushrooms are lovely, but I'm afraid the acidic air has made them far too bitter. We need the help of a mushroom expert to figure out how to spice 'em properly. Care to make a trip?"
+    accept: "Sure thing."
+    begin: "Great. Head to Clearvale and talk to Alexis at the Mushroom Society. I'm sure he'll have a solution for us."
+    incomplete: "Talk to Alexis yet?"
+    complete: "Fire salt, eh? What a spicy notion!"
+  actions:
+    interact:
+      - method: add_xp
+        params: 250
+      - actor: player
+        method: show_android_dialog
+        params:
+          - "Ah, a visitor. Welcome to the Mushroom Society, where the fungus is always among us. And occasionally humungous. Anyway, I can see you're looking for some recipe help. The acid in your mushroom samples can easily be countered with a dash of fire salt. Go back and talk to Isabella, I'm sure she can help you find some."
+          - Alexis
+  desc: "Visit Clearvale and talk to Alexis at the Mushroom Society."
+  tasks:
+    - desc: Visit the world of Clearvale
+      events:
+        - ["entered", "zone_name", "Clearvale"]
+    - desc: Talk to Alexis at the Mushroom Society
+      events:
+        - ["interact", "name", "Alexis"]
+      action: interact
+    - desc: Return to an Isabella android
+      events:
+        - ["return"]
+
+# cooking_fire_salt:
+#   group: Let Them Eat Cake
+#   title: Salt of the Earth
+#   reward:
+#     xp: 500
+#   story:
+#     intro: "So, I had some fire salt last week but it ignited while I was working on my Zesty Sandworm recipe. That worm meat was looking so delicious, too! We're gonna need to find some more. Think you can help?"
+#     accept: "Yep!"
+#     begin: "Great. Head to a Hell world and scrounge around for ten fire salt. Er, make that eleven. I'll use that extra one to finish my Sandworm recipe. I'm sure you'll want a taste!"
+#     incomplete: "Find those fire salts yet?"
+#     complete: "Lovely! These certainly look hot like Hades. Just a quick pinch on this worm meat... there. Deliciously chewy and, uh, hmm, a bit sandy. Ah well."
+#   desc: "Visit a Hell world and find eleven fire salts to bring back to Isabella."
+#   tasks:
+#     - desc: Visit a Hell world
+#       events:
+#         - ['entered', 'current_biome?', 'hell']
+#     - desc: Bring 11 fire salts to an Isabella android
+#       collect_inventory:
+#         ground/fire-salt: 11
+
+# cooking_jerky_power:
+#   group: Let Them Eat Cake
+#   title: Feel The Power (Of Jerky)
+#   reward:
+#     xp: 500
+#   story:
+#     intro: ""
+#     accept: "Okay."
+#     begin: ""
+#     incomplete: ""
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc:
+#       events:
+#         - ['chat']
+#       quantity: 10
+#     - desc: Return to an Isabella android
+#       events:
+#         - ['return']
+
+# cooking_steam_pistol:
+#   group: Let Them Eat Cake
+#   title: Dreams of Steam
+#   reward:
+#     xp: 250
+#   story:
+#     intro: ""
+#     accept: "Okay."
+#     begin: ""
+#     incomplete: ""
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc:
+#       events:
+#         - ['chat']
+#       quantity: 10
+#     - desc: Return to an Isabella android
+#       events:
+#         - ['return']
+
+# cooking_steam_vermin:
+#   group: Let Them Eat Cake
+#   title: Chicken of the Sky
+#   reward:
+#     xp: 250
+#   story:
+#     intro: ""
+#     accept: "Okay."
+#     begin: ""
+#     incomplete: ""
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc:
+#       events:
+#         - ['chat']
+#       quantity: 10
+#     - desc: Return to an Isabella android
+#       events:
+#         - ['return']
+
+# cooking_steam_filets:
+#   group: Let Them Eat Cake
+#   title: A Tastier Morsel
+#   reward:
+#     xp: 250
+#   story:
+#     intro: ""
+#     accept: "Okay."
+#     begin: ""
+#     incomplete: ""
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc:
+#       events:
+#         - ['chat']
+#       quantity: 10
+#     - desc: Return to an Isabella android
+#       events:
+#         - ['return']
+
+# cooking_filets_power:
+#   group: Let Them Eat Cake
+#   title: Premium Cut
+#   reward:
+#     xp: 250
+#   story:
+#     intro: ""
+#     accept: "Okay."
+#     begin: ""
+#     incomplete: ""
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc:
+#       events:
+#         - ['chat']
+#       quantity: 10
+#     - desc: Return to an Isabella android
+#       events:
+#         - ['return']
+
+# cooking_shroom_explosion:
+#   group: Let Them Eat Cake
+#   title: Fiery Fungi
+#   reward:
+#     xp: 250
+#   story:
+#     intro: ""
+#     accept: "Okay."
+#     begin: ""
+#     incomplete: ""
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc:
+#       events:
+#         - ['chat']
+#       quantity: 10
+#     - desc: Return to an Isabella android
+#       events:
+#         - ['return']
+
+# cooking_tea:
+#   group: Let Them Eat Cake
+#   title: A Stimulating Beverage
+#   reward:
+#     xp: 250
+#   story:
+#     intro: ""
+#     accept: "Okay."
+#     begin: ""
+#     incomplete: ""
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc:
+#       events:
+#         - ['chat']
+#       quantity: 10
+#     - desc: Return to an Isabella android
+#       events:
+#         - ['return']

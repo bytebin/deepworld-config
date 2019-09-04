@@ -1,0 +1,89 @@
+collect_typewriter:
+  group: Arts and Crafts
+  title: The Historical Record
+  reward:
+    xp: 250
+  story:
+    intro: "Ahhh good day. Quite the dreary landscape we have here, eh? And yet, there's so much art and history out there waiting to be found... I'm dying to study it. Perhaps you could help me?"
+    accept: "Sure!"
+    begin: "Wonderful! The thing is, I have nothing with which to take notes. Perhaps you could find me a typewriter so I can properly document our findings?"
+    incomplete: "Did you find a typewriter yet? I hear you can obtain them from loot quite readily... or perhaps another player."
+    complete: "Perfect! And it still types decently well, clickity clack! Great work finding this lovely old brass contraption."
+  desc: "Find a typewriter and bring back to Turner."
+  tasks:
+    - desc: "Bring a typewriter to a Turner android"
+      collect_inventory:
+        mechanical/typewriter: 1
+
+collect_sprocket_and_widget:
+  group: Arts and Crafts
+  title: Quality Control
+  reward:
+    xp: 500
+  story:
+    intro: "Well, I've had fun typing away, but there's a slight problem... the D and W keys seem to be stuck, it's quite a bother. I suspect those letters will be of importance to our documentation. Perhaps we can fix them?"
+    accept: "How can I help?"
+    begin: "It looks like we just need a sprocket and a widget to fix this up. If you don't have them handy, well, I hate to send you into danger, but I do hear the world of Cravenfell has a stash of mechanical parts..."
+    incomplete: "Still waiting for that sprocket and widget! Did you check Cravenfell?"
+    complete: "Beautiful, they fit perfectly! You have rescued D and W and now we can truly begin our mission!"
+  desc: "Find a sprocket and widget and bring back to Turner. Cravenfell is rumored to have a stash of them."
+  tasks:
+    - desc: "Bring a sprocket and widget to a Turner android"
+      collect_inventory:
+        accessories/sprocket: 1
+        accessories/widget: 1
+
+collect_paper:
+  group: Arts and Crafts
+  title: Book Bindery
+  reward:
+    xp: 750
+  story:
+    intro: "This typewriter is quite snappy now, but I admit we're going to need a lot more paper and ink to properly document our findings."
+    accept: "How can I help?"
+    begin: "You look like a fairly crafty human, so perhaps you can make a bundle of paper out of wood? And perhaps find a little resin to go along with it. That will definitely get us rolling!"
+    incomplete: "How's the paper making coming? Find some resin to go with it?"
+    complete: "Aha, look at this lovely stack of paper. Very nicely made, it will do perfectly for our artistic endeavors."
+  desc: "Craft or find 50 plain paper and find 50 resin to bring to Turner."
+  tasks:
+    - desc: "Bring 50 plain paper and 50 resin to a Turner android"
+      collect_inventory:
+        back/paper: 50
+        ground/resin: 50
+
+collect_gargoyles:
+  group: Arts and Crafts
+  title: Stonemason's Delight
+  reward:
+    xp: 1000
+  story:
+    intro: "I'm ready to begin our journey into the arts! But, uh, I've nothing yet to document in this lovely book we've assembled..."
+    accept: "Can I help?"
+    begin: "Glad you asked! I've heard that some humans are capable of carving gargoyle falcons out of stone. That would be a perfect subject to describe and draw. Do you think you could provide me two samples?"
+    incomplete: "Have you crafted those stone gargoyle falcons yet?"
+    complete: "Oooh, excellent craftsmanship. These two will do quite nicely for our first pages!"
+  desc: "Craft or find a front-facing falcon and a side-facing falcon and bring to Turner."
+  tasks:
+    - desc: "Bring a front-facing falcon and side-facing falcon to a Turner android."
+      collect_inventory:
+        building/gargoyle-falcon-front: 1
+        building/gargoyle-falcon-side: 1
+
+collect_gargoyles:
+  group: Arts and Crafts
+  title: Figurines and Figures
+  reward:
+    xp: 1500
+  story:
+    intro: "Our first pages are a lovely ode to stone figures. But I know there are many other kinds of figures awaiting examination in the wilds of Deepworld!"
+    accept: "I'll get some!"
+    begin: "You are quite spirited! From what I understand, there are tiny figurines to be found in loot, and these can be given to some androids to craft into marble and bloodstone figures. If you could find an Orator figurine and procure a marble and bloodstone Orator statue, we'd be in business!"
+    incomplete: "Have you found my three Orators yet?"
+    complete: "Beautiful, this is quite the trio of figures. So many angles and glossy surfaces to describe, document, and ponder."
+  desc: "Find three orator figurines and turn one into a marble statue and one into a bloodstone statue. This can be done by dragging a figurine to an android."
+  tasks:
+    - desc: "Bring an orator figurine, marble orator statue, and bloodstone orator statue to a Turner."
+      collect_inventory:
+        building/statue-figurine-1: 1
+        building/statue-marble-1: 1
+        building/statue-bloodstone-1: 1

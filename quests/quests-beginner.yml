@@ -1,0 +1,226 @@
+# survival_another_android:
+#   group: Survive and Thrive
+#   title: Paranoid Android
+#   reward:
+#     xp: 500
+#   story:
+#     intro: "Ah, another human survivor! Glad you were able to climb up out of there. I'm Newton, your friendly survival guidance android. I'm programmed to teleport you to a new world full of resources and other humans. Once there, you'll want find another Newton android like me at the center spawn. I'm sure he will have interesting things for you to do!"
+#     accept: "Cool, let's go!"
+#     begin: "Buckle in, you're off to the races!"
+#     incomplete: "Any luck finding another Newton?"
+#     complete: "Ahhh, hello human! I see my brother Newton sent you. Thanks for finding me - we have so much to talk about!"
+#   actions:
+#     begin:
+#       - method: send_to_spawn_zone_after_delay!
+#     incomplete:
+#       - method: send_to_spawn_zone_after_delay!
+#     hint:
+#       - method: event_message!
+#         params:
+#           - hintOverlay
+#           - text: "Use your map to locate the middle spawn. That's where Newton awaits you to complete your quest!"
+#             title: Quest Tip
+#             element: Middle Spawn
+#   desc: "You've entered the wilds of Deepworld! Find another Newton android to continue your quest. They can always be found in the middle spawn in public worlds."
+#   tasks:
+#     - desc: Enter a new world
+#       events:
+#         - ['entered', 'tutorial?', false]
+#       action: hint
+#     - desc: Find another Newton
+#       events:
+#         - ['return']
+#       qualify:
+#         - ['tutorial?', false]
+
+survival_say_hello:
+  group: Survive and Thrive
+  title: Paranoid Android
+  reward:
+    xp: 250
+    crowns: 5
+  story:
+    intro: "Ah, another human survivor! I'm Newton, your friendly survival guidance android. I can give you some equipment, but first I need to evaluate your mental state. You know, make sure there aren't any screws loose. Sound good?"
+    accept: "Sure."
+    begin: "Good, let's begin. Just open your mouth and say 'ahhh'. (Press the 'T' key, type 'ahhh', then hit enter)."
+    begin_mobile: "Good, let's begin. Just open your mouth and say 'ahhh'. (Tap the chat button on the lower left, type 'ahhh', then hit enter)."
+    incomplete: "Still having trouble talking? I just need you to say 'ahhh'. Not sure how? Open your Quest Log by clicking the profile button in the upper left, then clicking 'Quests'. It will tell you what to do."
+    complete: "Looks like your vocal chords are at least partly functional, so that's a great start!"
+  actions:
+    begin:
+      - method: event_message!
+        params:
+          - hintOverlay
+          - text: 'You have a new quest! Open your Quest Log by clicking the profile button in the upper left, then clicking "Quests"'
+            element: Profile
+    done:
+      - method: event_message!
+        params:
+          - hintOverlay
+          - text: "You finished a task in your first quest! To complete your quest, just return to Newton the Android and click on him again."
+            title: Quest Tip
+  desc: "Open chat by pressing 'T', then type 'ahhh' (or anything else) and hit enter."
+  desc_mobile: "Open chat by tapping the button in the lower left corner, then type 'ahhh' (or anything else) and hit enter."
+  tasks:
+    - desc: Say 'ahhh' (or anything else)
+      events:
+        - ["chat"]
+      action: done
+    - desc: Talk to Newton again
+      events:
+        - ["return"]
+
+survival_look_presentable:
+  group: Survive and Thrive
+  title: Let's Look Presentable
+  reward:
+    xp: 250
+    crowns: 5
+  story:
+    intro: "My sophisticated Diagnostics Unit confirms that you are not presently decapitated, mummified, or a duck. We can proceed! But first, my Style Unit requires that you wear a Top Hat so as to travel the wastelands in style. Ready to hat it up?"
+    accept: "Hooray for hats!"
+    begin: "Great. Just open your Profile, select 'Appearance', then 'Headgear', and then pick the top hat. It's brown and, um, hat-looking."
+    incomplete: "Still haven't found your hat? Just open your Profile in the upper left, select 'Appearance', then 'Headgear', then pick the top hat. It's brown and, um, hat-looking."
+    complete: Nicely done. If I were human, I might even say you've got some swagger. But I'm an android, so to me you're just straight-up 0101100101!
+  desc: "Wear a top hat. To do so, open your Profile, select 'Appearance', then 'Headgear', and then pick the top hat. It's brown and looks like a hat."
+  tasks:
+    - desc: Put on a top hat
+      events:
+        - ["appearance", "code", 1331]
+        - ["appearance", "code", 1332]
+    - desc: Talk to Newton again
+      events:
+        - ["return"]
+
+survival_shoot:
+  group: Survive and Thrive
+  title: Practice Your Marksmanship
+  reward:
+    xp: 500
+    crowns: 10
+  story:
+    intro: "The first thing you need to know - it gets a little dangerous out here. Acid rain, turrets, mutant land octopi, you get the picture. Fortunately, a few guns go a long way. I have a pistol for you if you'd like to do a little target practice?"
+    accept: "It's shootin' time!"
+    begin: "Here's a pistol. It uses steam to function, just like your jetpack. Go out and see if you can kill 10 critters with it!"
+    incomplete: "How's that shootin' coming along?"
+    complete: "Nice work, tex! I'm sure you'll get plenty more use out of that pistol quite soon."
+  actions:
+    begin:
+      - actor: player
+        method: gift_items!
+        params:
+          - tools/pistol: 1
+  desc: "Kill any 10 creatures with your pistol. To use, drag it to your hotbar from the Armaments section of your inventory and then select it. Your cursor should become a scope. Then just click on screen where you want to shoot."
+  desc_mobile: "Kill any 10 creatures with your pistol. To use, drag it to your hotbar from the Armaments section of your inventory and then select it. Then just tap and hold on screen where you want to shoot."
+  tasks:
+    - desc: Kill 10 mobs with your pistol
+      events:
+        - ["kill"]
+      qualify:
+        - ["current_item_group?", "pistol"]
+      quantity: 10
+    - desc: Return to a Newton android
+      events:
+        - ["return"]
+
+survival_shovel:
+  group: Survive and Thrive
+  title: Practice Your Shovelin' Arm
+  reward:
+    xp: 500
+    crowns: 10
+  story:
+    intro: "Your pickaxe and gun are your most important tools. But a shovel will help you almost as much. Many areas of Deepworld are protected against mining by protector dishes. These dishes can be placed by players or found in dungeons. You can't mine through protected areas, but you can use the shovel to dig through protected earth and other soft rocks. I can give you one to experiment with. Ready to shovel?"
+    accept: "Sure!"
+    begin: "Okay, take this shovel and go dig a bunch of blocks. Shouldn't take too long."
+    incomplete: "How's the shoveling?"
+    complete: "Nice work! You're a quick learner."
+  actions:
+    begin:
+      - actor: player
+        method: gift_items!
+        params:
+          - tools/shovel: 1
+  desc: "Equip your new shovel and use it to dig any 50 blocks. It works especially well on earth, sandstone, limestone, and other soft rocks."
+  tasks:
+    - desc: Shovel 50 blocks
+      events:
+        - ["dig"]
+      quantity: 50
+    - desc: Return to a Newton android
+      events:
+        - ["return"]
+
+survival_family_name:
+  group: Survive and Thrive
+  title: What's in a Name
+  reward:
+    xp: 500
+    crowns: 10
+  story:
+    intro: "You've got the basics down. I think you're ready to meet Victoria III. She was a personal steward for the late Queen Victoria and has an encyclopedic knowledge of Deepworld family history. I suspect she will be able to determine your Family Name. And we must all know our Name so we can bring it great honor!"
+    accept: "Names are cool."
+    begin: "I'm glad you're interested in your past. You'll need to journey to London and visit the top of Big Ben. Just make your way inside and talk to Victoria."
+    incomplete: "Have you visited Big Ben in London yet?"
+    complete: "You're a $family_name, eh? I think it suits you."
+  actions:
+    begin:
+      - method: event_message!
+        params:
+          - hintOverlay
+          - text: 'This quest requires you to go to a specific world. Click the World button in the upper right, select the "Personal" tab, then the "Quests" option. The world of London will appear in the list and you can click to go there.'
+            element: Portal
+    interact:
+      - actor: player
+        method: set_family_name!
+      - actor: player
+        method: show_android_dialog
+        params:
+          - "Ah, another survivor. I can see you're still a little dazed from that whole apocalypse business... you've forgotten your Family Name, yes? I can help. I can see it in your eyes. You're a $family_name! A more than worthy ancestry. What you do with that Name is up to you. Perhaps you will bring glory to your house. I wish you luck!"
+          - Victoria III
+
+  desc: "Go to Big Ben in the world of London and find Victoria III."
+  tasks:
+    - desc: Visit the world of London
+      events:
+        - ["entered", "zone_name", "London"]
+    - desc: Talk to Victoria III
+      events:
+        - ["interact", "name", "Victoria III"]
+      action: interact
+    - desc: Return to a Newton android
+      events:
+        - ["return"]
+  zones:
+    - 5b86d1b2c677207855fce42c
+
+survival_quest:
+  group: Survive and Thrive
+  title: Fancy Another Quest?
+  reward:
+    xp: 1000
+    crowns: 10
+  story:
+    intro: "It's been a pleasure guiding you as you learn the ways of Deepworld. But there are other androids with stories to tell! You should find and complete a quest for some other androids, then come back to tell me how it went."
+    accept: "Quests are fun!"
+    begin: "Only some androids are programmed to give out quests. I recommend visiting Arthur in Orkney and Isabella in Dungeness to get started. Remember, you can always check the Quests section in world search to remember which worlds to visit!"
+    incomplete: "How are those other quests going? Find Arthur in Orkney and Isabella in Dungeness."
+    complete: "You've become quite the quester! I'm so proud of you!"
+  desc: "Complete a quest for an Arthur android and an Isabella android. An Arthur can always be found in the northwest of Orkney, and an Isabella in Dungeness."
+  tasks:
+    - desc: Start and complete a combat quest for an Arthur android
+      events:
+        - ["complete_quest"]
+      progress:
+        - ["quests_completed_in_group", "The Art of War"]
+    - desc: Start and complete a cuisine quest for an Isabella android
+      events:
+        - ["complete_quest"]
+      progress:
+        - ["quests_completed_in_group", "Let Them Eat Cake"]
+    - desc: Return to a Newton android
+      events:
+        - ["return"]
+  zones:
+    - 5b86ec6ac677207855fd30f9
+    - 5b86dbdfc677207855fd0107

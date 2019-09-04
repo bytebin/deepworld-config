@@ -1,0 +1,548 @@
+combat_begins:
+  group: The Art of War
+  title: The Hunt Begins
+  reward:
+    xp: 250
+    crowns: 10
+  story:
+    intro: "Hello, human! I am looking for a good solider or two. I'm an Arthur, custom built to provide combat advice and preparedness to humans for the coming brain war. Er... I hear the humans already lost, actually. But we can still fight! I have some grand plans for the war, er, resistance, but first I need you to prove you've got what it takes. Go forth and bash some automata and return their innards to me."
+    accept: "I love bashing!"
+    begin: "Excellent. You'll find automata spewing forth from underground pipes. Should be easy enough to smash 'em into bits. Enjoy yourself!"
+    incomplete: "How's the smashing and bashing going? I need that scrap metal to finish building my spikey baseball bat..."
+    complete: "Good work, soldier. You can clearly handle yourself in a fight!"
+  desc: "Hunt and destroy 10 automata and return at least 10 scrap metal to Arthur. You'll find automata spawning from large pipes underground. They look like little brass robots."
+  tasks:
+    - desc: Destroy 10 automata
+      events:
+        - ['kill', 'category', 'automata']
+      quantity: 10
+    - desc: Bring 10 iron scrap metal to an Arthur android
+      collect_inventory:
+        rubble/iron: 10
+
+combat_muscle:
+  group: The Art of War
+  title: You Will Pump You Up
+  reward:
+    xp: 250
+    crowns: 10
+  story:
+    intro: "You've got spunk, kid, but those arms look a little flabby. Maybe because you were stuck in an underground vault for a couple years. But no matter, I can work with it. I'll just give you a sledgehammer, and you go sledge until you grow some muscle. Sound good?"
+    accept: "Okay."
+    begin: "Here's a sledgehammer. Go forth and bash twenty-five critters. Then come back and we'll measure those biceps!"
+    incomplete: "Arms getting tired? Keep swinging that sledge!"
+    complete: "Nice bashing! I think I might even see a little bit of muscle on those arms. We'll make a warrior of you yet!"
+  actions:
+    begin:
+      - actor: player
+        method: gift_items!
+        params:
+          - tools/sledgehammer: 1
+  desc: "Equip your sledgehammer in your hotbar, then find and kill 25 mobs with it."
+  tasks:
+    - desc: Kill 25 mobs with your sledgehammer
+      events:
+        - ['kill']
+      qualify:
+        - ['current_item_group?', 'sledgehammer']
+      quantity: 25
+    - desc: Return to an Arthur android
+      events:
+        - ['return']
+
+combat_scorpions:
+  group: The Art of War
+  title: No Pain No Gain
+  reward:
+    xp: 500
+    crowns: 10
+  story:
+    intro: "Your body is becoming that of a warrior, but we must condition your spirit as well. Bring me 3 scorpion tails so we can mix up their poison into a tasty warrior cleanse. Okay, maybe not tasty, but definitely poison-y!"
+    accept: "Umm. Sure?"
+    begin: "Great! You'll have to visit desert worlds to hunt down some giant scorpions. There's a very real risk of dying of thirst, so here's a few jars of water to keep you going for a bit. If you need more, just craft some jars and place them in water!"
+    incomplete: "Still hunting those scorpions?"
+    complete: "Excellent. Here's your delicious, poison-y power cleanse. Don't mind the heartburn or extreme intestinal discomfort. It's all part of being a warrior!"
+  actions:
+    begin:
+      - actor: player
+        method: gift_items!
+        params:
+          - containers/jar-water: 5
+  desc: "Visit a desert world and kill 3 giant scorpions."
+  tasks:
+    - desc: Kill 3 large scorpions
+      events:
+        - ['kill', 'code', 27]
+      quantity: 3
+    - desc: Bring 3 scorpion tails to an Arthur android
+      collect_inventory:
+        ground/scorpion-tail: 3
+
+combat_terrapi:
+  group: The Art of War
+  title: Terrify the Terrapi
+  reward:
+    xp: 500
+    crowns: 10
+  story:
+    intro: "You are becoming a true warrior. You will make an excellent soldier against our Brain oppressors! But first, we need to understand a little more about the brains' influences, starting with the lowly terrapus. Those little mutant land octopi are dangerous and varied. I need you to take out a few of each so we can properly plan for their presence on the battlefield. You'll need to visit multiple biomes, so stay alert! You won't last long in the Arctic or Desert, so short trips are your best bet."
+    accept: "I'm ready!"
+    begin: "Great. Normal, flame, and acid terrapi can be found in Temperate worlds. The rest reside in the Arctic or Hell. Good hunting!"
+    incomplete: "Squish those terrapi yet?"
+    complete: "Way to track those terrapi down. You've become quite the hunter!"
+  desc: "Hunt and kill 10 of each kind of terrapus. Normal, flame, and acid terrapi can be found in Temperate worlds. Flame and skeleton terrapi can be found in Hell. Frost terrapi can be found in the Arctic."
+  tasks:
+    - desc: Kill 10 normal terrapi
+      events:
+        - ['kill', 'code', 3]
+        - ['kill', 'code', 4]
+      quantity: 10
+    - desc: Kill 10 flame terrapi
+      events:
+        - ['kill', 'code', 5]
+      quantity: 10
+    - desc: Kill 10 acid terrapi
+      events:
+        - ['kill', 'code', 6]
+      quantity: 10
+    - desc: Kill 10 frost terrapi
+      events:
+        - ['kill', 'code', 8]
+      quantity: 10
+    - desc: Kill 10 skeleton terrapi
+      events:
+        - ['kill', 'code', 7]
+      quantity: 10
+    - desc: Return to an Arthur android
+      events:
+        - ['return']
+
+combat_queen_terrapi:
+  group: The Art of War
+  title: Killer Queen
+  reward:
+    xp: 500
+    crowns: 10
+  story:
+    intro: "Your expedition against the terrapi gave me much insight. It seems that though they evolve different abilities in different climates, they are birthed from the same source - the frightening Queen Terrapus. You'll need to journey to the Deep biome to find a few. When you find them, well, I think you know what to do by now..."
+    accept: "I'll hunt 'em!"
+    begin: "Good luck. The Deeps are quite dangerous, so watch your step. Also, if your mining skills aren't very high, you may find it tough to get around. I'm sure you'll figure it out, though!"
+    incomplete: "Find any Queen Terrapi yet? I hear they're quite fearsome to behold."
+    complete: "Way to smite those big ugly critters! I think we've got terrapi figured out. They crawl, they hurl, and occasionally make great pets!"
+  desc: "Visit a Deep world and kill 3 queen terrapi."
+  tasks:
+    - desc: Kill 3 queen terrapi
+      events:
+        - ['kill', 'code', 219]
+      quantity: 3
+    - desc: Return to an Arthur android
+      events:
+        - ['return']
+
+combat_bomb_automata:
+  group: The Art of War
+  title: Bombproofing (Or Lack Thereof)
+  reward:
+    xp: 500
+    crowns: 10
+  story:
+    intro: "We've learned much about the terrapi. But automata are just as plentiful, so we should look into them next. I've heard their mechanics are easily disrupted by bomb explosions. Perhaps you can investigate?"
+    accept: "Bombs away!"
+    begin: "Here are a few bombs to get you started. You can craft more with some iron, quartz, and gunpowder."
+    incomplete: "Blowing stuff up I hope?"
+    complete: "You know how to light a fuse! Excellent work, it's clear now that bombs shred automata like the junk they are."
+  actions:
+    begin:
+      - actor: player
+        method: gift_items!
+        params:
+          - mechanical/bomb: 3
+  desc: "Destroy 25 automata using bombs."
+  tasks:
+    - desc: Bomb 25 automata
+      events:
+        - ['explode', 'category', 'automata']
+      quantity: 25
+    - desc: Return to an Arthur android
+      events:
+        - ['return']
+
+combat_sandworm:
+  group: The Art of War
+  title: I Got Worms
+  reward:
+    xp: 500
+    crowns: 10
+  story:
+    intro: "The brains have experimented with a lot of creatures. They're able to make even the lowliest creatures a threat. Case in point - worms. Slimy, nasty worms. I want you to hunt a few of these mutants down and see what makes 'em tick."
+    accept: "Sure."
+    begin: "Head to a Desert world and dig deep to find sandworms. The snowworms you'll find in the Arctic."
+    incomplete: "Haven't found those worms yet?"
+    complete: "Thanks for the, uh, worm goop. I'll take a look after my stomach settles. Just kidding - I don't have a stomach, I'm an android, silly!"
+  desc: "Visit a Desert world and Arctic world to hunt and kill mutant worms."
+  tasks:
+    - desc: Visit a Desert world and kill 5 sand worms
+      events:
+        - ['kill', 'code', 210]
+      quantity: 5
+    - desc: Visit an Arctic world and kill 5 snow worms
+      events:
+        - ['kill', 'code', 211]
+      quantity: 5
+    - desc: Return to an Arthur android
+      events:
+        - ['return']
+
+combat_build_energy_pistol:
+  group: The Art of War
+  title: Thunderbolt and Lightning
+  reward:
+    xp: 500
+    crowns: 10
+  story:
+    intro: "You've done marvelously with the mutants and machines. But there's one more class of nasties you're going to have to learn about - the supernatural. Thing is, they can only be hurt with raw energy. Fortunately, I know a guy who has a bunch of old energy pistols in his lab. Fancy paying him a visit?"
+    accept: "Sure."
+    begin: "Cool. Head to Preston Peak and visit Gilbert's Lab. You'll find Gilbert in there somewhere, and I'm sure he will hook you up."
+    incomplete: "Talk to Gilbert yet?"
+    complete: "Glad Gilbert could help. He's a bit odd, but he does help where he can."
+  desc: "Visit Gilbert in Preston Peak to obtain an energy pistol."
+  actions:
+    interact:
+      - actor: player
+        method: gift_items!
+        params:
+          - tools/gun-energy-pistol: 1
+      - actor: player
+        method: add_xp
+        params:
+          - 250
+      - actor: player
+        method: show_android_dialog
+        params:
+          - "Ah, another trainee. Arthur sent you, did he? Always sends me the nicest looking folks. Easy on the eyes, you humans. I think it's the hair. I've tried a few wigs on but the electricity around here makes 'em poof out. It's a shame, I look good in dreadlocks. But anyway! Here's an energy pistol for ya, hope you give those revenants a run for their money. Not that they have money. But you know what I mean. Okay. Bye."
+          - Gilbert
+  tasks:
+    - desc: Visit the world of Preston Peak
+      events:
+        - ['entered', 'zone_name', 'Preston Peak']
+    - desc: Talk to Gilbert in Gilbert's Lab
+      events:
+        - ['interact', 'name', 'Gilbert']
+      action: interact
+    - desc: Return to an Arthur android
+      events:
+        - ['return']
+  zones:
+    - 5217d07db49291a1d327d63b
+
+combat_revenants:
+  group: The Art of War
+  title: Cult of the Occult
+  reward:
+    xp: 1000
+    crowns: 10
+  story:
+    intro: "I hope you've tested out that energy pistol, because you're going to need it. Hell ain't no cakewalk. By that I mean there is absolutely no cake there. None! Instead, there are ravenous ghouls known as Revenants. I want you to go slay a few with that energy pistol and report back."
+    accept: "Off to Hell!"
+    begin: "You'll find revenants without much trouble in any Hell world. But be on the lookout for their stronger cousins, the Dire Revenant, as well. I need you to take out a couple of those as well."
+    incomplete: "How's the ghostbusting?"
+    complete: "You look a bit... charred. But I guess that's Hell for ya! Glad you could put those revenants out of their misery."
+  desc: "Visit a Hell world and kill 20 revenants and 5 dire revenants."
+  tasks:
+    - desc: Kill 20 revenants
+      events:
+        - ['kill', 'code', 24]
+      quantity: 20
+    - desc: Kill 5 dire revenants
+      events:
+        - ['kill', 'code', 25]
+      quantity: 5
+    - desc: Return to an Arthur android
+      events:
+        - ['return']
+
+combat_brains_1:
+  group: The Art of War
+  title: Brain Bashing 101
+  reward:
+    xp: 1000
+    crowns: 10
+  story:
+    intro: "You're a master of the lesser monsters. Let's see how you fare against the big boys. It's time to start our war of attrition on those murderous brains, and I think your various guns and bombs just might help! Want to bash some brains?"
+    accept: "Definitely."
+    begin: "Great. Brains are all over, but they tend to concentrate in their nefarious dungeons and labs underground. Find one of these dungeons and knock out the brain protectors, then kill at least five of those little nasties."
+    incomplete: "Come across any dungeons lately?"
+    complete: "Nice work with that dungeon. The brains think they have high technology, but it's nothing a little pickaxe can't fix. Or a large pickaxe. Either way."
+  desc: "Find a dungeon underground in an unexplored world and destroy the red brain protectors. You'll also need to kill at least 5 brains."
+  tasks:
+    - desc: Raid a dungeon
+      events:
+        - ['raid']
+    - desc: Kill 5 brains
+      events:
+        - ['kill', 'category', 'brains']
+      quantity: 5
+      quantity: 5
+    - desc: Return to an Arthur android
+      events:
+        - ['return']
+
+combat_pvp:
+  group: The Art of War
+  title: Friendly Fire
+  reward:
+    xp: 1500
+    crowns: 10
+  story:
+    intro: "We've focused on destroying our enemies, but I think it's time to help prepare our friends. I need you to go to some PvP worlds and shake the complacency out of those other players. Rough 'em up a little. Since y'all have the Respawn-O-Matic, it's no big deal!"
+    accept: "Let's do it!"
+    begin: "Great. Head to some PvP worlds and shoot to kill."
+    incomplete: "How's the slayin'?"
+    complete: "Good work, I think we'll have some new recruits quite soon."
+  desc: "Visit a PvP world and kill 25 different players."
+  tasks:
+    - desc: Kill 25 different players in PvP worlds
+      events:
+        - ['kill']
+      progress:
+        - ['players_killed']
+      qualify:
+        - ['pvp?']
+      quantity: 25
+    - desc: Return to an Arthur android
+      events:
+        - ['return']
+
+# combat_pvp_bomb:
+#   group: The Art of War
+#   title: Human Bombproofing (Or Lack Thereof)
+#   reward:
+#     xp: 500
+#   story:
+#     intro: ""
+#     accept: "Okay."
+#     begin: ""
+#     incomplete: ""
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc:
+#       events:
+#         - ['chat']
+#       quantity: 10
+#     - desc: Return to an Arthur android
+#       events:
+#         - ['return']
+
+# combat_self_destruct:
+#   group: The Art of War
+#   title: Reincarnation Hurts
+#   reward:
+#     xp: 500
+#   story:
+#     intro: ""
+#     accept: "Okay."
+#     begin: ""
+#     incomplete: ""
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc:
+#       events:
+#         - ['chat']
+#       quantity: 10
+#     - desc: Return to an Arthur android
+#       events:
+#         - ['return']
+
+combat_brains_2:
+  group: The Art of War
+  title: Home Field Advantage
+  reward:
+    xp: 1000
+    crowns: 10
+  story:
+    intro: "I've got a another raid planned for you. The brains grow giant mutant neurons in their home worlds, and I need you to harvest some. And knock a few heads -- er, brains -- while you're at it. Ready?"
+    accept: "Always."
+    begin: "Brain worlds are very dangerous, so watch out for surprise attacks!"
+    incomplete: "Grab those neurons yet?"
+    complete: "Fantastic! These neurons should help me figure out the brains' organic interface technology."
+  desc: "Visit a brain world, find and mine some neurons, and kill a bunch of brains."
+  tasks:
+    - desc: Kill 25 adult brains in a brain world
+      events:
+        - ['kill', 'code', 200]
+      qualify:
+        - ['current_biome?', 'brain']
+      quantity: 25
+    - desc: Kill 5 large brains in a brain world
+      events:
+        - ['kill', 'code', 201]
+        - ['kill', 'code', 202]
+      qualify:
+        - ['current_biome?', 'brain']
+      quantity: 25
+    - desc: Bring 50 neurons to an Arthur android
+      collect_inventory:
+        brain/pipe: 50
+
+# combat_get_exo:
+#   group: The Art of War
+#   title: Unnatural Selection
+#   reward:
+#     xp: 1000
+#   story:
+#     intro: "The neurons you brought are quite interesting. I think there's a way to attach them to the human body, but it's beyond my abilities. I think you should go speak with Dr. Theopolis in Floopdedoop, he's quite the surgeon. Maybe he can hook you up?"
+#     accept: "Sure, why not."
+#     begin: "You'll find him in Floopdedoop. He's quite absent minded, but he definitely knows his stuff."
+#     incomplete: "Did you find the good doctor yet?"
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc: Visit the world of Floopdedoop
+#       events:
+#         - ['entered', 'zone_name', 'Floopdedoop']
+#     - desc: Talk to Doctor in the Doctor Tower
+#       events:
+#         - ['interact', 'Doctor']
+#     - desc: Return to an Arthur android
+#       events:
+#         - ['return']
+
+# combat_brains_2:
+#   group: The Art of War
+#   title: Happy Feet
+#   reward:
+#     xp: 1000
+#   story:
+#     intro: ""
+#     accept: "Okay."
+#     begin: ""
+#     incomplete: ""
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc:
+#       events:
+#         - ['chat']
+#       quantity: 10
+#     - desc: Return to an Arthur android
+#       events:
+#         - ['return']
+
+# combat_brains_2:
+#   group: The Art of War
+#   title: For the Love of Pandora
+#   reward:
+#     xp: 2500
+#   story:
+#     intro: ""
+#     accept: "Okay."
+#     begin: ""
+#     incomplete: ""
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc: Open a Pandora's box
+#       events:
+#         - ['start_minigame', 'code', 808]
+#       quantity: 1
+#     - desc: Win a Pandora event
+#       events:
+#         - ['win_pandora']
+#       quantity: 1
+#     - desc: Return to an Arthur android
+#       events:
+#         - ['return']
+
+# combat_inhibit:
+#   group: The Art of War
+#   title: A Tactical Strike
+#   reward:
+#     xp: 2500
+#   story:
+#     intro: ""
+#     accept: "Okay."
+#     begin: ""
+#     incomplete: ""
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc: Inhibit a brain spawner
+#       events:
+#         - ['inhibit']
+#       quantity: 10
+#     - desc: Return to an Arthur android
+#       events:
+#         - ['return']
+
+# combat_brains_3:
+#   group: The Art of War
+#   title: Lessons in Attrition
+#   reward:
+#     xp: 5000
+#   story:
+#     intro: ""
+#     accept: "Okay."
+#     begin: ""
+#     incomplete: ""
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc: Kill 50 brains in temperate worlds
+#       events:
+#         - ['kill', 'category', 'brains']
+#       qualify:
+#         - ['current_biome?', 'plain']
+#       quantity: 50
+#     - desc: Kill 50 brains in arctic worlds
+#       events:
+#         - ['kill', 'category', 'brains']
+#       qualify:
+#         - ['current_biome?', 'arctic']
+#       quantity: 50
+#     - desc: Kill 50 brains in desert worlds
+#       events:
+#         - ['kill', 'category', 'brains']
+#       qualify:
+#         - ['current_biome?', 'desert']
+#       quantity: 50
+#     - desc: Kill 50 brains in hell worlds
+#       events:
+#         - ['kill', 'category', 'brains']
+#       qualify:
+#         - ['current_biome?', 'hell']
+#       quantity: 50
+#     - desc: Kill 50 brains in brain worlds
+#       events:
+#         - ['kill', 'category', 'brains']
+#       qualify:
+#         - ['current_biome?', 'brain']
+#       quantity: 50
+#     - desc: Return to an Arthur android
+#       events:
+#         - ['return']
+
+# combat_brains_hatchet:
+#   group: The Art of War
+#   title: Lessons in Humiliation
+#   reward:
+#     xp: 2500
+#   story:
+#     intro: ""
+#     accept: "Okay."
+#     begin: ""
+#     incomplete: ""
+#     complete: ""
+#   desc: ""
+#   tasks:
+#     - desc: 'Kill 10 large brains, striking the killing blow with a hatchet'
+#       events:
+#         - ['kill', 'code', 201]
+#         - ['kill', 'code', 202]
+#       qualify:
+#         - ['current_item_group?', 'hatchet']
+#       quantity: 50
+#     - desc: Return to an Arthur android
+#       events:
+#         - ['return']
