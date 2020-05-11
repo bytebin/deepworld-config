@@ -1,8 +1,8 @@
 # ===== ITEM CONFIGURATION ===== #
 
-# border-continuity (sprite root): sprites that are drawn over edges of contiguous section of the item
-# border-continuity-color (white): color of continuity border
-# border-continuity-external (sprite root): sprites that are drawn around the edges of a contiguous section of the item
+# border_continuity (sprite root): sprites that are drawn over edges of contiguous section of the item
+# border_continuity_color (white): color of continuity border
+# border_continuity_external (sprite root): sprites that are drawn around the edges of a contiguous section of the item
 # carryable (boolean, true): shows up in inventory
 # diggable: (boolean, false): can item be dug with shovel
 # fieldable (boolean, true): is item protectable by dishes
@@ -90,7 +90,7 @@ items:
     code: 2
     level: 1
     opaque: true
-    border-wholeness: earth
+    border_wholeness: earth
     border_continuity_external: ['masks/border-external', 12]
     border_continuity_color: 1a0e00
     title: Earth Backdrop
@@ -101,8 +101,8 @@ items:
     code: 3
     level: 1
     opaque: true
-    border-wholeness: earth
-    border-continuity-external: ['masks/border-external', 12]
+    border_wholeness: earth
+    border_continuity_external: ['masks/border-external', 12]
     sprite_z: 3
     color: cfad70
     title: Sandstone Backdrop
@@ -112,8 +112,8 @@ items:
     code: 4
     level: 1
     opaque: true
-    border-wholeness: earth
-    border-continuity-external: ['masks/border-external', 12]
+    border_wholeness: earth
+    border_continuity_external: ['masks/border-external', 12]
     sprite_z: 2
     color: bbbeb5
     title: Limestone Backdrop
@@ -123,7 +123,7 @@ items:
     invulnerable: true
     background: base/earth
     sprite: ['base/maw', 4]
-    border-wholeness: earth
+    border_wholeness: earth
     spawn: creature
     gui: false
     sprite_z: 10
@@ -136,7 +136,7 @@ items:
     invulnerable: true
     background: base/earth
     sprite: ['base/maw', 4]
-    border-wholeness: earth
+    border_wholeness: earth
     gui: false
     sprite_z: 10
     title: Plugged Maw
@@ -146,7 +146,7 @@ items:
   base/pipe:
     code: 6
     invulnerable: true
-    border-wholeness: earth
+    border_wholeness: earth
     spawn: automata
     gui: false
     sprite_z: 10
@@ -158,7 +158,7 @@ items:
     code: 8
     invulnerable: true
     sprite: base/pipe
-    border-wholeness: earth
+    border_wholeness: earth
     gui: false
     sprite_z: 10
     title: Plugged Culvert
@@ -178,10 +178,10 @@ items:
     opaque: true
     background: base/earth
     continuity: base/vent-all
-    sprite-continuity: base/steam-vent
-    sprite-continuity-animation: ['base/steam-moving', 2]
+    sprite_continuity: base/steam-vent
+    sprite_continuity_animation: ['base/steam-moving', 2]
     sprite_continuity_animation_opacity: 128
-    border-wholeness: earth
+    border_wholeness: earth
     color: 715a35
     char: V
     sprite_z: 5
@@ -197,8 +197,8 @@ items:
     background: base/earth
     continuity: base/vent-all
     sprite: ''
-    sprite-continuity: base/steam-vent-cap
-    border-wholeness: earth
+    sprite_continuity: base/steam-vent-cap
+    border_wholeness: earth
     color: 715a35
     char: x
     sprite_z: 5
@@ -211,8 +211,8 @@ items:
     <<: *base
     opaque: true
     background: base/earth
-    border-wholeness: earth
-    border-continuity-external: ['masks/border-external', 12]
+    border_wholeness: earth
+    border_continuity_external: ['masks/border-external', 12]
     sprite_z: 7
 
   base/drawing-modern:
@@ -243,7 +243,7 @@ items:
     background: base/earth
     sprite: ['base/earth-accent', 14]
     opaque: true
-    border-wholeness: earth
+    border_wholeness: earth
     border_continuity_external: ['masks/border-external', 12]
     border_continuity_color: 45321a
     title: Earth Backdrop Accent
@@ -344,11 +344,11 @@ items:
     code: 255
     material: stone
     ingredients: ['ground/stone']
-    crafting quantity: 3
-    border-continuity: stone-back
+    crafting_quantity: 3
+    border_continuity: stone-back
     title: Stone Backdrop
     toughness: 1
-    decay inventory: rubble/stone-pile-1
+    decay_inventory: rubble/stone-pile-1
     rarity: 2
     hintt: 'Common stone backing, frequently found decayed and crumbling both above and belowground.'
   back/iron:
@@ -356,24 +356,24 @@ items:
     code: 267
     material: metal
     ingredients: ['building/iron']
-    crafting quantity: 3
-    border-continuity: iron-back
+    crafting_quantity: 3
+    border_continuity: iron-back
     title: Iron Backdrop
     toughness: 5
     gui: ['noborder']
-    decay inventory: rubble/iron
+    decay_inventory: rubble/iron
     hintt: 'Solid iron backing, useful for large-scale industrial projects and slightly hardier than brass and copper.'
   back/copper:
     <<: *back-tile
     code: 268
     material: metal
     ingredients: ['building/copper']
-    crafting quantity: 3
-    border-continuity: copper-back
+    crafting_quantity: 3
+    border_continuity: copper-back
     title: Copper Backdrop
     toughness: 4
     gui: ['noborder']
-    decay inventory: rubble/iron
+    decay_inventory: rubble/iron
     hintt: 'Solid copper backing, often used to contain acid pools in abandoned industrial warehouses.'
   back/brass:
     <<: *back-tile
@@ -381,22 +381,22 @@ items:
     code: 270
     material: metal
     ingredients: ['building/brass']
-    crafting quantity: 3
-    border-continuity: brass-back
+    crafting_quantity: 3
+    border_continuity: brass-back
     title: Brass Backdrop
     toughness: 4
     gui: ['noborder']
-    decay inventory: rubble/iron
+    decay_inventory: rubble/iron
     hintt: 'Solid brass backing, offering both toughness and a splash of color for all your metallic needs.'
   back/earth-brick:
     <<: *back-tile
     code: 30
     material: stone
     ingredients: [['ground/earth', 3]]
-    crafting quantity: 1
-    border-continuity: brick-back
-    border-continuity-color: ffcccc
-    decay inventory: ground/earth
+    crafting_quantity: 1
+    border_continuity: brick-back
+    border_continuity_color: ffcccc
+    decay_inventory: ground/earth
     title: Earth Brick Backdrop
     hintt: "For the absolute budget builder, you can't beat the affordability of earth bricks. Just dig and build and dig and build and repeat!"
   back/adobe:
@@ -404,9 +404,9 @@ items:
     code: 266
     material: stone
     ingredients: [['ground/earth', 8], ['ground/resin', 2]]
-    crafting quantity: 3
-    border-continuity: adobe-back
-    decay inventory: ground/earth
+    crafting_quantity: 3
+    border_continuity: adobe-back
+    decay_inventory: ground/earth
     title: Adobe Backdrop
     hintt: 'Adobe backing is very simple to construct, requiring mostly just earth. You may look like a cheapskate, but at least your house will be huge.'
   back/cork:
@@ -415,8 +415,8 @@ items:
     code: 273
     material: wood
     ingredients: ['building/wood', 'ground/resin']
-    crafting quantity: 2
-    border-continuity: cork
+    crafting_quantity: 2
+    border_continuity: cork
     hintt: 'Cork is known mostly for its tremendous ability to keep wine tasty, but it also serves as a nice decorative backdrop for butterflies and other such curiosities.'
   back/bloodstone:
     <<: *back-tile
@@ -424,12 +424,12 @@ items:
     code: 259
     material: stone
     ingredients: ['ground/bloodstone-ore']
-    crafting quantity: 3
-    crafting skill: ['building', 2]
-    border-continuity: bloodstone-back
+    crafting_quantity: 3
+    crafting_skill: ['building', 2]
+    border_continuity: bloodstone-back
     title: Bloodstone Backdrop
     toughness: 2
-    decay inventory: rubble/stone-pile-1
+    decay_inventory: rubble/stone-pile-1
     hintt: 'Bloodstone backing provides dark and mysterious overtones to building projects. Bloodstone itself is only found in Hell worlds.'
     lootable:
       category: supplies
@@ -441,12 +441,12 @@ items:
     code: 269
     material: stone
     ingredients: ['ground/marble-ore']
-    crafting quantity: 3
-    crafting skill: ['building', 3]
-    border-continuity: marble-back
+    crafting_quantity: 3
+    crafting_skill: ['building', 3]
+    border_continuity: marble-back
     title: Marble Backdrop
     toughness: 2
-    decay inventory: rubble/stone-pile-1
+    decay_inventory: rubble/stone-pile-1
     hintt: 'Marble backing makes any structure look fancy. Goes great with columns, statues, and Greek gods.'
     lootable:
       category: supplies
@@ -457,9 +457,9 @@ items:
     code: 271
     material: stone
     ingredients: ['ground/sandstone']
-    crafting quantity: 3
-    border-continuity: brick-back
-    border-continuity-color: 7e8e65
+    crafting_quantity: 3
+    border_continuity: brick-back
+    border_continuity_color: 7e8e65
     title: Sandstone Brick Backdrop
     toughness: 2
     hintt: 'A simple backdrop to complement your sandstone constructions.'
@@ -469,8 +469,8 @@ items:
     code: 272
     material: stone
     ingredients: ['ground/limestone']
-    crafting quantity: 3
-    border-continuity: brick-back
+    crafting_quantity: 3
+    border_continuity: brick-back
     title: Limestone Brick Backdrop
     toughness: 2
     hintt: 'A simple backdrop to complement your limestone constructions.'
@@ -480,11 +480,11 @@ items:
     code: 335
     material: stone
     ingredients: ['ground/stone']
-    crafting quantity: 3
-    border-continuity: brick-back
+    crafting_quantity: 3
+    border_continuity: brick-back
     title: Gray Cobblestone Backdrop
     toughness: 2
-    decay inventory: rubble/stone-pile-1
+    decay_inventory: rubble/stone-pile-1
     rarity: 2
     gui: ['noborder']
     hintt: 'A detailed backdrop to complement stone or gray cobblestone buildings.'
@@ -493,12 +493,12 @@ items:
     code: 336
     material: stone
     ingredients: ['ground/stone']
-    crafting quantity: 3
-    border-continuity: brick-back
-    border-continuity-color: 7e8e65
+    crafting_quantity: 3
+    border_continuity: brick-back
+    border_continuity_color: 7e8e65
     title: Tan Cobblestone Backdrop
     toughness: 2
-    decay inventory: rubble/stone-pile-1
+    decay_inventory: rubble/stone-pile-1
     rarity: 2
     gui: ['noborder']
     hintt: 'A detailed backdrop to complement sandstone or tan cobblestone buildings.'
@@ -508,9 +508,9 @@ items:
     code: 257
     material: stone
     ingredients: ['ground/clay']
-    crafting quantity: 3
-    border-continuity: brick-back
-    border-continuity-color: cccccc
+    crafting_quantity: 3
+    border_continuity: brick-back
+    border_continuity_color: cccccc
     color: '551111'
     toughness: 1
     gui: ['noborder']
@@ -521,12 +521,12 @@ items:
     code: 263
     material: stone
     ingredients: ['ground/clay']
-    crafting quantity: 3
-    border-continuity: brick-back
-    border-continuity-color: cccccc
+    crafting_quantity: 3
+    border_continuity: brick-back
+    border_continuity_color: cccccc
     color: '551111'
     title: Mixed Brick Backdrop
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     toughness: 1
     gui: ['noborder']
     hintt: 'Mixed brick backing gives you that classic redbrick feel plus 15% extra spiffyness.'
@@ -535,11 +535,11 @@ items:
     code: 264
     material: stone
     ingredients: ['ground/clay']
-    crafting quantity: 3
-    border-continuity: brick-back
-    border-continuity-color: 7e8e65
+    crafting_quantity: 3
+    border_continuity: brick-back
+    border_continuity_color: 7e8e65
     title: Tan Brick Backdrop
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     toughness: 1
     gui: ['noborder']
     hintt: "Tan brick backing goes great with Deepworld's many earth tones. Including earth itself!"
@@ -548,11 +548,11 @@ items:
     code: 265
     material: stone
     ingredients: ['ground/clay']
-    crafting quantity: 3
-    border-continuity: brick-back
-    border-continuity-color: 525c70
+    crafting_quantity: 3
+    border_continuity: brick-back
+    border_continuity_color: 525c70
     title: Blue Brick Backdrop
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     toughness: 1
     gui: ['noborder']
     hintt: "Everyone expects a RED brick. Blow their hats off with this blueish alternative!"
@@ -562,10 +562,10 @@ items:
     code: 260
     material: wood
     ingredients: ['building/wood']
-    crafting quantity: 3
-    border-continuity: wood-thin
+    crafting_quantity: 3
+    border_continuity: wood-thin
     title: Wood Backdrop
-    decay inventory: rubble/wood-1
+    decay_inventory: rubble/wood-1
     hintt: 'Standard wood backing is a mainstay in old houses and warehouses, where it often molds and serves as fodder for scrap wood collection.'
 
   back/wood-panel:
@@ -573,10 +573,10 @@ items:
     code: 261
     material: wood
     ingredients: ['building/wood']
-    crafting quantity: 3
-    border-continuity: wood-thin
+    crafting_quantity: 3
+    border_continuity: wood-thin
     title: Wood Panel
-    decay inventory: rubble/wood-1
+    decay_inventory: rubble/wood-1
     hintt: "Wood panelling is a basic construction backing, ideal for most civilized building projects."
 
   back/wood-panel-decorative:
@@ -585,11 +585,11 @@ items:
     code: 262
     material: wood
     ingredients: ['building/wood']
-    crafting quantity: 2
-    border-continuity: wood-thin
+    crafting_quantity: 2
+    border_continuity: wood-thin
     title: Fancy Wood Panel
-    crafting skill: ['building', 2]
-    decay inventory: rubble/wood-1
+    crafting_skill: ['building', 2]
+    decay_inventory: rubble/wood-1
     hintt: "When panelling just doesn't look nice enough, try this fancy panelling to add a little extra pizazz."
 
   back/paper:
@@ -597,31 +597,31 @@ items:
     code: 299
     material: paper
     ingredients: ['building/wood']
-    crafting quantity: 3
-    border-continuity: wallpaper
-    border-inventory: ''
+    crafting_quantity: 3
+    border_continuity: wallpaper
+    border_inventory: ''
     hintt: "Plain paper is mostly used as an ingredient for fancier wallpapers, but it's good for simple decorating in a pinch."
 
   back/wallpaper: &back-wallpaper
     <<: *back-tile
-    border-continuity: wallpaper
-    border-inventory: ''
+    border_continuity: wallpaper
+    border_inventory: ''
     material: paper
-    decay inventory: back/paper
+    decay_inventory: back/paper
     group: wallpaper
 
   back/wallpaper-1:
     <<: *back-wallpaper
     code: 300
     ingredients: ['back/paper']
-    border-continuity-color: '5c481e'
+    border_continuity_color: '5c481e'
     title: Gold Damask Wallpaper
     hintt: "Damask patterns are the king of Victorian wallpapers, and golden damask is surely the shiniest way to show them off."
   back/wallpaper-2:
     <<: *back-wallpaper
     code: 301
     ingredients: ['back/paper']
-    border-continuity-color: '5c484e'
+    border_continuity_color: '5c484e'
     title: Faded Floral Wallpaper
     hintt: "This worn-in wallpaper gives a great abandoned-yet-once-stylish feel for all your bunker needs."
   back/wallpaper-3:
@@ -629,8 +629,8 @@ items:
     code: 302
     level: 3
     ingredients: ['back/paper']
-    crafting skill: ['building', 2]
-    border-continuity-color: 'a49b87'
+    crafting_skill: ['building', 2]
+    border_continuity_color: 'a49b87'
     title: Art Deco Wallpaper
     hintt: "Art Deco stylings are key for the forward-thinking home decorator."
   back/wallpaper-4:
@@ -638,8 +638,8 @@ items:
     code: 303
     level: 3
     ingredients: ['back/paper']
-    crafting skill: ['building', 2]
-    border-continuity-color: '333135'
+    crafting_skill: ['building', 2]
+    border_continuity_color: '333135'
     title: Blue Quatrefoil Wallpaper
     hintt: "Everybody loves shapes! Put some on your wall with this fine wallpaper."
   back/wallpaper-5:
@@ -647,8 +647,8 @@ items:
     code: 304
     level: 6
     ingredients: ['back/paper']
-    crafting skill: ['building', 3]
-    border-continuity-color: '235125'
+    crafting_skill: ['building', 3]
+    border_continuity_color: '235125'
     title: Chartreuse Damask Wallpaper
     hintt: "Make a bold statement with this bright twist on the damask classic. Goes great with an acid swimming pool!"
   back/wallpaper-6:
@@ -656,16 +656,16 @@ items:
     code: 312
     level: 6
     ingredients: ['back/paper']
-    crafting skill: ['building', 3]
-    border-continuity-color: '582721'
+    crafting_skill: ['building', 3]
+    border_continuity_color: '582721'
     title: Red Damask Wallpaper
   back/wallpaper-7:
     <<: *back-wallpaper
     code: 313
     level: 10
     ingredients: ['back/paper']
-    crafting skill: ['building', 4]
-    border-continuity-color: '332e5e'
+    crafting_skill: ['building', 4]
+    border_continuity_color: '332e5e'
     title: Blue Crab Wallpaper
     hintt: "Showcase your nautical sensibilities with this lovely crab-themed wallpaper. Hey, who's hungry for some crab legs!"
   back/wallpaper-8:
@@ -673,34 +673,34 @@ items:
     code: 314
     level: 10
     ingredients: ['back/paper']
-    crafting skill: ['building', 4]
-    border-continuity-color: '5c585a'
+    crafting_skill: ['building', 4]
+    border_continuity_color: '5c585a'
     title: Yellow Damask Wallpaper
   back/wallpaper-9:
     <<: *back-wallpaper
     code: 315
     level: 15
     ingredients: ['back/paper']
-    crafting skill: ['building', 5]
-    border-continuity-color: '545e6b'
+    crafting_skill: ['building', 5]
+    border_continuity_color: '545e6b'
     title: Pink Quatrefoil Wallpaper
   back/wallpaper-10:
     <<: *back-wallpaper
     code: 316
     ingredients: ['back/paper']
-    border-continuity-color: '5c481e'
+    border_continuity_color: '5c481e'
     title: Vibrant Floral Wallpaper
   back/wallpaper-11:
     <<: *back-wallpaper
     code: 317
     ingredients: ['back/paper']
-    border-continuity-color: '5c481e'
+    border_continuity_color: '5c481e'
     title: Blue Lattice Wallpaper
   back/wallpaper-12:
     <<: *back-wallpaper
     code: 318
     ingredients: ['back/paper']
-    border-continuity-color: '5c481e'
+    border_continuity_color: '5c481e'
     title: Space Wallpaper
     hintt: "SPACE! In your bedroom. Sweet."
 
@@ -712,8 +712,8 @@ items:
     tileable: true
     material: glass
     ingredients: ['ground/quartz-ore']
-    crafting quantity: 2
-    border-continuity: wood-thin
+    crafting_quantity: 2
+    border_continuity: wood-thin
     title: Glass Backdrop
     hintt: '@backdrop-glass'
     lootable:
@@ -727,8 +727,8 @@ items:
     tileable: true
     material: glass
     ingredients: ['ground/quartz-ore', 'building/wood']
-    crafting quantity: 2
-    border-continuity: wood-thin
+    crafting_quantity: 2
+    border_continuity: wood-thin
     title: Fancy Glass Backdrop
     hintt: '@backdrop-glass'
     lootable:
@@ -742,8 +742,8 @@ items:
     tileable: true
     material: metal
     ingredients: ['building/iron']
-    crafting quantity: 2
-    crafting skill: ['building', 3]
+    crafting_quantity: 2
+    crafting_skill: ['building', 3]
     title: Scaffolding
     toughness: 4
     hintt: '@scaffold'
@@ -768,8 +768,8 @@ items:
     tileable: true
     material: wood
     ingredients: ['building/wood']
-    crafting quantity: 2
-    crafting skill: ['building', 2]
+    crafting_quantity: 2
+    crafting_skill: ['building', 2]
     title: Wood Scaffolding
     toughness: 3
     lootable:
@@ -796,7 +796,7 @@ items:
     earthy: true
     overlay_prefab: true
     karma: 0
-    sprites+:
+    sprites_plus:
       - frames: ground/earth
         masks: ['masks/border-external', 12]
         type: external
@@ -836,7 +836,7 @@ items:
   ground/earth-mid:
     <<: *ground-earthy
     code: 516
-    mining skill: ['mining', 2]
+    mining_skill: ['mining', 2]
     sprite: ground/earth-deep
     sprites:
       - frames: ground/earth-deep
@@ -850,7 +850,7 @@ items:
   ground/earth-deep:
     <<: *ground-earthy
     code: 517
-    mining skill: ['mining', 3]
+    mining_skill: ['mining', 3]
     sprite: ground/earth-deeper
     sprites:
       - frames: ground/earth-deeper
@@ -864,7 +864,7 @@ items:
   ground/earth-very-deep:
     <<: *ground-earthy
     code: 518
-    mining skill: ['mining', 4]
+    mining_skill: ['mining', 4]
     sprite: ground/earth-deepest
     sprites:
       - frames: ground/earth-deepest
@@ -881,7 +881,7 @@ items:
     sprite: ground/earth
     sprites:
       - frames: ground/earth
-    mining skill: ['mining', 5]
+    mining_skill: ['mining', 5]
     inventory: ground/earth
     gui: false
     spawn_entity:
@@ -892,7 +892,7 @@ items:
   ground/deep-earth-mid:
     <<: *ground-earthy
     code: 596
-    mining skill: ['mining', 6]
+    mining_skill: ['mining', 6]
     background: ground/earth
     sprite: ground/earth-deep
     sprites:
@@ -907,7 +907,7 @@ items:
   ground/deep-earth-deep:
     <<: *ground-earthy
     code: 597
-    mining skill: ['mining', 7]
+    mining_skill: ['mining', 7]
     background: ground/earth
     sprite: ground/earth-deeper
     sprites:
@@ -922,7 +922,7 @@ items:
   ground/deep-earth-very-deep:
     <<: *ground-earthy
     code: 598
-    mining skill: ['mining', 8]
+    mining_skill: ['mining', 8]
     background: ground/earth
     sprite: ground/earth-deepest
     sprites:
@@ -986,7 +986,7 @@ items:
     material: bone
     overlay_prefab: true
     ingredients: [['rubble/bone-pile', 10]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     sprites:
       - frames: ground/bone-wall
         z: -0.15
@@ -1022,7 +1022,7 @@ items:
     <<: *front-block
     code: 444
     diggable: true
-    border-continuity-external: ['masks/border-external', 12]
+    border_continuity_external: ['masks/border-external', 12]
     border_continuity_color: feec9d
     sprite_z: 2
     craftable: false
@@ -1106,7 +1106,7 @@ items:
     <<: *ground-earth-accent-vine
     code: 520
     background: ground/earth
-    #sprite-continuity: [vegetation/vine, 2]
+    #sprite_continuity: [vegetation/vine, 2]
     wiki: false
     gui: false
 
@@ -1372,7 +1372,7 @@ items:
     title: Assembled Miner Fossil
     sprite: ground/fossil-miner
     inventory_frame: inventory/ground/fossil-miner
-    crafting skill: ['perception', 6]
+    crafting_skill: ['perception', 6]
     ingredients: [['ground/fossil-miner-buried', 4]]
 
   ground/fossil-mammoth-buried:
@@ -1402,7 +1402,7 @@ items:
     title: Assembled Mammoth Fossil
     sprite: ground/fossil-mammoth
     inventory_frame: inventory/ground/fossil-mammoth
-    crafting skill: ['perception', 7]
+    crafting_skill: ['perception', 7]
     ingredients: [['ground/fossil-mammoth-buried', 12]]
 
   ground/fossil-oldone-buried:
@@ -1432,7 +1432,7 @@ items:
     title: Assembled One Fossil
     sprite: ground/fossil-oldone
     inventory_frame: inventory/ground/fossil-oldone
-    crafting skill: ['perception', 9]
+    crafting_skill: ['perception', 9]
     ingredients: [['ground/fossil-oldone-buried', 4]]
 
   ground/fossil-pterodactyl-buried:
@@ -1461,7 +1461,7 @@ items:
     title: Assembled Pterodactyl Fossil
     sprite: ground/fossil-pterodactyl
     inventory_frame: inventory/ground/fossil-pterodactyl
-    crafting skill: ['perception', 8]
+    crafting_skill: ['perception', 8]
     ingredients: [['ground/fossil-pterodactyl-buried', 6]]
 
   ground/fossil-trex-buried:
@@ -1490,7 +1490,7 @@ items:
     title: Assembled T-Rex Fossil
     sprite: ground/fossil-trex
     inventory_frame: inventory/ground/fossil-trex
-    crafting skill: ['perception', 10]
+    crafting_skill: ['perception', 10]
     ingredients: [['ground/fossil-trex-buried', 15]]
 
 
@@ -1525,7 +1525,7 @@ items:
 
   ground/clay-accent: &ground-clay-accent
     <<: *ground-clay-chunk
-    mining bonus: ['mining', 5]
+    mining_bonus: ['mining', 5]
     gui: false
     carryable: false
 
@@ -1608,7 +1608,7 @@ items:
     color: '463924'
     background: ground/earth
     continuity: ground/earth
-    border-continuity-external: ['masks/border-external', 12]
+    border_continuity_external: ['masks/border-external', 12]
     material: stone
     group: mineral
     hint: '@mineral'
@@ -1616,7 +1616,7 @@ items:
     report: true
     carryable: false
     gui: false
-    sprites+:
+    sprites_plus:
       - frames: ground/earth
         masks: ['masks/border-external', 12]
         type: external
@@ -2102,7 +2102,7 @@ items:
       command: true
       spawn: true
     use_proximity: 3
-    spawn_entity_crafting quantity: [2, 4]
+    spawn_entity_crafting_quantity: [2, 4]
     spawn_entity:
       terrapus/child: 2
       terrapus/adult: 1
@@ -2124,7 +2124,7 @@ items:
       command: true
       spawn: true
     use_proximity: 3
-    spawn_entity_crafting quantity: [4, 6]
+    spawn_entity_crafting_quantity: [4, 6]
     spawn_entity:
       terrapus/queen: 1
     inventory: ground/resin
@@ -2168,12 +2168,12 @@ items:
   ground/blackrock:
     <<: *front-block
     code: 664
-    mining skill: ['mining', 20]
+    mining_skill: ['mining', 20]
     material: stone
     craftable: false
     toughness: 2
     hint: Blackrock is the toughest known natural stone. It is unmineable and can only be cleared with the use of bombs.
-    border-continuity-external: ['masks/border-external', 12]
+    border_continuity_external: ['masks/border-external', 12]
     color: 2a2a2a
     sprite_z: 3
     sprites:
@@ -2198,22 +2198,22 @@ items:
     code: 601
     material: wood
     ingredients: ['building/wood']
-    crafting quantity: 3
-    border-continuity: wood
+    crafting_quantity: 3
+    border_continuity: wood
     title: Wood Block
     mod: decay
-    decay inventory: rubble/wood-1
+    decay_inventory: rubble/wood-1
     border_shadow: true
   building/earth-brick:
     <<: *front-block
     code: 31
     material: stone
     ingredients: [['ground/earth', 3]]
-    crafting quantity: 1
-    border-continuity: brick
-    border-continuity-color: ffcccc
+    crafting_quantity: 1
+    border_continuity: brick
+    border_continuity_color: ffcccc
     mod: decay
-    decay inventory: ground/earth
+    decay_inventory: ground/earth
     title: Earth Brick
     hintt: "For the absolute budget builder, you can't beat the affordability of earth bricks. Just dig and build and dig and build and repeat!"
   building/adobe:
@@ -2221,18 +2221,18 @@ items:
     code: 619
     material: stone
     ingredients: [['ground/earth', 8], ['ground/resin', 2]]
-    crafting quantity: 3
-    border-continuity: adobe
+    crafting_quantity: 3
+    border_continuity: adobe
     mod: decay
-    decay inventory: ground/earth
+    decay_inventory: ground/earth
     title: Adobe Brick
   building/brick:
     <<: *front-block
     code: 608
     material: stone
     ingredients: ['ground/clay']
-    crafting quantity: 2
-    border-continuity: brick
+    crafting_quantity: 2
+    border_continuity: brick
     mod: decay
     toughness: 1
     gui: ['noborder']
@@ -2243,10 +2243,10 @@ items:
     code: 627
     material: stone
     ingredients: ['ground/clay']
-    crafting quantity: 2
-    border-continuity: brick
+    crafting_quantity: 2
+    border_continuity: brick
     mod: decay
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     toughness: 1
     gui: ['noborder']
     title: Mixed Brick
@@ -2256,11 +2256,11 @@ items:
     code: 628
     material: stone
     ingredients: ['ground/clay']
-    crafting quantity: 2
-    border-continuity: brick
-    border-continuity-color: 7e8e65
+    crafting_quantity: 2
+    border_continuity: brick
+    border_continuity_color: 7e8e65
     mod: decay
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     toughness: 1
     gui: ['noborder']
     title: Tan Brick
@@ -2270,11 +2270,11 @@ items:
     code: 629
     material: stone
     ingredients: ['ground/clay']
-    crafting quantity: 2
-    border-continuity: brick
-    border-continuity-color: 525c70
+    crafting_quantity: 2
+    border_continuity: brick
+    border_continuity_color: 525c70
     mod: decay
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     toughness: 1
     gui: ['noborder']
     title: Blue Brick
@@ -2283,7 +2283,7 @@ items:
     code: 609
     material: wood
     ingredients: ['ground/resin', 'building/wood']
-    crafting quantity: 2
+    crafting_quantity: 2
     background: containers/barrel
     sprite: containers/barrel-pitch
 
@@ -2294,15 +2294,15 @@ items:
       climb: true
     ingredients: ['ground/flax']
     title: Rope Ladder
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
   building/rope:
     code: 501
     tileable: true
     material: soft
     ingredients: ['ground/flax']
-    crafting quantity: 3
-    crafting skill: ['building', 2]
-    sprite-continuity: building/rope
+    crafting_quantity: 3
+    crafting_skill: ['building', 2]
+    sprite_continuity: building/rope
     sprites:
       - frames: building/rope
         type: continuity
@@ -2311,8 +2311,8 @@ items:
     tileable: true
     material: soft
     ingredients: ['ground/flax']
-    crafting quantity: 2
-    crafting skill: ['building', 2]
+    crafting_quantity: 2
+    crafting_skill: ['building', 2]
     title: Knotted Rope
 
   building/door-wood:
@@ -2320,7 +2320,7 @@ items:
     color: 515a25
     char: D
     material: wood
-    inventory sprite: building/door-wood-open
+    inventory_sprite: building/door-wood-open
     shape: polygonal
     title: Wood Door
     hint: '@door'
@@ -2340,11 +2340,11 @@ items:
     code: 611
     material: wood
     ingredients: ['building/wood']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     title: Fancy Wood Block
     mod: decay
-    border-continuity: wood-decorative
-    decay inventory: rubble/wood-1
+    border_continuity: wood-decorative
+    decay_inventory: rubble/wood-1
     border_shadow: true
   building/ladder-wood:
     code: 612
@@ -2352,13 +2352,13 @@ items:
     use:
       climb: true
     ingredients: ['building/wood']
-    crafting quantity: 3
+    crafting_quantity: 3
     title: Wood Ladder
   building/post-wood:
     code: 613
     material: wood
     ingredients: ['building/wood']
-    crafting quantity: 3
+    crafting_quantity: 3
     title: Wood Post
   building/trapdoor-wood:
     code: 614
@@ -2384,11 +2384,11 @@ items:
     code: 615
     material: stone
     ingredients: ['ground/stone']
-    crafting quantity: 3
-    border-continuity: stone
+    crafting_quantity: 3
+    border_continuity: stone
     mod: decay
     toughness: 1
-    decay inventory: rubble/stone-pile-1
+    decay_inventory: rubble/stone-pile-1
     title: Stone Block
     border_shadow: true
   building/sandstone:
@@ -2396,8 +2396,8 @@ items:
     code: 658
     material: stone
     ingredients: ['ground/sandstone']
-    border-continuity: brick
-    border-continuity-color: 7e8e65
+    border_continuity: brick
+    border_continuity_color: 7e8e65
     mod: decay
     toughness: 1
     title: Sandstone Brick
@@ -2408,7 +2408,7 @@ items:
     code: 659
     material: stone
     ingredients: ['ground/limestone']
-    border-continuity: brick
+    border_continuity: brick
     mod: decay
     toughness: 1
     title: Limestone Brick
@@ -2419,11 +2419,11 @@ items:
     code: 337
     material: stone
     ingredients: ['ground/stone']
-    crafting quantity: 3
-    border-continuity: brick
+    crafting_quantity: 3
+    border_continuity: brick
     mod: decay
     toughness: 1
-    decay inventory: rubble/stone-pile-1
+    decay_inventory: rubble/stone-pile-1
     title: Gray Cobblestone Block
     border_shadow: true
     gui: ['noborder']
@@ -2432,12 +2432,12 @@ items:
     code: 338
     material: stone
     ingredients: ['ground/stone']
-    crafting quantity: 3
-    border-continuity: brick
-    border-continuity-color: 7e8e65
+    crafting_quantity: 3
+    border_continuity: brick
+    border_continuity_color: 7e8e65
     mod: decay
     toughness: 1
-    decay inventory: rubble/stone-pile-1
+    decay_inventory: rubble/stone-pile-1
     title: Tan Cobblestone Block
     border_shadow: true
     gui: ['noborder']
@@ -2446,9 +2446,9 @@ items:
     code: 616
     material: stone
     ingredients: ['ground/bloodstone-ore']
-    crafting quantity: 3
-    crafting skill: ['building', 3]
-    border-continuity: bloodstone
+    crafting_quantity: 3
+    crafting_skill: ['building', 3]
+    border_continuity: bloodstone
     mod: decay
     toughness: 2
     karma: -1
@@ -2457,7 +2457,7 @@ items:
     code: 639
     material: stone
     ingredients: [['ground/bloodstone-ore', 2]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     toughness: 2
     karma: -2
   building/marble:
@@ -2465,9 +2465,9 @@ items:
     code: 617
     material: stone
     ingredients: ['ground/marble-ore']
-    crafting skill: ['building', 3]
-    crafting quantity: 3
-    border-continuity: marble
+    crafting_skill: ['building', 3]
+    crafting_quantity: 3
+    border_continuity: marble
     mod: decay
     toughness: 2
     karma: -1
@@ -2476,7 +2476,7 @@ items:
     code: 618
     material: stone
     ingredients: [['ground/marble-ore', 2]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     toughness: 2
     karma: -2
 
@@ -2487,12 +2487,12 @@ items:
     tileable: true
     material: glass
     sprite: building/glass-all
-    sprite-continuity: building/glass
-    sprite-continuity-config: connectors-balloon
+    sprite_continuity: building/glass
+    sprite_continuity_config: connectors-balloon
     continuity_corners: horizontal
     shape: box
     ingredients: ['ground/quartz-ore']
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     title: Glass Block
     sprites:
       - frames: building/glass
@@ -2513,11 +2513,11 @@ items:
   building/crystal-blue:
     <<: *building-crystal
     code: 604
-    sprite-color: 6463ff
+    sprite_color: 6463ff
     light_color: 3433ff
     ingredients: [['ground/crystal-blue-1', 2], ['ground/quartz-ore', 3]]
-    crafting skill: ['building', 7]
-    crafting quantity: 2
+    crafting_skill: ['building', 7]
+    crafting_quantity: 2
     title: Blue Crystal Block
     sprites:
       - frames: building/crystal-whole
@@ -2526,11 +2526,11 @@ items:
   building/crystal-red:
     <<: *building-crystal
     code: 605
-    sprite-color: b75f60
+    sprite_color: b75f60
     light_color: b72f30
     ingredients: ['ground/crystal-blue-1', 'ground/crystal-red-1', ['ground/quartz-ore', 3]]
-    crafting skill: ['building', 8]
-    crafting quantity: 2
+    crafting_skill: ['building', 8]
+    crafting_quantity: 2
     title: Red Crystal Block
     sprites:
       - frames: building/crystal-whole
@@ -2539,11 +2539,11 @@ items:
   building/crystal-purple:
     <<: *building-crystal
     code: 606
-    sprite-color: 8e53a8
+    sprite_color: 8e53a8
     light_color: 5e2388
     ingredients: ['ground/crystal-blue-1', 'ground/crystal-purple-1', ['ground/quartz-ore', 3]]
-    crafting skill: ['building', 8]
-    crafting quantity: 2
+    crafting_skill: ['building', 8]
+    crafting_quantity: 2
     title: Purple Crystal Block
     sprites:
       - frames: building/crystal-whole
@@ -2555,7 +2555,7 @@ items:
     material: wood
     shelter: true
     shadow: true
-    decay inventory: rubble/wood-1
+    decay_inventory: rubble/wood-1
 
   building/roof:
     <<: *front-block
@@ -2579,7 +2579,7 @@ items:
     code: 622
     shape: polygonal
     ingredients: [['building/wood', 4], ['building/pitch', 2]]
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     karma: -1
     title: Large Roof Edge
 
@@ -2588,7 +2588,7 @@ items:
     <<: *roofing
     code: 623
     ingredients: ['building/wood', 'building/pitch']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     mod: decay
     title: Brown Roofing
 
@@ -2598,7 +2598,7 @@ items:
     code: 624
     shape: polygonal
     ingredients: ['building/wood', 'building/pitch']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     title: Small Brown Roof Edge
 
   building/roof-brown-edge-large:
@@ -2607,7 +2607,7 @@ items:
     code: 625
     shape: polygonal
     ingredients: [['building/wood', 4], ['building/pitch', 2]]
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     title: Large Brown Roof Edge
     karma: -1
 
@@ -2617,7 +2617,7 @@ items:
     code: 631
     mod: decay
     ingredients: ['ground/clay', 'building/pitch']
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     carryable: false
     title: Spanish Roofing
 
@@ -2626,7 +2626,7 @@ items:
     <<: *mirrorable
     code: 632
     shape: polygonal
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     ingredients: ['ground/clay', 'building/pitch']
     carryable: false
     title: Small Spanish Roof Edge
@@ -2637,7 +2637,7 @@ items:
     code: 633
     shape: polygonal
     ingredients: [['ground/clay', 3], ['building/pitch', 2]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     carryable: false
     title: Large Spanish Roof Edge
     karma: -1
@@ -2648,7 +2648,7 @@ items:
     code: 50
     mod: decay
     ingredients: ['building/brass', 'building/pitch']
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     title: Brass Roofing
 
   building/roof-brass-edge:
@@ -2657,7 +2657,7 @@ items:
     code: 51
     shape: polygonal
     shape_definition: building/roof-edge
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     ingredients: ['building/brass', 'building/pitch']
     title: Small Brass Roof Edge
 
@@ -2668,32 +2668,32 @@ items:
     shape: polygonal
     shape_definition: building/roof-edge-large
     ingredients: [['building/brass', 3], ['building/pitch', 2]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     title: Large Brass Roof Edge
     karma: -1
 
   building/weathervane:
     code: 626
     ingredients: [['building/iron', 2]]
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
 
   building/mailbox:
     code: 653
     ingredients: [['building/iron', 4]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
 
   building/balloon:
     code: 607
     tileable: true
     material: soft
     sprite: building/balloon-tan-all
-    sprite-continuity: building/balloon-tan
-    sprite-continuity-config: connectors-balloon
+    sprite_continuity: building/balloon-tan
+    sprite_continuity_config: connectors-balloon
     continuity_corners: horizontal
     shape: box
     solid: true
     ingredients: ['ground/flax', 'ground/resin']
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     group: balloon
     sprites:
       - frames: building/balloon-tan
@@ -2705,13 +2705,13 @@ items:
     tileable: true
     material: soft
     sprite: building/balloon-striped-all
-    sprite-continuity: building/balloon-striped
-    sprite-continuity-config: connectors-balloon-striped
+    sprite_continuity: building/balloon-striped
+    sprite_continuity_config: connectors-balloon-striped
     continuity_corners: horizontal
     shape: box
     solid: true
     ingredients: ['ground/flax', ['ground/resin', 2]]
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
     title: Striped Balloon
     group: balloon
     sprites:
@@ -2723,14 +2723,14 @@ items:
     code: 637
     title: Marble Pedestal
     ingredients: [['ground/marble-ore', 2]]
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
     karma: -3
 
   building/pedestal-bloodstone:
     code: 638
     title: Bloodstone Pedestal
     ingredients: [['ground/bloodstone-ore', 2]]
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
     karma: -3
 
   building/porcelain:
@@ -2738,7 +2738,7 @@ items:
     code: 630
     material: glass
     ingredients: [['ground/clay', 2]]
-    border-continuity: porcelain
+    border_continuity: porcelain
     mod: decay
     toughness: 1
 
@@ -2747,8 +2747,8 @@ items:
     toughness: 3
     material: soft
     ingredients: ['ground/flax']
-    crafting quantity: 2
-    crafting skill: ['building', 3]
+    crafting_quantity: 2
+    crafting_skill: ['building', 3]
     title: Rope Bridge Block
     shape: polygonal
   building/bridge-rope-end:
@@ -2757,14 +2757,14 @@ items:
     toughness: 2
     material: soft
     ingredients: [['ground/flax', 3]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     title: Rope Bridge End
   building/bridge-rope-railing:
     code: 505
     material: soft
     toughness: 2
     ingredients: ['ground/flax']
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     title: Rope Bridge Railing
   building/bridge-wood:
     <<: *mirrorable
@@ -2773,7 +2773,7 @@ items:
     toughness: 4
     shape: polygonal
     ingredients: [['building/wood', 10], ['building/iron', 4]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     title: Wood Bridge
     karma: -2
   building/bridge-wood-block:
@@ -2782,14 +2782,14 @@ items:
     toughness: 3
     material: wood
     ingredients: ['building/wood', 'building/iron']
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     title: Wood Bridge Block
   building/bridge-wood-railing:
     code: 682
     toughness: 2
     material: wood
     ingredients: ['building/wood']
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     title: Wood Railing
   building/bridge-stone:
     <<: *mirrorable
@@ -2798,7 +2798,7 @@ items:
     toughness: 5
     shape: polygonal
     ingredients: [['building/stone', 10], ['building/iron', 4]]
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
     title: Stone Bridge
     karma: -2
   building/bridge-stone-block:
@@ -2807,14 +2807,14 @@ items:
     toughness: 4
     material: stone
     ingredients: ['building/stone', 'building/iron']
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
     title: Stone Bridge Block
   building/bridge-stone-railing:
     code: 685
     toughness: 3
     material: stone
     ingredients: ['building/stone']
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
     title: Stone Railing
   building/bridge:
     <<: *mirrorable
@@ -2823,7 +2823,7 @@ items:
     toughness: 5
     shape: polygonal
     ingredients: [['building/iron', 10], ['building/stone', 4]]
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
     title: Metal Bridge
     karma: -2
   building/bridge-block:
@@ -2832,14 +2832,14 @@ items:
     toughness: 4
     material: metal
     ingredients: ['building/iron', 'building/stone']
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
     title: Metal Bridge Block
   building/fence-square:
     code: 636
     toughness: 3
     material: metal
     ingredients: ['building/iron']
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
     title: Metal Railing
 
 
@@ -2850,7 +2850,7 @@ items:
     toughness: 5
     material: metal
     #ingredients: ['building/iron']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     wiki: false
 
   # Decoration
@@ -2865,59 +2865,59 @@ items:
     <<: *building-gargoyle
     code: 640
     ingredients: [['building/stone', 2], 'tools/pickaxe-fine']
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     title: Front-Facing Falcon
   building/gargoyle-falcon-side:
     <<: *building-gargoyle
     <<: *mirrorable
     code: 641
     ingredients: [['building/stone', 2], 'tools/pickaxe-fine']
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     title: Side-Facing Falcon
   building/gargoyle-small-demon-front:
     <<: *building-gargoyle
     code: 642
     ingredients: [['building/stone', 2], 'tools/pickaxe-fine']
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
   building/gargoyle-small-demon-side:
     <<: *building-gargoyle
     <<: *mirrorable
     code: 643
     ingredients: [['building/stone', 2], 'tools/pickaxe-fine']
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
   building/gargoyle-wall-front:
     <<: *building-gargoyle
     code: 644
     ingredients: [['building/stone', 4], 'tools/pickaxe-fine']
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
   building/gargoyle-wall-side:
     <<: *building-gargoyle
     <<: *mirrorable
     code: 645
     ingredients: [['building/stone', 4], 'tools/pickaxe-fine']
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
   building/gargoyle-large-demon-front:
     <<: *building-gargoyle
     code: 646
     ingredients: [['building/stone', 8], ['tools/pickaxe-fine', 2]]
-    crafting skill: ['building', 7]
+    crafting_skill: ['building', 7]
   building/gargoyle-large-demon-side:
     <<: *building-gargoyle
     <<: *mirrorable
     code: 647
     ingredients: [['building/stone', 8], ['tools/pickaxe-fine', 2]]
-    crafting skill: ['building', 7]
+    crafting_skill: ['building', 7]
   building/statue-gothic-front:
     code: 648
     ingredients: [['building/stone', 4], 'tools/pickaxe-fine']
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
     title: Gothic Statue
     karma: -5
   building/statue-gothic-side:
     <<: *mirrorable
     code: 649
     ingredients: [['building/stone', 4], 'tools/pickaxe-fine']
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
     title: Gothic Statue
     karma: -5
 
@@ -3083,11 +3083,11 @@ items:
     code: 650
     material: metal
     ingredients: ['ground/copper-ore', 'ground/zinc-ore']
-    crafting quantity: 2
-    border-continuity: brass
+    crafting_quantity: 2
+    border_continuity: brass
     mod: decay
     toughness: 5
-    decay inventory: rubble/brass
+    decay_inventory: rubble/brass
     title: Brass Block
     sprites:
       - frames: building/brass
@@ -3101,12 +3101,12 @@ items:
     material: metal
     ingredients: ['building/brass', 'building/iron']
     sprite: building/brass
-    border-continuity: brass-reinforced
+    border_continuity: brass-reinforced
     title: Reinforced Brass Block
     mod: decay
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     toughness: 10
-    decay inventory: rubble/brass
+    decay_inventory: rubble/brass
     karma: -2
     sprites:
       - frames: building/brass
@@ -3119,7 +3119,7 @@ items:
     material: metal
     shape: polygonal
     ingredients: [['building/brass', 3], 'building/iron']
-    inventory sprite: building/door-brass-open
+    inventory_sprite: building/door-brass-open
     title: Brass Door
     hint: '@door'
     door: true
@@ -3129,7 +3129,7 @@ items:
       change:
         name: building/door-brass-open
         sprite: building/door-brass-open
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     toughness: 5
     karma: -1
   building/staircase:
@@ -3139,7 +3139,7 @@ items:
       climb: true
     material: metal
     ingredients: [['building/brass', 4], ['building/iron', 2]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     karma: -1
   building/ladder-brass:
     code: 656
@@ -3148,15 +3148,15 @@ items:
       climb: true
     title: Brass Ladder
     ingredients: ['building/brass']
-    crafting quantity: 2
-    crafting skill: ['building', 2]
+    crafting_quantity: 2
+    crafting_skill: ['building', 2]
     toughness: 3
   building/trapdoor-brass:
     code: 657
     material: metal
     shape: polygonal
     ingredients: ['building/brass', 'building/iron']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     title: Brass Trapdoor
     shelter: true
     door: true
@@ -3176,10 +3176,10 @@ items:
     code: 660
     material: metal
     ingredients: ['ground/iron-ore']
-    border-continuity: iron
+    border_continuity: iron
     mod: decay
     toughness: 5
-    decay inventory: rubble/iron
+    decay_inventory: rubble/iron
     title: Iron Block
     sprites:
       - frames: building/iron
@@ -3193,12 +3193,12 @@ items:
     sprite: building/iron
     material: metal
     ingredients: [['building/iron', 2]]
-    border-continuity: iron-reinforced
+    border_continuity: iron-reinforced
     title: Reinforced Iron Block
     mod: decay
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     toughness: 10
-    decay inventory: rubble/iron
+    decay_inventory: rubble/iron
     karma: -2
     sprites:
       - frames: building/iron
@@ -3210,13 +3210,13 @@ items:
     code: 661
     material: metal
     ingredients: ['building/iron']
-    crafting quantity: 4
+    crafting_quantity: 4
     toughness: 1
   building/post-iron:
     code: 662
     material: metal
     ingredients: ['building/iron']
-    crafting quantity: 3
+    crafting_quantity: 3
     title: Iron Post
     toughness: 1
   building/hanger:
@@ -3228,14 +3228,14 @@ items:
     code: 665
     material: metal
     ingredients: ['building/iron']
-    crafting quantity: 2
+    crafting_quantity: 2
     title: Iron Fence
     toughness: 1
   building/fence-iron-2:
     code: 669
     material: metal
     ingredients: ['building/iron']
-    crafting quantity: 2
+    crafting_quantity: 2
     title: Fancy Iron Fence
     toughness: 1
   building/fence-iron-tall-1:
@@ -3243,49 +3243,49 @@ items:
     material: metal
     title: Tall Iron Fence
     ingredients: ['building/iron']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     toughness: 1
   building/fence-iron-tall-2:
     code: 668
     material: metal
     title: Fancy Tall Iron Fence
     ingredients: ['building/iron']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     toughness: 1
   building/fence-wood-1:
     code: 671
     material: wood
     ingredients: ['building/wood']
-    crafting quantity: 2
+    crafting_quantity: 2
     title: Wood Fence
   building/fence-wood-2:
     code: 672
     material: wood
     ingredients: ['building/wood']
-    crafting quantity: 2
+    crafting_quantity: 2
     title: Fancy Wood Fence
   building/fence-wood-tall-1:
     code: 673
     material: wood
     ingredients: ['building/wood']
     title: Tall Wood Fence
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
   building/fence-wood-tall-2:
     code: 674
     material: wood
     ingredients: ['building/wood']
     title: Fancy Tall Wood Fence
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
 
   building/copper:
     <<: *front-block-metal
     code: 670
     material: metal
     ingredients: ['ground/copper-ore']
-    border-continuity: copper
+    border_continuity: copper
     mod: decay
     toughness: 5
-    decay inventory: rubble/copper
+    decay_inventory: rubble/copper
     title: Copper Block
     sprites:
       - frames: building/copper
@@ -3299,12 +3299,12 @@ items:
     material: metal
     ingredients: ['building/copper', 'building/iron']
     sprite: building/copper
-    border-continuity: copper-reinforced
+    border_continuity: copper-reinforced
     title: Reinforced Copper Block
     mod: decay
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     toughness: 10
-    decay inventory: rubble/copper
+    decay_inventory: rubble/copper
     karma: -2
     sprites:
       - frames: building/copper
@@ -3325,7 +3325,7 @@ items:
     material: wood
     karma: -2
     ingredients: [['building/wood', 3], ['ground/flax', 3], ['ground/feathers', 6], ['ground/resin', 2]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
 
   building/tinman:
     code: 677
@@ -3333,7 +3333,7 @@ items:
     toughness: 3
     karma: -2
     ingredients: [['building/iron', 4], ['ground/resin', 5], ['building/pitch', 2]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
 
 
 
@@ -3409,7 +3409,7 @@ items:
     material: metal
     sprite: signs/iron-small
     ingredients: [['building/iron', 3], 'building/pitch']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     toughness: 2
     title: Small Iron Sign
     sprites:
@@ -3422,7 +3422,7 @@ items:
     material: metal
     sprite: signs/copper-small
     ingredients: [['building/copper', 3], 'building/pitch']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     toughness: 2
     title: Small Copper Sign
     sprites:
@@ -3435,7 +3435,7 @@ items:
     material: metal
     sprite: signs/brass-small
     ingredients: [['building/brass', 3], 'building/pitch']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     toughness: 2
     title: Small Brass Sign
     sprites:
@@ -3448,7 +3448,7 @@ items:
     material: wood
     sprite: signs/wood-large
     ingredients: [['building/wood', 6], ['building/pitch', 2]]
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     title: Large Wood Sign
     sprites:
       - frames: signs/wood-large
@@ -3460,7 +3460,7 @@ items:
     material: metal
     sprite: signs/iron-large
     ingredients: [['building/iron', 6], ['building/pitch', 2]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     toughness: 2
     title: Large Iron Sign
     sprites:
@@ -3473,7 +3473,7 @@ items:
     material: metal
     sprite: signs/copper-large
     ingredients: [['building/copper', 6], ['building/pitch', 2]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     toughness: 2
     title: Large Copper Sign
     sprites:
@@ -3486,7 +3486,7 @@ items:
     material: metal
     sprite: signs/brass-large
     ingredients: [['building/brass', 6], ['building/pitch', 2]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     toughness: 2
     title: Large Brass Sign
     sprites:
@@ -3533,7 +3533,7 @@ items:
     code: 914
     hint: 'Plaques are signs that designate a landmark, which allows them to appear on the world map.'
     ingredients: [['building/brass', 4], ['building/marble', 8]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     color: ffffff
     karma: -5
     use:
@@ -3554,7 +3554,7 @@ items:
     place_constraints:
       percent_explored: 0.75
     ingredients: [['building/brass', 8], ['building/marble', 4], 'ground/crystal-purple-1']
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
     title: Landmark Plaque
     inventory: ''
     mod_inventory: [1, 'rubble/brass']
@@ -3622,7 +3622,7 @@ items:
       - frames: signs/plaque-ruby
         z: -0.10
 
-  signs/mechanical: &sign-large
+  signs/mechanical:
     code: 919
     meta: local
     title: Mechanical Sign
@@ -3630,7 +3630,7 @@ items:
     material: metal
     color: a28219
     ingredients: [['building/iron', 6], ['building/brass', 6], ['ground/quartz-ore', 6], 'ground/crystal-blue-1']
-    crafting skill: ['engineering', 7]
+    crafting_skill: ['engineering', 7]
     use:
       sign: true
       switched: MessageSign
@@ -3675,7 +3675,7 @@ items:
     meta: global
     title: Guild Obelisk
     sprite: signs/obelisk-mega
-    special placement: crest
+    special_placement: crest
     field: 30
     karma: -20
     custom_place: true
@@ -3799,7 +3799,7 @@ items:
     meta: global
     custom_mine: true
     ingredients: [['building/iron', 20], ['ground/quartz-ore', 20], 'ground/crystal-purple-1']
-    crafting skill: ['combat', 5]
+    crafting_skill: ['combat', 5]
 
   signs/obelisk-old:
     code: 932
@@ -4022,7 +4022,7 @@ items:
     group: gravestone
     sprite: ['rubble/gravestone', 4]
     ingredients: ['building/stone']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
 
   rubble/hell-gravestone:
     code: 961
@@ -4273,7 +4273,7 @@ items:
   vegetation/growable-tree: &growable-tree
     <<: *pottable-tree
     inventory: ''
-    place mod: 10
+    place_mod: 10
     gui: ['last mod']
 
   vegetation/pine-tree:
@@ -4289,7 +4289,7 @@ items:
     size: [1, 2]
     gui: ['last mod']
     ingredients: ['vegetation/pine-tree', ['holiday/christmas-lights-white', 2]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     title: Festive Pine Tree
     use:
       create dialog:
@@ -4323,7 +4323,7 @@ items:
     mod: tiling
     background: ground/earth
     continuity: ground/earth
-    border-continuity-external: ['masks/border-external', 12]
+    border_continuity_external: ['masks/border-external', 12]
     border_continuity_color: 1a0e00
     inventory: building/wood
     material: wood
@@ -4560,7 +4560,7 @@ items:
     inventory: ''
     adjacent_change: [[0, 1], '!', 'planter', 'vegetation/shrub-dead', 5]
     mod: sprite
-    place mod: 5
+    place_mod: 5
     gui: ['last mod']
     mining_bonus:
       chance: 0.125
@@ -4674,7 +4674,7 @@ items:
 
   vegetation/flower-fancy: &vegetation-flower-fancy
     <<: *vegetation-flower
-    place mod: 8
+    place_mod: 8
     center: true
     size: [1, 2]
     mining_bonus:
@@ -4688,7 +4688,7 @@ items:
     <<: *vegetation-flower-bulb
     code: 202
     title: Bird of Paradise Bulb
-    placing skill: ['horticulture', 5]
+    placing_skill: ['horticulture', 5]
   vegetation/flower-bird-of-paradise:
     <<: *vegetation-flower-fancy
     code: 203
@@ -4699,7 +4699,7 @@ items:
     <<: *vegetation-flower-bulb
     code: 204
     title: Cactus Flower Bulb
-    placing skill: ['horticulture', 4]
+    placing_skill: ['horticulture', 4]
   vegetation/flower-cactus:
     <<: *vegetation-flower-fancy
     code: 205
@@ -4710,7 +4710,7 @@ items:
     <<: *vegetation-flower-bulb
     code: 206
     title: Echinacea Bulb
-    placing skill: ['horticulture', 2]
+    placing_skill: ['horticulture', 2]
   vegetation/flower-echinacea:
     <<: *vegetation-flower-fancy
     code: 207
@@ -4721,7 +4721,7 @@ items:
     <<: *vegetation-flower-bulb
     code: 208
     title: Sunflower Bulb
-    placing skill: ['horticulture', 3]
+    placing_skill: ['horticulture', 3]
   vegetation/flower-sunflower:
     <<: *vegetation-flower-fancy
     code: 209
@@ -4732,7 +4732,7 @@ items:
     <<: *vegetation-flower-bulb
     code: 210
     title: Trumpet Flower Bulb
-    placing skill: ['horticulture', 6]
+    placing_skill: ['horticulture', 6]
   vegetation/flower-trumpets:
     <<: *vegetation-flower-fancy
     code: 211
@@ -4743,7 +4743,7 @@ items:
     <<: *vegetation-flower-bulb
     code: 212
     title: Bonsai Tree Bulb
-    placing skill: ['horticulture', 10]
+    placing_skill: ['horticulture', 10]
   vegetation/tree-bonsai:
     <<: *vegetation-flower-fancy
     code: 213
@@ -4754,7 +4754,7 @@ items:
     <<: *vegetation-flower-bulb
     code: 214
     title: Ghost Tree Bulb
-    placing skill: ['horticulture', 8]
+    placing_skill: ['horticulture', 8]
   vegetation/tree-hellish:
     <<: *vegetation-flower-fancy
     code: 215
@@ -4767,7 +4767,7 @@ items:
   vegetation/pumpkin-seeds:
     <<: *vegetation-flower-bulb
     code: 415
-    inventory sprite: vegetation/pumpkin-seeds
+    inventory_sprite: vegetation/pumpkin-seeds
     sprite: vegetation/pumpkin-roots
     title: Pumpkin Seed
 
@@ -4796,7 +4796,7 @@ items:
     <<: *jack-o-lantern
     code: 418
     sprite: ['vegetation/pumpkin-lantern', 4]
-    crafting skill: ['agility', 3]
+    crafting_skill: ['agility', 3]
     ingredients: ['vegetation/pumpkin', 'tools/hatchet']
     title: Jack-O-Lantern
 
@@ -4804,7 +4804,7 @@ items:
     <<: *jack-o-lantern
     code: 419
     sprite: ['vegetation/pumpkin-lantern-lit', 4]
-    crafting skill: ['agility', 4]
+    crafting_skill: ['agility', 4]
     ingredients: ['vegetation/jack-o-lantern', 'lighting/candle']
     light: 1
     light_color: ffcc22
@@ -4829,39 +4829,39 @@ items:
     code: 1100
     color: f5f5e5
     background: lighting/lantern
-    sprite animation: ['lighting/lantern-flame', 2]
+    sprite_animation: ['lighting/lantern-flame', 2]
     material: metal
     light: 5
     mounted: true
     ingredients: ['back/glass', 'building/pitch']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     karma: -1
   lighting/floorlamp:
     code: 1101
     color: eeeeee
     material: metal
     light: 5
-    light position: [0, -2]
+    light_position: [0, -2]
     ingredients: ['building/brass', 'back/glass', 'building/pitch']
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     karma: -1
   lighting/streetlight:
     code: 1102
     color: eeeeee
     material: metal
     light: 7
-    light position: [0, -3]
+    light_position: [0, -3]
     ingredients: [['building/iron', 3], 'back/glass', 'building/pitch']
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     karma: -1
   lighting/streetlight-triple:
     code: 248
     color: eeeeee
     material: metal
     light: 7
-    light position: [0, -3]
+    light_position: [0, -3]
     ingredients: [['building/iron', 6], ['back/glass', 3], ['building/pitch', 3]]
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
     karma: -1
     title: Fancy Streetlight
   lighting/candle:
@@ -4869,7 +4869,7 @@ items:
     color: eeeedd
     material: metal
     background: lighting/candle
-    sprite animation: ['lighting/candle-flames', 2]
+    sprite_animation: ['lighting/candle-flames', 2]
     light: 4
     mounted: true
     ingredients: ['ground/flax', 'ground/resin']
@@ -4878,12 +4878,12 @@ items:
     color: eeeedd
     material: metal
     background: lighting/candlelabra
-    sprite animation: ['lighting/candlelabra-flames', 2]
+    sprite_animation: ['lighting/candlelabra-flames', 2]
     light: 5
-    light position: [0.5, 0]
+    light_position: [0.5, 0]
     mounted: true
     ingredients: [['ground/flax', 2], 'ground/resin', 'building/brass']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     karma: -1
     title: Candelabra
   lighting/chandelier:
@@ -4891,44 +4891,44 @@ items:
     color: eeeedd
     material: metal
     background: lighting/chandelier
-    sprite animation: ['lighting/chandelier-flames', 2]
+    sprite_animation: ['lighting/chandelier-flames', 2]
     light: 6
-    light position: [1.5, 0.5]
+    light_position: [1.5, 0.5]
     mounted: true
     ingredients: [['ground/flax', 4], 'ground/resin', ['building/brass', 3]]
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
     karma: -2
   lighting/industrial:
     code: 1105
     color: eeeeff
     material: metal
     background: lighting/industrial
-    sprite animation: ['lighting/industrial-flames', 2]
+    sprite_animation: ['lighting/industrial-flames', 2]
     light: 8
     title: Industrial Light
     mounted: true
     ingredients: ['building/brass', 'building/iron', 'back/glass', 'ground/crystal-blue-1']
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
     karma: -1
   lighting/industrial-cord:
     code: 1106
     material: metal
     title: Light Cord
     ingredients: ['building/brass', 'building/iron']
-    crafting quantity: 3
-    crafting skill: ['building', 3]
+    crafting_quantity: 3
+    crafting_skill: ['building', 3]
   lighting/grow-lamp:
     code: 1107
     color: eeeeff
     material: metal
     background: lighting/grow-lamp
-    sprite animation: ['lighting/grow-lamp-glow', 2]
+    sprite_animation: ['lighting/grow-lamp-glow', 2]
     light: 6
     light_color: ffaaff
     title: Grow Lamp
     mounted: true
     #ingredients: [['building/brass', 2], ['building/iron', 2], ['back/glass', 2], 'ground/crystal-purple-1']
-    #crafting skill: ['engineering', 5]
+    #crafting_skill: ['engineering', 5]
     karma: -10
   lighting/fancy-lamp-1:
     code: 240
@@ -4981,7 +4981,7 @@ items:
     title: Paper Lamp
     mod: sprite
     ingredients: [['back/paper', 5], 'lighting/candle', 'ground/resin']
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
     sprite: ['lighting/paper', 4]
     light: 3
     use:
@@ -5033,13 +5033,13 @@ items:
     code: 758
     material: wood
     ingredients: ['building/wood']
-    crafting quantity: 3
+    crafting_quantity: 3
   furniture/shelf-end:
     <<: *mirrorable
     code: 759
     material: wood
     ingredients: ['building/wood']
-    crafting quantity: 2
+    crafting_quantity: 2
 
   furniture/bookshelf-tall:
     code: 770
@@ -5061,7 +5061,7 @@ items:
     material: soft
     title: Plush Chair
     ingredients: [['building/wood', 2], ['ground/feathers', 4], 'ground/flax']
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     karma: -2
   furniture/chair-a:
     code: 700
@@ -5073,7 +5073,7 @@ items:
     material: wood
     title: Tall Chair
     ingredients: [['building/wood', 3], 'ground/resin']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
   furniture/chair-a-side:
     <<: *mirrorable
     code: 702
@@ -5086,7 +5086,7 @@ items:
     material: wood
     title: Tall Side Chair
     ingredients: [['building/wood', 3], 'ground/resin']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
   furniture/chair-fine:
     code: 704
     material: wood
@@ -5094,7 +5094,7 @@ items:
     mod: sprite
     gui: ['nosprite']
     ingredients: [['building/wood', 2], ['ground/feathers', 2], 'ground/flax', 'ground/resin']
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     background: furniture/chair-fine
     sprite: ['furniture/chair-fine', 3]
     karma: -2
@@ -5114,7 +5114,7 @@ items:
     mod: sprite
     gui: ['nosprite']
     ingredients: [['building/wood', 4], ['ground/feathers', 4], ['ground/flax', 2], ['ground/resin', 2]]
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
     background: furniture/fainting
     sprite: ['furniture/fainting', 3]
     karma: -3
@@ -5134,7 +5134,7 @@ items:
     mod: sprite
     gui: ['nosprite']
     ingredients: [['building/wood', 6], ['ground/feathers', 6], ['ground/flax', 3], ['ground/resin', 2]]
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
     background: furniture/davenport
     sprite: ['furniture/davenport', 3]
     karma: -3
@@ -5152,7 +5152,7 @@ items:
     code: 39
     material: wood
     ingredients: [['building/wood', 8], ['building/iron', 3]]
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
 
   furniture/table:
     code: 774
@@ -5182,7 +5182,7 @@ items:
   furniture/scale:
     code: 784
     ingredients: ['building/wood-decorative', ['building/brass', 2], 'building/iron']
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     karma: -2
     use:
       inventory: true
@@ -5202,19 +5202,19 @@ items:
   #   code: 777
   #   material: ceramic
   #   ingredients: [['building/porcelain', 4], 'building/brass', 'building/iron']
-  #   crafting skill: ['building', 2]
+  #   crafting_skill: ['building', 2]
   #   karma: -2
   #   use:
   #     change:
   #       name: furniture/bathtub-bubbling
   #       background: furniture/bathtub
-  #       sprite animation: ['furniture/bathtub-bubbles', 3]
+  #       sprite_animation: ['furniture/bathtub-bubbles', 3]
   #       emitter: ''
   furniture/bathtub:
     code: 777
     material: ceramic
     ingredients: [['building/porcelain', 4], 'building/brass', 'building/iron']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     karma: -2
     use:
       change:
@@ -5226,23 +5226,23 @@ items:
     code: 778
     material: ceramic
     ingredients: [['building/porcelain', 2], 'building/brass']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     karma: -2
   furniture/toilet:
     <<: *mirrorable
     code: 779
     material: ceramic
     ingredients: [['building/porcelain', 2], 'building/brass', 'building/iron']
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     karma: -2
   furniture/bidet:
     <<: *mirrorable
     code: 698
     material: ceramic
     ingredients: ['building/porcelain', 'building/brass', 'building/iron']
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     background: furniture/bidet
-    sprite animation: ['furniture/bidet-water', 3]
+    sprite_animation: ['furniture/bidet-water', 3]
     karma: -2
   furniture/wastebasket:
     code: 789
@@ -5270,7 +5270,7 @@ items:
     code: 791
     material: wood
     ingredients: [['building/wood', 3], ['ground/feathers', 4], ['ground/flax', 2]]
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     karma: -2
   furniture/bed-covered:
     <<: *mirrorable
@@ -5279,7 +5279,7 @@ items:
     background: furniture/bed
     sprite: furniture/bed-curtains
     ingredients: [['building/wood-decorative', 3], ['ground/feathers', 8], ['ground/flax', 2]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     title: Canopy Bed
     karma: -3
   furniture/cabinet:
@@ -5307,21 +5307,21 @@ items:
     material: wood
     karma: -2
     ingredients: [['building/wood-decorative', 2], 'building/iron']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
   furniture/wine-rack-large:
     code: 839
     material: wood
     title: Large Wine Rack
     karma: -3
     ingredients: [['building/wood-decorative', 4], ['building/iron', 2]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
   furniture/fountain:
     code: 224
     material: brass
     ingredients: [['building/brass', 20], ['building/porcelain', 6], ['ground/beryllium-ore', 4]]
-    crafting skill: ['building', 9]
+    crafting_skill: ['building', 9]
     background: furniture/fountain
-    sprite animation: ['furniture/fountain-water', 3]
+    sprite_animation: ['furniture/fountain-water', 3]
 
   furniture/fiery: &furniture-fiery
     mod: change
@@ -5338,14 +5338,14 @@ items:
     code: 794
     material: wood
     ingredients: [['building/wood', 3], 'building/pitch']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     background: furniture/fireplace
     sprite: furniture/fireplace-dark
     title: Small Fireplace
     change:
       - name: furniture/fireplace-active
         inherit: true
-        sprite animation: ['furniture/fireplace-flame', 3]
+        sprite_animation: ['furniture/fireplace-flame', 3]
         sound_loop: fire_woodstove01_15
         light: 6
   furniture/fireplace-large:
@@ -5353,14 +5353,14 @@ items:
     code: 795
     material: wood
     ingredients: [['building/wood', 6], ['building/pitch', 2]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     background: furniture/fireplace-large
     sprite: furniture/fireplace-large-dark
     title: Large Fireplace
     change:
       - name: furniture/fireplace-large-active
         inherit: true
-        sprite animation: ['furniture/fireplace-large-flame', 3]
+        sprite_animation: ['furniture/fireplace-large-flame', 3]
         sound_loop: fire_woodstove01_15
         light: 8
   furniture/brazier:
@@ -5368,30 +5368,30 @@ items:
     code: 796
     material: metal
     ingredients: [['building/iron', 2], 'building/copper', ['building/pitch', 2]]
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     background: furniture/brazier
     sprite: ''
     change:
       - name: furniture/brazier-active
         inherit: true
-        sprite animation: ['furniture/brazier-flame', 3]
+        sprite_animation: ['furniture/brazier-flame', 3]
         sound_loop: fire_woodstove01_15
         light: 5
 
   furniture/grandfather-clock:
     code: 760
-    #special placement: clock
+    #special_placement: clock
     ingredients: [['building/wood', 6], ['building/brass', 3], ['ground/quartz-ore', 5], ['mechanical/friend-parts-gear', 3], 'back/glass', 'ground/crystal-blue-1']
-    crafting skill: ['building', 7]
+    crafting_skill: ['building', 7]
     karma: -3
 
   furniture/clock-giant:
     code: 761
     background: furniture/clock-giant-back
-    special placement: clock
+    special_placement: clock
     title: Giant Clock
     karma: -20
-    crafting skill: ['building', 10]
+    crafting_skill: ['building', 10]
     ingredients: [['building/brass', 50], ['building/iron', 50], ['ground/quartz-ore', 25], ['mechanical/friend-parts-gear', 25], ['back/glass', 10], 'ground/crystal-purple-1']
 
   furniture/art: &furniture-art
@@ -5513,7 +5513,7 @@ items:
   furniture/painting: &furniture-painting
     <<: *furniture-art
     mounted: true
-    special placement: framed
+    special_placement: framed
     sprites:
       - frames: furniture/painting-frame
         z: -0.1
@@ -5532,10 +5532,10 @@ items:
   furniture/painting-landscape:
     <<: *furniture-painting
     code: 797
-    special placement: framed
+    special_placement: framed
     background: ['furniture/painting-back', 5]
     sprite: ['furniture/painting-building', 5]
-    sprites+:
+    sprites_plus:
       - frames: ['furniture/painting-back', 5]
         type: random
         gui: true
@@ -5548,91 +5548,91 @@ items:
     <<: *furniture-painting
     code: 785
     title: Une Pipe
-    sprites+:
+    sprites_plus:
       - frames: furniture/painting-une-pipe
         gui: true
   furniture/painting-digdug:
     <<: *furniture-painting
     code: 786
     title: Dig Dug
-    sprites+:
+    sprites_plus:
       - frames: furniture/painting-digdug
         gui: true
   furniture/painting-notch:
     <<: *furniture-painting
     code: 787
     title: Notch
-    sprites+:
+    sprites_plus:
       - frames: furniture/painting-notch
         gui: true
   furniture/painting-smasheroid:
     <<: *furniture-painting
     code: 788
     title: Smasheroid
-    sprites+:
+    sprites_plus:
       - frames: furniture/painting-smasheroid
         gui: true
   furniture/painting-surfer:
     <<: *furniture-painting
     code: 765
     title: Stunt Surfer
-    sprites+:
+    sprites_plus:
       - frames: furniture/painting-surfer
         gui: true
   furniture/painting-alpaca:
     <<: *furniture-painting
     code: 766
     title: Alpaca
-    sprites+:
+    sprites_plus:
       - frames: furniture/painting-alpaca
         gui: true
   furniture/painting-son-of-man:
     <<: *furniture-painting
     code: 756
     title: Son of Man
-    sprites+:
+    sprites_plus:
       - frames: furniture/painting-son-of-man
         gui: true
   furniture/painting-outling:
     <<: *furniture-painting
     code: 757
     title: Outling
-    sprites+:
+    sprites_plus:
       - frames: furniture/painting-outling
         gui: true
   furniture/painting-northerners:
     <<: *furniture-painting
     code: 762
     title: Northerners
-    sprites+:
+    sprites_plus:
       - frames: furniture/painting-northerners
         gui: true
   furniture/painting-leapquest:
     <<: *furniture-painting
     code: 835
     title: Leap Quest
-    sprites+:
+    sprites_plus:
       - frames: furniture/painting-leapquest
         gui: true
   furniture/painting-gashlycrumb:
     <<: *furniture-painting
     code: 699
     title: Gashlycrumb
-    sprites+:
+    sprites_plus:
       - frames: furniture/painting-gashlycrumb
         gui: true
   furniture/painting-autumn:
     <<: *furniture-painting
     code: 218
     title: Autumn
-    sprites+:
+    sprites_plus:
       - frames: furniture/painting-autumn
         gui: true
   furniture/painting-mayflower:
     <<: *furniture-painting
     code: 219
     title: Mayflower
-    sprites+:
+    sprites_plus:
       - frames: furniture/painting-mayflower
         gui: true
 
@@ -5722,9 +5722,9 @@ items:
     code: 754
     material: metal
     background: furniture/daguerreotype-frame-small
-    inventory sprite: furniture/daguerreotype-frame-small
+    inventory_sprite: furniture/daguerreotype-frame-small
     sprite: ''
-    special placement: unique
+    special_placement: unique
     title: Daguerreotype
     sprites:
       - frames: furniture/daguerreotype-frame-small
@@ -5738,8 +5738,8 @@ items:
     material: metal
     background: furniture/daguerreotype-frame-large
     sprite: ''
-    inventory sprite: furniture/daguerreotype-frame-large
-    special placement: unique
+    inventory_sprite: furniture/daguerreotype-frame-large
+    special_placement: unique
     title: Large Daguerreotype
     sprites:
       - frames: furniture/daguerreotype-frame-large
@@ -5764,7 +5764,7 @@ items:
     code: 906
     group: cage
     ingredients: [['building/iron', 2]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
 
   containers/cage-pet:
     code: 907
@@ -5873,7 +5873,7 @@ items:
     code: 802
     material: wood
     ingredients: [['building/wood', 2], ['building/iron', 2], 'building/brass', 'ground/flax']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     title: Large Chest
     use:
       command: true
@@ -5975,7 +5975,7 @@ items:
     loot: ['treasure', 'armaments+']
     loot_graphic: loot_mech
     loot_xp: 25
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
     karma: -3
     report: true
     group: chest
@@ -5996,7 +5996,7 @@ items:
     loot: ['treasure+', 'armaments+']
     loot_graphic: loot_mech
     loot_xp: 25
-    crafting skill: ['engineering', 4]
+    crafting_skill: ['engineering', 4]
     karma: -3
     report: true
     group: chest
@@ -6024,9 +6024,9 @@ items:
     material: wood
     meta: local
     title: Mixing Barrel
-    special placement: unique
+    special_placement: unique
     ingredients: ['containers/barrel', 'building/wood-decorative', 'back/glass', 'building/iron', ['ground/resin', 4]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     karma: -2
     group: barrel
 
@@ -6157,7 +6157,7 @@ items:
     <<: *flower-pot
     code: 825
     ingredients: [['building/brass', 2], 'building/iron']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     title: Brass Flower Pot
 
   containers/flower-pot-clay:
@@ -6172,7 +6172,7 @@ items:
     <<: *flower-pot
     code: 827
     ingredients: [['back/glass', 4]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     use:
       planter: true
     title: Glass Flower Pot
@@ -6181,7 +6181,7 @@ items:
     <<: *flower-pot
     code: 828
     ingredients: [['building/porcelain', 2], 'building/brass']
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     use:
       planter: true
     title: Porcelain Flower Pot
@@ -6288,7 +6288,7 @@ items:
     background: ['containers/wine-bottle', 4]
     sprite: ['containers/wine-label', 4]
     ingredients: ['back/glass', 'back/paper']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
 
 
   # ===== Automata ===== #
@@ -6304,39 +6304,39 @@ items:
   mechanical/butler-brass:
     <<: *butler-item
     code: 820
-    inventory sprite: entities/automata/butlerbot-head
+    inventory_sprite: entities/automata/butlerbot-head
     place_entity: automata/butler-brass
     place_entity_sprite: automata/butlerbot-head
     title: Brass Butler Bot
     karma: -5
     ingredients: [['building/brass-reinforced', 20], ['ground/quartz-ore', 10], ['ground/crystal-purple-1', 2], 'accessories/schematic']
-    crafting skill: ['automata', 4]
-    placing skill: ['automata', 3]
+    crafting_skill: ['automata', 4]
+    placing_skill: ['automata', 3]
 
   mechanical/butler-diamond:
     <<: *butler-item
     code: 821
-    inventory sprite: entities/automata/butlerbot-head-diamond
+    inventory_sprite: entities/automata/butlerbot-head-diamond
     place_entity: automata/butler-diamond
     place_entity_sprite: automata/butlerbot-head-diamond
     title: Diamond Butler Bot
     karma: -10
     ingredients: [['building/brass-reinforced', 10], ['ground/quartz-ore', 20], ['ground/crystal-purple-1', 2], ['ground/diamond-ore', 5], 'accessories/schematic']
-    crafting skill: ['automata', 6]
-    placing skill: ['automata', 4]
+    crafting_skill: ['automata', 6]
+    placing_skill: ['automata', 4]
     rarity: 3
 
   mechanical/butler-onyx:
     <<: *butler-item
     code: 822
-    inventory sprite: entities/automata/butlerbot-head-onyx
+    inventory_sprite: entities/automata/butlerbot-head-onyx
     place_entity: automata/butler-onyx
     place_entity_sprite: automata/butlerbot-head-onyx
     title: Onyx Butler Bot
     karma: -15
     ingredients: [['building/brass-reinforced', 10], ['ground/quartz-ore', 30], ['ground/crystal-purple-1', 2], ['ground/onyx', 4], 'accessories/schematic']
-    crafting skill: ['automata', 8]
-    placing skill: ['automata', 5]
+    crafting_skill: ['automata', 8]
+    placing_skill: ['automata', 5]
     rarity: 3
 
 
@@ -6351,7 +6351,7 @@ items:
     <<: *music
     code: 830
     ingredients: [['building/wood-decorative', 2], 'building/brass', 'ground/quartz-ore']
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
     change:
       - name: music/phonograph-static
         inherit: true
@@ -6361,7 +6361,7 @@ items:
     <<: *music
     code: 831
     background: music/music-box-base
-    sprite animation: ['music/music-box-ballerina', 4]
+    sprite_animation: ['music/music-box-ballerina', 4]
     use:
       change:
         <<: *music
@@ -6369,13 +6369,13 @@ items:
         background: music/music-box-base
         emitter: ''
     ingredients: [['building/wood-decorative', 2], 'building/brass', 'ground/quartz-ore']
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
 
   music/piano:
     <<: *music
     code: 832
     ingredients: [['building/wood-decorative', 8], 'building/brass', ['building/porcelain', 3]]
-    crafting skill: ['building', 7]
+    crafting_skill: ['building', 7]
 
   music/bass-drum:
     <<: *music
@@ -6416,7 +6416,7 @@ items:
     toughness: 5
     karma: -3
     ingredients: [['building/brass', 2], 'building/iron', 'ground/quartz-ore']
-    crafting skill: ['engineering', 2]
+    crafting_skill: ['engineering', 2]
     title: Mechanical Door
     use:
       switched: true
@@ -6470,7 +6470,7 @@ items:
     toughness: 5
     karma: -3
     ingredients: ['building/brass', 'building/iron', 'ground/quartz-ore']
-    crafting skill: ['engineering', 2]
+    crafting_skill: ['engineering', 2]
     title: Mechanical Trapdoor
     use:
       switched: true
@@ -6524,7 +6524,7 @@ items:
     toughness: 5
     karma: -4
     ingredients: [['building/brass', 2], 'building/iron', 'ground/quartz-ore']
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
     title: Large Mechanical Trapdoor
     use:
       switched: true
@@ -6580,7 +6580,7 @@ items:
     toughness: 10
     karma: -4
     ingredients: [['building/brass', 6], ['building/iron', 12], ['ground/quartz-ore', 6]]
-    crafting skill: ['engineering', 6]
+    crafting_skill: ['engineering', 6]
     title: Fancy Mechanical Door
     use:
       switched: true
@@ -6621,7 +6621,7 @@ items:
     meta: hidden
     karma: -2
     ingredients: ['building/brass', 'building/iron', ['ground/quartz-ore', 3]]
-    crafting skill: ['engineering', 2]
+    crafting_skill: ['engineering', 2]
     use:
       command: true
       switch: true
@@ -6681,11 +6681,11 @@ items:
     material: metal
     background: mechanical/switch-off
     sprite: mechanical/switch-timer-off
-    inventory sprite: mechanical/switch-timer-on
+    inventory_sprite: mechanical/switch-timer-on
     hint: '@mechanical-switch'
     meta: hidden
     ingredients: ['building/brass', 'building/iron', ['ground/quartz-ore', 6]]
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
     title: Timed Switch
     karma: -3
     use:
@@ -6721,7 +6721,7 @@ items:
     title: Large Switch
     karma: -4
     ingredients: [['building/brass', 2], ['building/iron', 2], ['ground/quartz-ore', 4], 'ground/crystal-blue-1']
-    crafting skill: ['engineering', 4]
+    crafting_skill: ['engineering', 4]
     use:
       command: true
       switch: true
@@ -6787,7 +6787,7 @@ items:
     meta: hidden
     karma: -4
     ingredients: [['building/brass', 2], ['building/iron', 2], ['ground/quartz-ore', 8], 'ground/crystal-blue-1']
-    crafting skill: ['engineering', 5]
+    crafting_skill: ['engineering', 5]
     use:
       command: true
       switch: true
@@ -6822,7 +6822,7 @@ items:
     title: Reset Switch
     karma: -10
     ingredients: [['building/brass', 6], ['building/iron', 4], ['ground/quartz-ore', 12], 'ground/crystal-purple-1']
-    crafting skill: ['engineering', 10]
+    crafting_skill: ['engineering', 10]
     membership: true
     use:
       command: true
@@ -6858,7 +6858,7 @@ items:
     hint: '@touchplate'
     meta: hidden
     ingredients: ['building/brass', 'building/iron', ['ground/quartz-ore', 3]]
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
     karma: -2
     use:
       trigger: true
@@ -6905,7 +6905,7 @@ items:
     hint: '@touchplate'
     meta: hidden
     ingredients: ['building/brass', 'building/iron', ['ground/quartz-ore', 3], 'ground/marble-ore', 'ground/bloodstone-ore']
-    crafting skill: ['engineering', 4]
+    crafting_skill: ['engineering', 4]
     karma: -2
     use:
       trigger: true
@@ -6983,7 +6983,7 @@ items:
     meta: hidden
     title: Fancy Touchplate
     ingredients: ['building/brass', 'building/iron', ['ground/quartz-ore', 4], 'ground/beryllium-ore', 'ground/crystal-blue-1']
-    crafting skill: ['engineering', 4]
+    crafting_skill: ['engineering', 4]
     karma: -4
     use:
       trigger: true
@@ -7034,7 +7034,7 @@ items:
     meta: hidden
     title: Fancy Timed Touchplate
     ingredients: ['building/brass', 'building/iron', ['ground/quartz-ore', 8], 'ground/beryllium-ore', 'ground/crystal-blue-1']
-    crafting skill: ['engineering', 5]
+    crafting_skill: ['engineering', 5]
     karma: -4
     use:
       trigger: true
@@ -7195,9 +7195,9 @@ items:
     meta: hidden
     code: 853
     group: collector
-    placing skill: ['engineering', 2]
+    placing_skill: ['engineering', 2]
     ingredients: [['building/brass', 12], ['building/iron', 4], ['ground/quartz-ore', 3], 'ground/crystal-blue-1']
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
     change:
       - name: mechanical/collector-active
         inherit: true
@@ -7208,12 +7208,12 @@ items:
     material: metal
     mod: change
     ingredients: [['building/brass', 15], ['building/iron', 15], ['ground/beryllium-ore', 5], ['ground/crystal-blue-1', 2], 'mechanical/mini-tesla']
-    crafting skill: ['science', 5]
+    crafting_skill: ['science', 5]
     crafting_helper: true
     change:
       - name: mechanical/tesla-coil-active
         background: mechanical/tesla-coil
-        sprite animation: ['mechanical/tesla-coil-electric', 3]
+        sprite_animation: ['mechanical/tesla-coil-electric', 3]
         light: 3
         light_color: ff88ff
         sound_loop: forboding
@@ -7224,7 +7224,7 @@ items:
     power: 30
     spawn_spacing: 30
     ingredients: [['building/brass', 12], ['building/iron', 12], ['ground/quartz-ore', 10], ['ground/lead-ore', 6], ['ground/crystal-blue-1', 2]]
-    crafting skill: ['engineering', 7]
+    crafting_skill: ['engineering', 7]
     crafting_helper: true
     place_constraints:
       percent_explored: 0.75
@@ -7235,7 +7235,7 @@ items:
     change:
       - background: mechanical/suppressor
         sprite: mechanical/suppressor-overlay
-        sprite-color: 00ff00
+        sprite_color: 00ff00
         inherit: true
         sound_loop: deflectorhum
   mechanical/replenisher:
@@ -7245,8 +7245,8 @@ items:
   mechanical/inhibitor:
     <<: *steam-powered
     code: 861
-    placing skill: ['engineering', 3]
-    crafting skill: ['engineering', 5]
+    placing_skill: ['engineering', 3]
+    crafting_skill: ['engineering', 5]
     crafting_helper: true
     field: 1
     mounted: true
@@ -7260,14 +7260,14 @@ items:
     <<: *steam-powered
     code: 863
     ingredients: [['building/wood-decorative', 15], ['building/brass', 10], ['building/iron', 5], ['ground/quartz-ore', 4], 'ground/crystal-blue-1']
-    crafting skill: ['engineering', 5]
+    crafting_skill: ['engineering', 5]
     crafting_helper: true
     meta: local
     use:
       wine_press: true
     sprite: mechanical/winepress-base
     karma: -5
-    special placement: unique
+    special_placement: unique
     change:
       - name: mechanical/wine-press-active
         inherit: true
@@ -7276,7 +7276,7 @@ items:
     <<: *steam-powered
     code: 851
     ingredients: [['building/brass', 25], ['building/iron', 15], ['building/pitch', 15], ['ground/quartz-ore', 4], 'ground/crystal-blue-1']
-    crafting skill: ['engineering', 4]
+    crafting_skill: ['engineering', 4]
     crafting_helper: true
     change:
       - name: mechanical/engine-active
@@ -7286,7 +7286,7 @@ items:
     <<: *steam-powered
     code: 850
     ingredients: [['building/brass', 10], ['building/iron', 5], ['building/pitch', 2], 'ground/crystal-blue-1']
-    crafting skill: ['engineering', 2]
+    crafting_skill: ['engineering', 2]
     mod: change
     change:
       - name: mechanical/furnace-lit
@@ -7300,7 +7300,7 @@ items:
     code: 852
     mod: change
     ingredients: [['building/brass', 20], ['building/iron', 10], ['building/pitch', 4], 'ground/crystal-blue-1']
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
     crafting_helper: true
     change:
       - name: mechanical/forge-lit
@@ -7317,7 +7317,7 @@ items:
     toughness: 7
     spawn_spacing: 25
     ingredients: [['building/iron', 10], ['building/brass', 4], ['building/pitch', 4], 'ground/crystal-red-1']
-    crafting skill: ['engineering', 8]
+    crafting_skill: ['engineering', 8]
     use:
       switched: Exploder
       explode: true
@@ -7339,12 +7339,12 @@ items:
     code: 25
     mod: change
     ingredients: [['building/brass', 10], ['building/iron', 10], ['building/pitch', 4], 'ground/crystal-blue-1', 'ground/diamond-ore']
-    crafting skill: ['engineering', 6]
+    crafting_skill: ['engineering', 6]
     crafting_helper: true
     change:
       - name: mechanical/mill-active
         background: mechanical/mill
-        sprite animation: ['mechanical/mill-anim', 2]
+        sprite_animation: ['mechanical/mill-anim', 2]
         sound_loop: old_compressor
 
   mechanical/lathe:
@@ -7352,12 +7352,12 @@ items:
     code: 26
     mod: change
     ingredients: [['building/brass', 30], ['building/iron', 20], ['ground/resin', 20], ['ground/crystal-blue-1', 2]]
-    crafting skill: ['engineering', 4]
+    crafting_skill: ['engineering', 4]
     crafting_helper: true
     change:
       - name: mechanical/lathe-active
         background: mechanical/lathe
-        sprite animation: ['mechanical/lathe-anim', 2]
+        sprite_animation: ['mechanical/lathe-anim', 2]
         sound_loop: old_compressor
 
   mechanical/loom:
@@ -7365,12 +7365,12 @@ items:
     code: 27
     mod: change
     #ingredients: [['building/brass', 10], ['building/iron', 6], ['building/pitch', 4], 'ground/crystal-blue-1']
-    crafting skill: ['engineering', 7]
+    crafting_skill: ['engineering', 7]
     crafting_helper: true
     change:
       - name: mechanical/loom-active
         background: mechanical/loom
-        sprite animation: ['mechanical/loom-anim', 2]
+        sprite_animation: ['mechanical/loom-anim', 2]
         sound_loop: old_compressor
 
   mechanical/magnet-large:
@@ -7380,7 +7380,7 @@ items:
     sprite: mechanical/magnet-trap-large
     title: Power Magnet
     ingredients: [['building/iron', 30], ['building/brass', 5], ['ground/quartz-ore', 10], 'ground/crystal-blue-1', ['ground/beryllium-ore', 4]]
-    crafting skill: ['science', 5]
+    crafting_skill: ['science', 5]
     crafting_helper: true
     change:
       - name: mechanical/magnet-active
@@ -7393,7 +7393,7 @@ items:
     meta: local
     power: 30
     ingredients: [['building/iron', 20], ['building/brass', 10], ['ground/quartz-ore', 10], ['ground/lead-ore', 6], ['ground/crystal-blue-1', 2]]
-    crafting skill: ['engineering', 9]
+    crafting_skill: ['engineering', 9]
     use:
       suppress-bomb: true
     mod: change
@@ -7475,7 +7475,7 @@ items:
     ingredients: [['building/brass', 5], ['building/iron', 2], ['ground/beryllium-ore', 1], ['ground/crystal-white-small', 1]]
     crafting_helpers: [["furniture/blueprint-dish-brass", 1], ["mechanical/control-panel", 1], ["mechanical/magnet-large", 1]]
     crafting_events: [["bomb-fire", 0.5, 5], ["brains", 0.25, 1]]
-    crafting skill: ["engineering", 5]
+    crafting_skill: ["engineering", 5]
   mechanical/dish:
     <<: *dish
     code: 854
@@ -7489,7 +7489,7 @@ items:
     ingredients: [['building/brass', 10], ['building/iron', 5], ['ground/beryllium-ore', 2], ['ground/crystal-white-small', 2]]
     crafting_helpers: [["furniture/blueprint-dish-brass", 1], ["mechanical/control-panel", 1], ["mechanical/mill", 1], ["mechanical/magnet-large", 1]]
     crafting_events: [["bomb-fire", 0.5, 6], ["brains", 0.25, 2]]
-    crafting skill: ["engineering", 7]
+    crafting_skill: ["engineering", 7]
   mechanical/dish-large:
     <<: *dish
     code: 855
@@ -7503,7 +7503,7 @@ items:
     ingredients: [['building/brass', 20], ['building/iron', 10], ['ground/beryllium-ore', 5], ['ground/crystal-white-large', 1]]
     crafting_helpers: [["furniture/blueprint-dish-diamond", 1], ["mechanical/control-panel-large", 1], ["mechanical/mill", 2], ["mechanical/magnet-large", 2]]
     crafting_events: [["bomb-fire", 0.5, 7], ["brains", 0.25, 3]]
-    crafting skill: ["engineering", 9]
+    crafting_skill: ["engineering", 9]
   mechanical/dish-mega:
     <<: *dish
     code: 857
@@ -7517,7 +7517,7 @@ items:
     ingredients: [['building/brass', 40], ['building/iron', 20], ['ground/beryllium-ore', 10], ['ground/crystal-white-large', 2]]
     crafting_helpers: [["furniture/blueprint-dish-diamond", 1], ["mechanical/control-panel-large", 1], ["mechanical/mill", 4], ["mechanical/magnet-large", 4]]
     crafting_events: [["bomb-fire", 0.5, 8], ["brains", 0.25, 4]]
-    crafting skill: ["engineering", 11]
+    crafting_skill: ["engineering", 11]
   mechanical/dish-giga:
     <<: *dish
     code: 909
@@ -7531,7 +7531,7 @@ items:
     ingredients: [['building/brass', 80], ['building/iron', 40], ['ground/beryllium-ore', 20], ['ground/crystal-white-large', 3], ['ground/onyx', 1]]
     crafting_helpers: [["furniture/blueprint-dish-onyx", 1], ["mechanical/control-panel-large", 1], ["mechanical/mill", 6], ["mechanical/magnet-large", 6]]
     crafting_events: [["bomb-fire", 0.5, 9], ["brains", 0.25, 5]]
-    crafting skill: ["engineering", 13]
+    crafting_skill: ["engineering", 13]
   mechanical/dish-broken:
     <<: *mechanical
     code: 856
@@ -7542,7 +7542,7 @@ items:
     meta: local
     title: Broken Protector
     inventory: ''
-    mining skill: ['engineering', 3]
+    mining_skill: ['engineering', 3]
     hint: '@dish-broken'
     sound_loop: cricketpulse
     sound_loop_volume: 0.5
@@ -7763,9 +7763,9 @@ items:
     code: 833
     opaque: true
     background: mechanical/trap-electric
-    sprite-continuity-animation: ['mechanical/trap-electric-arc', 3]
+    sprite_continuity_animation: ['mechanical/trap-electric-arc', 3]
     sprite_continuity_animation_opacity: 220
-    border-continuity: trap-electric
+    border_continuity: trap-electric
     spawn_spacing: 25
     title: Electric Trap
     #ingredients
@@ -7793,7 +7793,7 @@ items:
     <<: *enemy-protector
     code: 858
     field: 15
-    mining skill: ['engineering', 3]
+    mining_skill: ['engineering', 3]
     light: 1.5
     guard: 1
     title: Dark Protector
@@ -7803,7 +7803,7 @@ items:
     <<: *enemy-protector
     code: 859
     field: 22
-    mining skill: ['engineering', 5]
+    mining_skill: ['engineering', 5]
     light: 3
     guard: 3
     title: Fancy Dark Protector
@@ -7815,10 +7815,10 @@ items:
     gui: false
     code: 865
     field: 25
-    mining skill: ['engineering', 5]
+    mining_skill: ['engineering', 5]
     light: 6
     light_color: ff0000
-    sprite-color: ff0000
+    sprite_color: ff0000
     guard: 5
     title: Epic Dark Protector
     xp: 25
@@ -7970,16 +7970,16 @@ items:
     ingredients: [['building/brass', 10], ['building/iron', 5], ['ground/beryllium-ore', 3], ['ground/crystal-green-small', 1]]
     crafting_helpers: [["furniture/blueprint-spawner-brass", 1], ["mechanical/control-panel", 1], ["mechanical/mill", 2], ["mechanical/magnet-large", 2]]
     crafting_events: [["bomb-fire", 0.5, 7], ["brains", 0.25, 3]]
-    crafting skill: ["engineering", 6]
+    crafting_skill: ["engineering", 6]
 
   mechanical/pipe:
     code: 860
     tileable: true
     material: metal
     ingredients: ['building/brass']
-    crafting quantity: 3
-    crafting skill: ['building', 2]
-    sprite-continuity: mechanical/pipe
+    crafting_quantity: 3
+    crafting_skill: ['building', 2]
+    sprite_continuity: mechanical/pipe
     sprites:
       - frames: mechanical/pipe
         type: continuity
@@ -7989,8 +7989,8 @@ items:
     tileable: true
     material: metal
     ingredients: ['ground/lead-ore']
-    crafting quantity: 3
-    sprite-continuity: mechanical/pipe-iron
+    crafting_quantity: 3
+    sprite_continuity: mechanical/pipe-iron
     title: Lead Pipe
     sprites:
       - frames: mechanical/pipe-iron
@@ -8001,9 +8001,9 @@ items:
     material: metal
     tileable: true
     ingredients: ['building/brass', 'building/iron']
-    crafting quantity: 2
-    crafting skill: ['building', 3]
-    sprite-continuity: mechanical/rail
+    crafting_quantity: 2
+    crafting_skill: ['building', 3]
+    sprite_continuity: mechanical/rail
     sprite: mechanical/rail-1
     sprites:
       - frames: mechanical/rail
@@ -8012,14 +8012,14 @@ items:
   mechanical/platform:
     code: 888
     material: metal
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     karma: -3
 
   mechanical/vault:
     code: 998
     meta: local
     material: metal
-    crafting skill: ['engineering', 10]
+    crafting_skill: ['engineering', 10]
     field: 1
     field_coverage: [4, 4]
     karma: -8
@@ -8047,7 +8047,7 @@ items:
     damage: ['piercing', 0.75]
     shape: polygonal
     ingredients: ['building/brass', ['building/iron', 2]]
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     shelter: true
     karma: -1
     title: Large Spikes
@@ -8059,7 +8059,7 @@ items:
     damage: ['piercing', 0.4]
     shape: polygonal
     ingredients: ['building/brass', 'building/iron']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     shelter: true
     title: Spikes
     karma: -1
@@ -8108,14 +8108,14 @@ items:
     <<: *bomb
     code: 842
     ingredients: [['building/iron', 2], 'ground/quartz-ore', ['ammo/gunpowder', 5]]
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
     timer: ['bomb', 5]
 
   mechanical/bomb-large:
     <<: *bomb
     code: 843
     ingredients: ['building/iron', 'building/brass', 'ground/quartz-ore', ['ammo/gunpowder', 10]]
-    crafting skill: ['engineering', 5]
+    crafting_skill: ['engineering', 5]
     timer: ['bomb', 8]
     title: Big Bomb
 
@@ -8123,7 +8123,7 @@ items:
     <<: *bomb
     code: 508
     ingredients: [['building/iron', 3], ['building/brass', 3], ['ground/quartz-ore', 3], ['ammo/gunpowder', 25]]
-    crafting skill: ['engineering', 8]
+    crafting_skill: ['engineering', 8]
     timer: ['bomb', 16]
     title: Mega Bomb
 
@@ -8131,7 +8131,7 @@ items:
     <<: *bomb
     code: 844
     ingredients: ['building/iron', 'building/brass', 'ground/quartz-ore', 'ammo/gunpowder', ['building/pitch', 2]]
-    crafting skill: ['engineering', 4]
+    crafting_skill: ['engineering', 4]
     timer: ['bomb-fire', 6]
     title: Fire Bomb
 
@@ -8139,7 +8139,7 @@ items:
     <<: *bomb
     code: 845
     ingredients: ['building/iron', 'building/brass', ['ground/quartz-ore', 3], 'ammo/gunpowder']
-    crafting skill: ['engineering', 6]
+    crafting_skill: ['engineering', 6]
     timer: ['bomb-electric', 7]
     title: Electric Bomb
 
@@ -8192,7 +8192,7 @@ items:
     <<: *bomb
     code: 836
     ingredients: ['building/iron', 'building/brass', 'ground/quartz-ore', ['ground/resin', 2], ['ammo/gunpowder', 5]]
-    crafting skill: ['engineering', 4]
+    crafting_skill: ['engineering', 4]
     timer: ['bomb-dig', 5]
     title: Dig Bomb
 
@@ -8213,7 +8213,7 @@ items:
     material: metal
     title: Mine
     ingredients: [['building/iron', 2], ['ground/quartz-ore', 2], ['ammo/gunpowder', 5]]
-    crafting skill: ['engineering', 4]
+    crafting_skill: ['engineering', 4]
     inventory: ''
     spawn_spacing: 25
     fieldable: false
@@ -8249,7 +8249,7 @@ items:
   mechanical/stand:
     material: metal
     code: 879
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
     inventory: rubble/iron
 
   mechanical/turret: &mechanical-turret
@@ -8266,161 +8266,161 @@ items:
     <<: *mechanical-turret
     code: 871
     background: mechanical/turret-base-small
-    inventory sprite: turrets/small-1
+    inventory_sprite: turrets/small-1
     title: Gun Turret
     ingredients: ['parts/gun-barrel', ['ammo/bullets', 4], 'building/brass', 'building/iron', ['ground/crystal-blue-1', 2]]
-    crafting skill: ['automata', 2]
+    crafting_skill: ['automata', 2]
 
   mechanical/turret-pistol-mk2:
     <<: *mechanical-turret
     code: 33
     background: mechanical/turret-base-mark-2
-    inventory sprite: turrets/gun-mark-2
+    inventory_sprite: turrets/gun-mark-2
     title: Gun Turret Mark II
 
   mechanical/turret-pistol-mk3:
     <<: *mechanical-turret
     code: 34
     background: mechanical/turret-base-mark-3
-    inventory sprite: turrets/gun-mark-3
+    inventory_sprite: turrets/gun-mark-3
     title: Gun Turret Mark III
 
   mechanical/turret-fire:
     <<: *mechanical-turret
     code: 872
     background: mechanical/turret-base-small
-    inventory sprite: turrets/small-2
+    inventory_sprite: turrets/small-2
     title: Fire Turret
     ingredients: ['parts/gun-barrel', ['building/pitch', 4], 'building/brass', 'building/iron', ['ground/crystal-blue-1', 3]]
-    crafting skill: ['automata', 3]
+    crafting_skill: ['automata', 3]
 
   mechanical/turret-fire-mk2:
     <<: *mechanical-turret
     code: 35
     background: mechanical/turret-base-mark-2
-    inventory sprite: turrets/fire-mark-2
+    inventory_sprite: turrets/fire-mark-2
     title: Fire Turret Mark II
 
   mechanical/turret-fire-mk3:
     <<: *mechanical-turret
     code: 36
     background: mechanical/turret-base-mark-3
-    inventory sprite: turrets/fire-mark-3
+    inventory_sprite: turrets/fire-mark-3
     title: Fire Turret Mark III
 
   mechanical/turret-acid:
     <<: *mechanical-turret
     code: 873
     background: mechanical/turret-base-small
-    inventory sprite: turrets/large-1
+    inventory_sprite: turrets/large-1
     title: Acid Turret
     ingredients: ['parts/gun-barrel', ['back/glass', 3], ['building/brass', 3], 'building/iron', ['ground/crystal-blue-1', 3]]
-    crafting skill: ['automata', 4]
+    crafting_skill: ['automata', 4]
 
   mechanical/turret-acid-mk2:
     <<: *mechanical-turret
     code: 37
     background: mechanical/turret-base-mark-2
-    inventory sprite: turrets/acid-mark-2
+    inventory_sprite: turrets/acid-mark-2
     title: Acid Turret Mark II
 
   mechanical/turret-acid-mk3:
     <<: *mechanical-turret
     code: 38
     background: mechanical/turret-base-mark-3
-    inventory sprite: turrets/acid-mark-3
+    inventory_sprite: turrets/acid-mark-3
     title: Acid Turret Mark III
 
   mechanical/turret-flame:
     <<: *mechanical-turret
     code: 874
     background: mechanical/turret-base-small
-    inventory sprite: turrets/large-2
+    inventory_sprite: turrets/large-2
     title: Flame Turret
     ingredients: [['parts/gun-barrel', 2], ['building/pitch', 8], 'building/brass', ['building/iron', 4], ['ground/crystal-blue-1', 4]]
-    crafting skill: ['automata', 5]
+    crafting_skill: ['automata', 5]
 
   mechanical/turret-flame-mk2:
     <<: *mechanical-turret
     code: 40
     background: mechanical/turret-base-mark-2
-    inventory sprite: turrets/flame-mark-2
+    inventory_sprite: turrets/flame-mark-2
     title: Flame Turret Mark II
 
   mechanical/turret-flame-mk3:
     <<: *mechanical-turret
     code: 41
     background: mechanical/turret-base-mark-3
-    inventory sprite: turrets/flame-mark-3
+    inventory_sprite: turrets/flame-mark-3
     title: Flame Turret Mark III
 
   mechanical/turret-dessicator:
     <<: *mechanical-turret
     code: 875
     background: mechanical/turret-base-small
-    inventory sprite: turrets/dessicator
+    inventory_sprite: turrets/dessicator
     title: Dessicator
     ingredients: [['parts/gun-barrel', 2], ['ground/quartz-ore', 3], ['building/iron', 2], ['building/brass', 2], ['ground/crystal-blue-1', 4]]
-    crafting skill: ['automata', 6]
+    crafting_skill: ['automata', 6]
 
   mechanical/turret-dessicator-mk2:
     <<: *mechanical-turret
     code: 42
     background: mechanical/turret-base-mark-2
-    inventory sprite: turrets/dessicator-mark-2
+    inventory_sprite: turrets/dessicator-mark-2
     title: Dessicator Turret Mark II
 
   mechanical/turret-dessicator-mk3:
     <<: *mechanical-turret
     code: 43
     background: mechanical/turret-base-mark-3
-    inventory sprite: turrets/dessicator-mark-3
+    inventory_sprite: turrets/dessicator-mark-3
     title: Dessicator Turret Mark III
 
   mechanical/turret-frost:
     <<: *mechanical-turret
     code: 44
     background: mechanical/turret-base-small
-    inventory sprite: turrets/frost
+    inventory_sprite: turrets/frost
     title: Gun Turret
     #ingredients: ['parts/gun-barrel', ['ammo/bullets', 4], 'building/brass', 'building/iron', ['ground/crystal-blue-1', 2]]
-    #crafting skill: ['automata', 3]
+    #crafting_skill: ['automata', 3]
 
   mechanical/turret-frost-mk2:
     <<: *mechanical-turret
     code: 45
     background: mechanical/turret-base-mark-2
-    inventory sprite: turrets/frost-mark-2
+    inventory_sprite: turrets/frost-mark-2
     title: Frost Turret Mark II
 
   mechanical/turret-frost-mk3:
     <<: *mechanical-turret
     code: 46
     background: mechanical/turret-base-mark-3
-    inventory sprite: turrets/frost-mark-3
+    inventory_sprite: turrets/frost-mark-3
     title: Frost Turret Mark III
 
   mechanical/turret-energy:
     <<: *mechanical-turret
     code: 47
     background: mechanical/turret-base-small
-    inventory sprite: turrets/energy
+    inventory_sprite: turrets/energy
     title: Gun Turret
     #ingredients: ['parts/gun-barrel', ['ammo/bullets', 4], 'building/brass', 'building/iron', ['ground/crystal-blue-1', 2]]
-    #crafting skill: ['automata', 3]
+    #crafting_skill: ['automata', 3]
 
   mechanical/turret-energy-mk2:
     <<: *mechanical-turret
     code: 48
     background: mechanical/turret-base-mark-2
-    inventory sprite: turrets/energy-mark-2
+    inventory_sprite: turrets/energy-mark-2
     title: Energy Turret Mark II
 
   mechanical/turret-energy-mk3:
     <<: *mechanical-turret
     code: 49
     background: mechanical/turret-base-mark-3
-    inventory sprite: turrets/energy-mark-3
+    inventory_sprite: turrets/energy-mark-3
     title: Energy Turret Mark III
 
   # Chromatic
@@ -8435,7 +8435,7 @@ items:
     code: 280
     material: metal
     craftable: false
-    border-continuity: chromatic-back
+    border_continuity: chromatic-back
     title: Chromatic Backdrop
     toughness: 3
 
@@ -8445,9 +8445,9 @@ items:
     code: 281
     material: metal
     craftable: false
-    border-continuity: chromatic
+    border_continuity: chromatic
     toughness: 5
-    decay inventory: rubble/iron
+    decay_inventory: rubble/iron
     title: Chromatic Block
 
   chromatic/block-reinforced:
@@ -8457,7 +8457,7 @@ items:
     material: metal
     craftable: false
     sprite: chromatic/block
-    border-continuity: chromatic-reinforced
+    border_continuity: chromatic-reinforced
     toughness: 10
     title: Reinforced Chromatic Block
 
@@ -8550,7 +8550,7 @@ items:
     code: 880
     meta: local
     title: Purifier
-    special placement: unique
+    special_placement: unique
     hint: "The purifier has seven parts scattered throughout the world which need to be collected in order to begin functioning. Once all of these are found, the base must be activated by a player, at which point the world will gradually lose acidity and eventually support new plant life!"
     sprites:
       - frames: mechanical/geck-tub
@@ -8596,7 +8596,7 @@ items:
     code: 894
     meta: local
     title: Composter
-    special placement: unique
+    special_placement: unique
     hint: "The composter has five parts scattered throughout the world which need to be collected in order to begin functioning. Once all are found, players can click the active composter to exchange earth and guano for composted earth. If the world has been purified, these blocks can be placed to support plant growth."
     change:
       - name: mechanical/composter-chamber-active
@@ -8634,7 +8634,7 @@ items:
     code: 927
     meta: local
     title: Recycler
-    special placement: unique
+    special_placement: unique
     use:
       command: true
       recycler: true
@@ -8667,14 +8667,14 @@ items:
     karma: -50
     ownership: true
     meta: global
-    special placement: machine
+    special_placement: machine
     gui: ['trim']
     group: steam
     steam: true
 
   machines/gun-suppressor-base: &gun-suppressor-base
     <<: *world-machine
-    inventory sprite: machines/gun-suppressor-base-1
+    inventory_sprite: machines/gun-suppressor-base-1
     inventory_frame: inventory/machines/gun-suppressor
     use:
       world_machine: teleport
@@ -8683,7 +8683,7 @@ items:
   machines/gun-suppressor:
     <<: *gun-suppressor-base
     code: 339
-    inventory sprite: machines/gun-suppressor-base
+    inventory_sprite: machines/gun-suppressor-base
     sprite:
       - machines/gun-suppressor-base
       - machines/gun-suppressor-spinner
@@ -8695,7 +8695,7 @@ items:
     <<: *gun-suppressor-base
     code: 229
     title: Diamond Gun Suppressor
-    inventory sprite: machines/gun-suppressor-base
+    inventory_sprite: machines/gun-suppressor-base
     sprite:
       - machines/gun-suppressor-base
       - machines/gun-suppressor-spinner
@@ -8711,7 +8711,7 @@ items:
     <<: *gun-suppressor-base
     code: 230
     title: Onyx Gun Suppressor
-    inventory sprite: machines/gun-suppressor-base
+    inventory_sprite: machines/gun-suppressor-base
     sprite:
       - machines/gun-suppressor-base
       - machines/gun-suppressor-spinner
@@ -8729,7 +8729,7 @@ items:
 
   machines/holograph-base: &holograph-base
     <<: *world-machine
-    inventory sprite: machines/holograph-base-1
+    inventory_sprite: machines/holograph-base-1
     inventory_frame: inventory/machines/holograph
     use:
       world_machine: holograph
@@ -8814,7 +8814,7 @@ items:
 
   machines/mass-spawner-base: &mass-spawner-base
     <<: *world-machine
-    inventory sprite: machines/mass-spawner-base-1
+    inventory_sprite: machines/mass-spawner-base-1
     inventory_frame: inventory/machines/mass-spawner
     use:
       world_machine: spawner
@@ -8824,7 +8824,7 @@ items:
     <<: *mass-spawner-base
     code: 341
     power: 1
-    inventory sprite: machines/mass-spawner-base
+    inventory_sprite: machines/mass-spawner-base
     sprite:
       - machines/mass-spawner-base
       - machines/mass-spawner-diamond-1
@@ -8846,14 +8846,14 @@ items:
     ingredients: [['building/brass', 250], ['ground/quartz-ore', 50], ['ground/crystal-green-large', 2], ['mechanical/chemistry-set', 2]]
     crafting_helpers: [["furniture/blueprint-mass-spawner-brass", 1], ["mechanical/control-panel-large", 1], ["mechanical/magnet-large", 6]]
     crafting_events: [["bomb-fire", 0.75, 5]]
-    crafting skill: ["science", 4]
+    crafting_skill: ["science", 4]
 
   machines/mass-spawner-diamond:
     <<: *mass-spawner-base
     code: 231
     title: Diamond Mass Spawner
     power: 2
-    inventory sprite: machines/mass-spawner-base
+    inventory_sprite: machines/mass-spawner-base
     sprite:
       - machines/mass-spawner-base
       - machines/mass-spawner-diamond-1
@@ -8871,7 +8871,7 @@ items:
     ingredients: [['machines/mass-spawner', 1], ['ground/crystal-green-large', 2], ['mechanical/chemistry-set', 2], ['ground/diamond-ore', 10]]
     crafting_helpers: [["furniture/blueprint-mass-spawner-diamond", 1], ["mechanical/control-panel-large", 2], ["mechanical/magnet-large", 8]]
     crafting_events: [["bomb-fire", 0.85, 5]]
-    crafting skill: ["science", 7]
+    crafting_skill: ["science", 7]
 
 
   machines/mass-spawner-onyx:
@@ -8879,7 +8879,7 @@ items:
     code: 232
     title: Onyx Mass Spawner
     power: 3
-    inventory sprite: machines/mass-spawner-base
+    inventory_sprite: machines/mass-spawner-base
     sprite:
       - machines/mass-spawner-base
       - machines/mass-spawner-diamond-1
@@ -8901,11 +8901,11 @@ items:
     ingredients: [['machines/mass-spawner-diamond', 1], ['ground/crystal-green-large', 2], ['mechanical/chemistry-set', 2], ['ground/onyx', 6]]
     crafting_helpers: [["furniture/blueprint-mass-spawner-onyx", 1], ["mechanical/control-panel-large", 3], ["mechanical/magnet-large", 10]]
     crafting_events: [["bomb-fire", 0.95, 5]]
-    crafting skill: ["science", 10]
+    crafting_skill: ["science", 10]
 
   machines/mass-teleporter-base: &mass-teleporter-base
     <<: *world-machine
-    inventory sprite: machines/mass-teleporter-base-1
+    inventory_sprite: machines/mass-teleporter-base-1
     inventory_frame: inventory/machines/mass-teleporter
     use:
       world_machine: teleport
@@ -8926,7 +8926,7 @@ items:
     ingredients: [['building/brass', 250], ['ground/quartz-ore', 50], ['ground/crystal-orange', 2], ['mechanical/science-bulb', 2]]
     crafting_helpers: [["furniture/blueprint-mass-teleporter-brass", 1], ["mechanical/control-panel-large", 1], ["mechanical/mill", 6]]
     crafting_events: [["bomb-fire", 0.75, 5]]
-    crafting skill: ["science", 5]
+    crafting_skill: ["science", 5]
 
   machines/mass-teleporter-diamond:
     <<: *mass-teleporter-base
@@ -8946,7 +8946,7 @@ items:
     ingredients: [['machines/mass-teleporter', 1], ['ground/crystal-orange', 2], ['mechanical/science-bulb', 2], ['ground/diamond-ore', 10]]
     crafting_helpers: [["furniture/blueprint-mass-teleporter-diamond", 1], ["mechanical/control-panel-large", 2], ["mechanical/mill", 8]]
     crafting_events: [["bomb-fire", 0.85, 5]]
-    crafting skill: ["science", 8]
+    crafting_skill: ["science", 8]
 
   machines/mass-teleporter-onyx:
     <<: *mass-teleporter-base
@@ -8968,11 +8968,11 @@ items:
     ingredients: [['machines/mass-teleporter-diamond', 1], ['ground/crystal-orange', 2], ['mechanical/science-bulb', 2], ['ground/onyx', 6]]
     crafting_helpers: [["furniture/blueprint-mass-teleporter-onyx", 1], ["mechanical/control-panel-large", 3], ["mechanical/mill", 10]]
     crafting_events: [["bomb-fire", 0.95, 5]]
-    crafting skill: ["science", 11]
+    crafting_skill: ["science", 11]
 
   machines/weather-machine-base: &weather-machine-base
     <<: *world-machine
-    inventory sprite: machines/weather-machine-base-1
+    inventory_sprite: machines/weather-machine-base-1
     inventory_frame: inventory/machines/weather-machine
     use:
       world_machine: weather
@@ -8993,7 +8993,7 @@ items:
     ingredients: [['building/brass', 250], ['ground/quartz-ore', 50], ['ground/crystal-white-large', 2], ['mechanical/science-gadget', 2]]
     crafting_helpers: [["furniture/blueprint-weather-machine-brass", 1], ["mechanical/control-panel-large", 1], ["mechanical/lathe", 6]]
     crafting_events: [["bomb-fire", 0.75, 5]]
-    crafting skill: ["science", 6]
+    crafting_skill: ["science", 6]
 
   machines/weather-machine-diamond:
     <<: *weather-machine-base
@@ -9013,7 +9013,7 @@ items:
     ingredients: [['machines/weather-machine', 1], ['ground/crystal-white-large', 2], ['mechanical/science-gadget', 2], ['ground/diamond-ore', 10]]
     crafting_helpers: [["furniture/blueprint-weather-machine-diamond", 1], ["mechanical/control-panel-large", 2], ["mechanical/lathe", 8]]
     crafting_events: [["bomb-fire", 0.85, 5]]
-    crafting skill: ["science", 9]
+    crafting_skill: ["science", 9]
 
   machines/weather-machine-onyx:
     <<: *weather-machine-base
@@ -9037,7 +9037,7 @@ items:
     ingredients: [['machines/weather-machine-diamond', 1], ['ground/crystal-white-large', 2], ['mechanical/science-gadget', 2], ['ground/onyx', 6]]
     crafting_helpers: [["furniture/blueprint-weather-machine-onyx", 1], ["mechanical/control-panel-large", 3], ["mechanical/lathe", 10]]
     crafting_events: [["bomb-fire", 0.95, 5]]
-    crafting skill: ["science", 12]
+    crafting_skill: ["science", 12]
 
 
   # ===== HELL ===== #
@@ -9061,7 +9061,7 @@ items:
     code: 1003
     meta: local
     title: Expiator
-    special placement: unique
+    special_placement: unique
     hint: "The expiator has seven parts scattered throughout the world which need to be collected in order to begin functioning. Once all are found, players can lead ghosts to the machine to deliver them out of Hell."
     change:
       - name: hell/expiator-face-active
@@ -9098,10 +9098,10 @@ items:
     craftable: false
     meta: global
     background: hell/dish
-    sprite animation: ['hell/dish-soul', 3]
+    sprite_animation: ['hell/dish-soul', 3]
     title: Infernal Protector
     hint: Infernal protectors cause damage as well as protecting blocks, and can only be disabled by delivering enough souls with the expiator.
-    special placement: unique
+    special_placement: unique
     color: 781e6e
     inventory: ''
     karma: -5
@@ -9118,8 +9118,8 @@ items:
     shape: box
     solid: true
     diggable: true
-    border-continuity: ice
-    border-continuity-external: ['masks/border-external', 12]
+    border_continuity: ice
+    border_continuity_external: ['masks/border-external', 12]
     border_continuity_color: eeeeff
     sprite_z: 3
     craftable: false
@@ -9139,20 +9139,20 @@ items:
     shape: box
     solid: true
     ingredients: ['arctic/ice']
-    crafting quantity: 2
+    crafting_quantity: 2
     background: arctic/ice
     sprite: arctic/ice-brick
-    border-continuity: ice-brick
+    border_continuity: ice-brick
     biome: arctic
 
   back/ice-brick:
     code: 1082
     tileable: true
     ingredients: ['arctic/ice']
-    crafting quantity: 2
+    crafting_quantity: 2
     background: arctic/ice
     sprite: arctic/ice-brick-back
-    border-continuity: ice-brick
+    border_continuity: ice-brick
     title: Ice Backdrop
     biome: arctic
 
@@ -9163,20 +9163,20 @@ items:
     shape: box
     solid: true
     ingredients: ['arctic/snow']
-    crafting quantity: 2
+    crafting_quantity: 2
     background: arctic/snow
     sprite: arctic/snow-brick
-    border-continuity: snow-brick
+    border_continuity: snow-brick
     biome: arctic
 
   back/snow-brick:
     code: 373
     tileable: true
     ingredients: ['arctic/snow']
-    crafting quantity: 2
+    crafting_quantity: 2
     background: arctic/snow
     sprite: arctic/snow-brick-back
-    border-continuity: snow-brick
+    border_continuity: snow-brick
     title: Snow Brick Backdrop
     biome: arctic
 
@@ -9185,7 +9185,7 @@ items:
     code: 1083
     color: f2f2f4
     diggable: true
-    border-continuity-external: ['masks/border-external', 12]
+    border_continuity_external: ['masks/border-external', 12]
     border_continuity_color: fdfdfe
     sprite_z: 2
     craftable: false
@@ -9255,7 +9255,7 @@ items:
     background: arctic/snowball
     sprite: ['arctic/snowman-face', 3]
     center: true
-    special placement: unique
+    special_placement: unique
     biome: arctic
     carryable: false
 
@@ -9303,7 +9303,7 @@ items:
     tileable: true
     material: metal
     craftable: false
-    sprite-continuity: brain/pipe
+    sprite_continuity: brain/pipe
     karma: -2
     title: Neuron
     sprites:
@@ -9315,8 +9315,8 @@ items:
     tileable: true
     material: metal
     craftable: false
-    sprite-continuity: brain/tank-base
-    sprite-continuity-config: connectors-left-right
+    sprite_continuity: brain/tank-base
+    sprite_continuity_config: connectors-left-right
     karma: -2
     title: Brain Tank Base
     sprites:
@@ -9329,8 +9329,8 @@ items:
     tileable: true
     material: metal
     craftable: false
-    sprite-continuity: brain/tank-brass-top
-    sprite-continuity-config: connectors-left-right
+    sprite_continuity: brain/tank-brass-top
+    sprite_continuity_config: connectors-left-right
     karma: -2
     title: Brain Tank Top
     sprites:
@@ -9343,8 +9343,8 @@ items:
     tileable: true
     material: metal
     craftable: false
-    sprite-continuity: brain/tank
-    sprite-continuity-config: connectors-square
+    sprite_continuity: brain/tank
+    sprite_continuity_config: connectors-square
     karma: -2
     title: Brain Tank Glass
     sprites:
@@ -9421,7 +9421,7 @@ items:
       event: showTeleport
       command: true
     mod: change
-    place mod: 1
+    place_mod: 1
     spacing: 50
     karma: -10
     hint: "Click on teleporters to quickly travel throughout the world. Inactive teleporters can be repaired with a click, progressing you towards a Teleporter Repairman achievement and unlocking the teleporter for use by players."
@@ -9430,8 +9430,8 @@ items:
     change:
       - name: mechanical/teleporter-active
         inherit: true
-        sprite animation: ['mechanical/teleporter-glow', 2]
-        sprite animation color: 5accfd
+        sprite_animation: ['mechanical/teleporter-glow', 2]
+        sprite_animation_color: 5accfd
         sprites:
           - frames: mechanical/teleporter
           - frames: ['mechanical/teleporter-glow', 2]
@@ -9448,8 +9448,8 @@ items:
       transmit: true
     mod: change
     ingredients: [['building/brass', 5], ['building/iron', 2], ['ground/quartz-ore', 6], ['ground/crystal-blue-1', 2]]
-    placing skill: ['engineering', 4]
-    crafting skill: ['engineering', 6]
+    placing_skill: ['engineering', 4]
+    crafting_skill: ['engineering', 6]
     karma: -5
     title: Target Teleporter
     hint: "Target teleporters allow teleportation to a specific location nearby. Place a beacon after placing the teleporter to identify the location. As your engineering skill increases, you can place it farther and farther away!"
@@ -9457,8 +9457,8 @@ items:
       - name: mechanical/teleporter-mini-active
         background: mechanical/teleporter-mini-base
         inherit: true
-        sprite animation: ['mechanical/teleporter-mini-motes', 3]
-        sprite animation color: c7fca8
+        sprite_animation: ['mechanical/teleporter-mini-motes', 3]
+        sprite_animation_color: c7fca8
         emitter: diamond sparkles
 
   mechanical/teleporter-mini-diamond:
@@ -9466,14 +9466,14 @@ items:
     code: 397
     meta: hidden
     background: mechanical/teleporter-mini-diamond-base
-    sprite animation: ['mechanical/teleporter-mini-motes', 3]
-    sprite animation color: 44aaff
+    sprite_animation: ['mechanical/teleporter-mini-motes', 3]
+    sprite_animation_color: 44aaff
     emitter: diamond sparkles
-    inventory sprite: mechanical/teleporter-mini-diamond-onyx
+    inventory_sprite: mechanical/teleporter-mini-diamond-onyx
     title: Diamond Target Teleporter
     ingredients: [['building/brass', 6], ['building/iron', 2], ['ground/quartz-ore', 8], ['ground/crystal-blue-1', 3], 'ground/diamond-ore']
-    placing skill: ['engineering', 6]
-    crafting skill: ['engineering', 8]
+    placing_skill: ['engineering', 6]
+    crafting_skill: ['engineering', 8]
     use:
       command: true
       target teleport: true
@@ -9496,14 +9496,14 @@ items:
     code: 398
     meta: hidden
     background: mechanical/teleporter-mini-onyx-base
-    sprite animation: ['mechanical/teleporter-mini-motes', 3]
-    sprite animation color: ee44ff
+    sprite_animation: ['mechanical/teleporter-mini-motes', 3]
+    sprite_animation_color: ee44ff
     emitter: diamond sparkles
-    inventory sprite: mechanical/teleporter-mini-onyx-base
+    inventory_sprite: mechanical/teleporter-mini-onyx-base
     title: Onyx Target Teleporter
     #ingredients: [['building/brass', 6], ['building/iron', 2], ['ground/quartz-ore', 8], ['ground/crystal-blue-1', 3], 'ground/diamond-ore']
-    placing skill: ['engineering', 8]
-    crafting skill: ['engineering', 10]
+    placing_skill: ['engineering', 8]
+    crafting_skill: ['engineering', 10]
     use:
       command: true
       target teleport: true
@@ -9529,8 +9529,8 @@ items:
     <<: *mechanical
     code: 966
     ingredients: [['building/brass', 2], 'building/iron', ['ground/quartz-ore', 2], 'ground/crystal-blue-1']
-    placing skill: ['engineering', 2]
-    crafting skill: ['engineering', 4]
+    placing_skill: ['engineering', 2]
+    crafting_skill: ['engineering', 4]
     karma: -3
     use:
       transmitted: true
@@ -9543,8 +9543,8 @@ items:
     meta: global
     spacing: 50
     background: mechanical/zone-teleporter
-    sprite animation: ['mechanical/zone-teleporter-glow', 2]
-    sprite animation color: ffa100
+    sprite_animation: ['mechanical/zone-teleporter-glow', 2]
+    sprite_animation_color: ffa100
     ownership: true
     karma: -20
     #sound_loop: wobble_02
@@ -9570,8 +9570,8 @@ items:
     meta: hidden
     gui: false
     background: mechanical/teleporter
-    sprite animation: ['mechanical/teleporter-glow', 2]
-    sprite animation color: 111111
+    sprite_animation: ['mechanical/teleporter-glow', 2]
+    sprite_animation_color: 111111
     title: One-Way Teleporter
     karma: -10
     #sound_loop: wobble_02
@@ -9594,8 +9594,8 @@ items:
     meta: hidden
     gui: false
     background: mechanical/zone-teleporter
-    sprite animation: ['mechanical/zone-teleporter-glow', 2]
-    sprite animation color: 111111
+    sprite_animation: ['mechanical/zone-teleporter-glow', 2]
+    sprite_animation_color: 111111
     title: One-Way World Teleporter
     karma: -20
     #sound_loop: wobble_02
@@ -9623,8 +9623,8 @@ items:
     meta: hidden
     gui: false
     background: mechanical/zone-teleporter
-    sprite animation: ['mechanical/zone-teleporter-glow', 2]
-    sprite animation color: ffa100
+    sprite_animation: ['mechanical/zone-teleporter-glow', 2]
+    sprite_animation_color: ffa100
     #sound_loop: wobble_02
     use:
       command: true
@@ -9650,7 +9650,7 @@ items:
 
   mechanical/toolbox:
     code: 470
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
     ingredients: [['building/brass', 2], ['building/iron', 3], ['ground/lead-ore', 3]]
   mechanical/science-scrap:
     code: 471
@@ -9663,24 +9663,24 @@ items:
     title: Research Bulb
   mechanical/chemistry-set:
     code: 474
-    crafting skill: ['survival', 6]
+    crafting_skill: ['survival', 6]
     ingredients: ['building/brass', ['containers/jar-acid', 3], ['containers/jar-water', 3], 'ground/beryllium-ore', 'ground/quartz-ore']
   mechanical/control-panel:
     <<: *steam-powered
     code: 475
-    crafting skill: ['science', 2]
+    crafting_skill: ['science', 2]
     ingredients: [['building/brass', 8], ['building/iron', 5], ['ground/quartz-ore', 5], ['ground/beryllium-ore', 5], 'accessories/schematic']
     crafting_helper: true
   mechanical/control-panel-large:
     <<: *steam-powered
     code: 435
-    crafting skill: ['science', 4]
+    crafting_skill: ['science', 4]
     ingredients: [['building/brass', 20], ['building/iron', 10], ['ground/quartz-ore', 12], ['ground/beryllium-ore', 12], 'accessories/schematic']
     title: Large Control Panel
     crafting_helper: true
   mechanical/mini-tesla:
     code: 476
-    crafting skill: ['science', 3]
+    crafting_skill: ['science', 3]
     ingredients: [['building/brass', 3], ['building/iron', 3], ['ground/beryllium-ore', 2], 'ground/crystal-blue-1']
 
   mechanical/friend-parts-boxing-gloves:
@@ -9713,7 +9713,7 @@ items:
     code: 400
     material: metal
     ingredients: [['building/iron', 6]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
 
   industrial/vat-acid:
     code: 401
@@ -9728,10 +9728,10 @@ items:
     <<: *mirrorable
     code: 402
     material: metal
-    sprite animation: ['industrial/conveyor-belt', 2]
+    sprite_animation: ['industrial/conveyor-belt', 2]
     ingredients: [['building/iron', 4], ['building/brass', 2], ['ground/quartz-ore', 2]]
-    placing skill: ['engineering', 2]
-    crafting skill: ['engineering', 5]
+    placing_skill: ['engineering', 2]
+    crafting_skill: ['engineering', 5]
     shape: polygonal
     shape_definition: industrial/conveyor
     solid: true
@@ -9744,33 +9744,33 @@ items:
     code: 404
     material: metal
     ingredients: ['building/iron']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     title: Heavy Chain
 
   industrial/chain-large:
     code: 405
     material: metal
     ingredients: [['building/iron', 2]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     title: Large Heavy Chain
 
   industrial/crane:
     code: 406
     material: metal
     ingredients: [['building/iron', 2], ['building/brass', 2], 'ground/quartz-ore']
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
 
   industrial/crane-base:
     code: 407
     material: metal
     ingredients: [['building/iron', 3], ['building/brass', 2]]
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
 
   industrial/crane-large:
     code: 408
     material: metal
     ingredients: [['building/iron', 4], ['building/brass', 4], ['ground/quartz-ore', 2]]
-    crafting skill: ['engineering', 4]
+    crafting_skill: ['engineering', 4]
     karma: -2
     title: Large Crane
 
@@ -9778,7 +9778,7 @@ items:
     code: 409
     material: metal
     ingredients: [['building/iron', 6], ['building/brass', 4]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     karma: -2
     title: Large Crane Base
 
@@ -9834,17 +9834,17 @@ items:
     code: 468
     title: Wreath
     ingredients: ['vegetation/pine-tree', ['ground/flax', 2]]
-    crafting skill: ['building', 4]
-    crafting quantity: 2
+    crafting_skill: ['building', 4]
+    crafting_quantity: 2
   holiday/wreath-large:
     code: 469
     title: Large Wreath
     ingredients: ['vegetation/pine-tree', ['ground/flax', 2]]
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
   holiday/christmas-lights-colored:
     code: 477
     tileable: true
-    sprite-continuity: holiday/christmas-lights-colored
+    sprite_continuity: holiday/christmas-lights-colored
     title: Colored Festive Lights
     size: [1, 1]
     sprites:
@@ -9855,11 +9855,11 @@ items:
   holiday/christmas-lights-white:
     code: 479
     tileable: true
-    sprite-continuity: holiday/christmas-lights-white
+    sprite_continuity: holiday/christmas-lights-white
     title: Festive Lights
     light: 1
-    crafting skill: ['building', 5]
-    crafting quantity: 5
+    crafting_skill: ['building', 5]
+    crafting_quantity: 5
     ingredients: [['lighting/industrial-cord', 2], ['back/glass', 2], 'ground/crystal-blue-1']
     sprites:
       - frames: holiday/christmas-lights-white
@@ -9885,7 +9885,7 @@ items:
     sprite: holiday/door-festive-closed
     shape_definition: building/door-wood
     ingredients: ['building/door-wood', 'holiday/wreath-small']
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     use:
       change:
         name: building/door-festive-open
@@ -9901,12 +9901,12 @@ items:
     <<: *front-block
     level: 20
     code: 936
-    border-continuity: brick
-    border-continuity-color: 7e2e2e
+    border_continuity: brick
+    border_continuity_color: 7e2e2e
     sprite_z: 3
     material: wood
     # ingredients: [['holiday/candy-cane-small', 10]]
-    # crafting skill: ['building', 6]
+    # crafting_skill: ['building', 6]
 
   holiday/tree-charlie-brown:
     <<: *mirrorable
@@ -9928,7 +9928,7 @@ items:
   holiday/snowflake:
     code: 1224
     sprite: ['holiday/snowflake', 4]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     ingredients: [['back/paper', 2]]
 
 
@@ -9951,7 +9951,7 @@ items:
 
   tools/melee: &melee
     damage_duration: 0.444
-    damage range: 6.0
+    damage_range: 6.0
 
   # Tools
   tools/pickaxe:
@@ -9981,7 +9981,7 @@ items:
     damage: ['piercing', 0.7]
     critical_hit: 0.005
     ingredients: ['building/wood', 'building/iron', 'ground/resin']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     karma: -3
   tools/pickaxe-diamond:
     <<: *melee
@@ -9997,7 +9997,7 @@ items:
     critical_hit: 0.0075
     emitter: diamond sparkles
     ingredients: [['ground/diamond-ore', 4], ['building/brass', 2], ['ground/resin', 2]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     karma: -5
     rarity: 3
   tools/pickaxe-onyx: &onyx-pickaxe
@@ -10014,7 +10014,7 @@ items:
     critical_hit: 0.01
     emitter: onyx sparkles
     ingredients: [['ground/onyx', 3], ['building/brass', 2], ['ground/resin', 2]]
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
     karma: -10
     rarity: 4
   tools/pickaxe-platinum:
@@ -10024,7 +10024,7 @@ items:
     emitter: platinum sparkles
     rarity: 5
     ingredients: [['tools/pickaxe-onyx', 1], ['ground/platinum-ore', 100]]
-    crafting skill: ['building', 9]
+    crafting_skill: ['building', 9]
 
   tools/sledgehammer:
     <<: *melee
@@ -10044,7 +10044,7 @@ items:
     damage: ['bludgeoning', 1.0]
     critical_hit: 0.02
     ingredients: ['building/wood', ['building/iron', 2], 'ground/resin']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     karma: -3
     group: sledgehammer
   tools/sledgehammer-diamond:
@@ -10055,7 +10055,7 @@ items:
     damage: ['bludgeoning', 1.2]
     critical_hit: 0.03
     ingredients: [['ground/diamond-ore', 4], ['building/iron', 2], ['ground/resin', 2]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     karma: -5
     rarity: 3
     group: sledgehammer
@@ -10067,7 +10067,7 @@ items:
     damage: ['bludgeoning', 1.4]
     critical_hit: 0.04
     ingredients: [['ground/onyx', 3], ['building/iron', 2], ['ground/resin', 2]]
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
     karma: -10
     rarity: 3
     group: sledgehammer
@@ -10078,7 +10078,7 @@ items:
   #   emitter: platinum sparkles
   #   rarity: 5
   #   ingredients: [['tools/sledgehammer-onyx', 1], ['ground/platinum-ore', 100]]
-  #   crafting skill: ['building', 10]
+  #   crafting_skill: ['building', 10]
   #   available_after: 2018-11-01
 
   tools/shovel:
@@ -10104,7 +10104,7 @@ items:
     damage: ['bludgeoning', 0.6]
     title: Diamond Shovel
     ingredients: [['ground/diamond-ore', 4], ['building/brass', 2], ['building/iron', 2]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     karma: -5
     rarity: 3
     group: shovel
@@ -10118,7 +10118,7 @@ items:
     damage: ['bludgeoning', 0.7]
     title: Onyx Shovel
     ingredients: [['ground/onyx', 3], ['building/brass', 2], ['building/iron', 2]]
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
     karma: -10
     rarity: 3
     group: shovel
@@ -10129,7 +10129,7 @@ items:
     emitter: platinum sparkles
     rarity: 5
     ingredients: [['tools/shovel-onyx', 1], ['ground/platinum-ore', 100]]
-    crafting skill: ['building', 9]
+    crafting_skill: ['building', 9]
 
   tools/tesla-club:
     <<: *melee
@@ -10140,7 +10140,7 @@ items:
     damage: ['energy', 1.5]
     critical_hit: 0.025
     ingredients: [['building/brass', 2], ['building/iron', 2], ['ground/quartz-ore', 5], 'ground/crystal-red-1', 'accessories/schematic']
-    crafting skill: ['engineering', 5]
+    crafting_skill: ['engineering', 5]
     karma: -7
     rarity: 3
 
@@ -10151,7 +10151,7 @@ items:
     power: 1.2
     damage: ['slashing', 0.6]
     ingredients: ['building/wood', ['building/iron', 2]]
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     group: hatchet
   tools/hatchet-diamond:
     <<: *melee
@@ -10161,7 +10161,7 @@ items:
     title: Diamond Hatchet
     damage: ['slashing', 0.8]
     ingredients: [['ground/diamond-ore', 3], ['building/brass', 2], ['building/iron', 2]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     group: hatchet
     rarity: 3
   tools/hatchet-onyx: &onyx-hatchet
@@ -10172,7 +10172,7 @@ items:
     damage: ['slashing', 1.0]
     title: Onyx Hatchet
     ingredients: [['ground/onyx', 2], ['building/brass', 2], ['building/iron', 2]]
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
     group: hatchet
     rarity: 4
   tools/hatchet-platinum:
@@ -10182,7 +10182,7 @@ items:
     emitter: platinum sparkles
     rarity: 5
     ingredients: [['tools/hatchet-onyx', 1], ['ground/platinum-ore', 100]]
-    crafting skill: ['building', 10]
+    crafting_skill: ['building', 10]
 
   tools/net:
     <<: *melee
@@ -10198,7 +10198,7 @@ items:
     title: Diamond Net
     rarity: 3
     ingredients: [['ground/diamond-ore', 3], ['building/iron', 2], ['tools/net', 2]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
   tools/net-onyx: &onyx-net
     <<: *melee
     code: 369
@@ -10207,7 +10207,7 @@ items:
     title: Onyx Net
     rarity: 4
     ingredients: [['ground/onyx', 2], ['building/iron', 2], ['tools/net', 4]]
-    crafting skill: ['building', 7]
+    crafting_skill: ['building', 7]
   tools/net-platinum:
     <<: *onyx-net
     code: 68
@@ -10215,7 +10215,7 @@ items:
     emitter: platinum sparkles
     rarity: 5
     ingredients: [['tools/net-onyx', 1], ['ground/platinum-ore', 100]]
-    crafting skill: ['building', 10]
+    crafting_skill: ['building', 10]
 
   tools/cane:
     <<: *melee
@@ -10223,7 +10223,7 @@ items:
     action: melee
     damage: ['bludgeoning', 0.3]
     ingredients: [['building/wood', 5], ['building/brass', 1]]
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
   tools/cane-diamond:
     <<: *melee
     code: 366
@@ -10231,7 +10231,7 @@ items:
     damage: ['bludgeoning', 0.5]
     rarity: 3
     ingredients: [['ground/diamond-ore', 5], ['building/wood', 5]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
     title: Diamond Cane
   tools/cane-onyx: &onyx-cane
     <<: *melee
@@ -10240,7 +10240,7 @@ items:
     damage: ['bludgeoning', 0.7]
     rarity: 4
     ingredients: [['ground/onyx', 4], ['building/wood', 5]]
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
     title: Onyx Cane
   tools/cane-platinum:
     <<: *onyx-cane
@@ -10249,7 +10249,7 @@ items:
     emitter: platinum sparkles
     rarity: 5
     ingredients: [['tools/cane-onyx', 1], ['ground/platinum-ore', 100]]
-    crafting skill: ['building', 10]
+    crafting_skill: ['building', 10]
 
   tools/spade:
     <<: *melee
@@ -10261,7 +10261,7 @@ items:
     bonus: 0.5
     damage: ['piercing', 0.3]
     ingredients: [['building/iron', 2], ['building/wood', 2]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     hintt: "The spade is a slow mining tool that allows you to occasionally recoup bulbs when mining grown flowers. Use better spades and increase your Horticulture skill to improve your chances of recouping!"
   tools/spade-diamond:
     <<: *melee
@@ -10273,7 +10273,7 @@ items:
     bonus: 0.75
     damage: ['piercing', 0.5]
     ingredients: [['ground/diamond-ore', 3], ['building/iron', 2]]
-    crafting skill: ['building', 5]
+    crafting_skill: ['building', 5]
     title: Diamond Spade
   tools/spade-onyx: &onyx-spade
     <<: *melee
@@ -10285,7 +10285,7 @@ items:
     bonus: 1.0
     damage: ['piercing', 0.7]
     ingredients: [['ground/onyx', 2], ['building/iron', 2]]
-    crafting skill: ['building', 7]
+    crafting_skill: ['building', 7]
     title: Onyx Spade
   tools/spade-platinum:
     <<: *onyx-spade
@@ -10294,7 +10294,7 @@ items:
     emitter: platinum sparkles
     rarity: 5
     ingredients: [['tools/spade-onyx', 1], ['ground/platinum-ore', 100]]
-    crafting skill: ['building', 10]
+    crafting_skill: ['building', 10]
 
   tools/rapier:
     <<: *melee
@@ -10302,14 +10302,14 @@ items:
     action: melee
     damage: ['slashing', 1.0]
     ingredients: [['building/iron', 8], ['building/wood', 2]]
-    crafting skill: ['building', 4]
+    crafting_skill: ['building', 4]
   tools/rapier-diamond:
     <<: *melee
     code: 238
     action: melee
     damage: ['slashing', 1.2]
     ingredients: [['ground/diamond-ore', 4], ['building/iron', 5], ['building/brass', 3]]
-    crafting skill: ['building', 6]
+    crafting_skill: ['building', 6]
     title: Diamond Rapier
   tools/rapier-onyx: &onyx-rapier
     <<: *melee
@@ -10317,7 +10317,7 @@ items:
     action: melee
     damage: ['slashing', 1.4]
     ingredients: [['ground/onyx', 3], ['building/iron', 5], ['building/brass', 3]]
-    crafting skill: ['building', 8]
+    crafting_skill: ['building', 8]
     title: Onyx Rapier
   tools/rapier-platinum:
     <<: *onyx-rapier
@@ -10326,7 +10326,7 @@ items:
     emitter: platinum sparkles
     rarity: 5
     ingredients: [['tools/rapier-onyx', 1], ['ground/platinum-ore', 100]]
-    crafting skill: ['building', 12]
+    crafting_skill: ['building', 12]
 
   tools/gun: &tools-gun
     action: gun
@@ -10345,13 +10345,13 @@ items:
     rarity: 4
 
   tools/gun-pistol-fancy: &tools-gun-fancy-pistol
-    ammo cost: 0.6
+    ammo_cost: 0.6
     rate: 3
     burst: 4
 
   tools/gun-type-bullets: &tools-gun-type-bullets
-    ammo cost: 0.333
-    damage range: 15
+    ammo_cost: 0.333
+    damage_range: 15
 
   tools/pistol:
     <<: *tools-gun
@@ -10362,10 +10362,10 @@ items:
     spawn: bullets/lead
     rate: 2
     speed: 14
-    shoot emitter: steam puff burst
+    shoot_emitter: steam puff burst
     muzzle: tools/muzzle-flash-pistol
     ingredients: ['parts/pistol-stock', 'parts/gun-barrel']
-    crafting skill: ['building', 2]
+    crafting_skill: ['building', 2]
     karma: -2
     auto_equip: true
     rarity: 1
@@ -10380,7 +10380,7 @@ items:
     damage: ['piercing', 0.875]
     rate: 3
     speed: 15
-    shoot emitter: steam puff burst strong
+    shoot_emitter: steam puff burst strong
     muzzle: tools/muzzle-flash-pistol-mk2
     group: pistol
   tools/pistol-mk3:
@@ -10392,7 +10392,7 @@ items:
     damage: ['piercing', 1.05]
     rate: 4
     speed: 16
-    shoot emitter: steam puff burst stronger
+    shoot_emitter: steam puff burst stronger
     muzzle: tools/muzzle-flash-pistol-mk3
     group: pistol
 
@@ -10405,10 +10405,10 @@ items:
     spawn: bullets/lead
     rate: 3
     speed: 16
-    shoot emitter: steam puff burst
+    shoot_emitter: steam puff burst
     muzzle: tools/muzzle-flash-musket
     ingredients: ['parts/musket-stock', ['parts/gun-barrel', 2]]
-    crafting skill: ['building', 3]
+    crafting_skill: ['building', 3]
     rarity: 1
   tools/musket-mk2:
     <<: *tools-gun-mk2
@@ -10419,7 +10419,7 @@ items:
     spawn: bullets/lead-mk2
     rate: 4
     speed: 17
-    shoot emitter: steam puff burst strong
+    shoot_emitter: steam puff burst strong
     muzzle: tools/muzzle-flash-musket-mk2
   tools/musket-mk3:
     <<: *tools-gun-mk3
@@ -10430,7 +10430,7 @@ items:
     spawn: bullets/lead-mk3
     rate: 5
     speed: 18
-    shoot emitter: steam puff burst stronger
+    shoot_emitter: steam puff burst stronger
     muzzle: tools/muzzle-flash-musket-mk3
 
   tools/speargun:
@@ -10464,8 +10464,8 @@ items:
     code: 352
 
   tools/gun-type-steam: &tools-gun-type-steam
-    ammo cost: 0.06
-    damage range: 12
+    ammo_cost: 0.06
+    damage_range: 12
     sound_loop: steam
 
   tools/gun-steam-pistol:
@@ -10478,9 +10478,9 @@ items:
     spawn: bullets/steam
     speed: 7
     muzzle: tools/muzzle-flash-gun-steam
-    shoot emitter: steam puff
+    shoot_emitter: steam puff
     ingredients: ['parts/pistol-stock', ['parts/gun-barrel', 2], ['building/brass', 2], 'building/iron', 'ground/crystal-blue-1']
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
   tools/gun-steam-pistol-mk2:
     <<: *tools-gun-mk2
     <<: *tools-gun-type-steam
@@ -10490,7 +10490,7 @@ items:
     damage: ['fire', 0.75]
     spawn: bullets/steam-mk2
     speed: 8
-    shoot emitter: steam puff strong
+    shoot_emitter: steam puff strong
     muzzle: tools/muzzle-flash-gun-steam
   tools/gun-steam-pistol-mk3:
     <<: *tools-gun-mk3
@@ -10501,7 +10501,7 @@ items:
     damage: ['fire', 0.9]
     spawn: bullets/steam-mk3
     speed: 9
-    shoot emitter: steam puff stronger
+    shoot_emitter: steam puff stronger
     muzzle: tools/muzzle-flash-gun-steam
     color: ffffff
 
@@ -10515,9 +10515,9 @@ items:
     rate: 30
     speed: 7
     muzzle: tools/muzzle-flash-gun-steam
-    shoot emitter: steam puff
+    shoot_emitter: steam puff
     ingredients: ['parts/pistol-stock', ['parts/gun-barrel', 2], ['building/brass', 6], ['building/iron', 2], ['ground/crystal-blue-1', 2]]
-    crafting skill: ['engineering', 5]
+    crafting_skill: ['engineering', 5]
   tools/gun-steam-mk2:
     <<: *tools-gun-mk2
     <<: *tools-gun-type-steam
@@ -10527,7 +10527,7 @@ items:
     spawn: bullets/steam-mk2
     rate: 30
     speed: 8
-    shoot emitter: steam puff strong
+    shoot_emitter: steam puff strong
     muzzle: tools/muzzle-flash-gun-steam
   tools/gun-steam-mk3:
     <<: *tools-gun-mk3
@@ -10538,62 +10538,62 @@ items:
     spawn: bullets/steam-mk3
     rate: 30
     speed: 9
-    shoot emitter: steam puff stronger
+    shoot_emitter: steam puff stronger
     muzzle: tools/muzzle-flash-gun-steam
     glow_sprite: tools/gun-steam-mk3-glow
     color: ffffff
 
   tools/gun-type-acid: &tools-gun-type-acid
-    ammo cost: 0.5
-    damage range: 12
+    ammo_cost: 0.5
+    damage_range: 12
 
   tools/gun-acid:
     <<: *tools-gun
     code: 1031
     title: Acid Cannon
     damage: ['acid', 1.2]
-    damage range: 12
+    damage_range: 12
     spawn: bullets/acid
     rate: 3
     burst: 3
     speed: 10
-    ammo cost: 0.5
-    shoot emitter: acid puff burst
+    ammo_cost: 0.5
+    shoot_emitter: acid puff burst
     muzzle: tools/muzzle-flash-gun-acid
     ingredients: ['parts/pistol-stock', ['parts/gun-barrel', 2], ['building/brass', 4], ['containers/jar-acid', 5], ['ground/crystal-red-1', 2]]
-    crafting skill: ['engineering', 6]
+    crafting_skill: ['engineering', 6]
   tools/gun-acid-mk2:
     <<: *tools-gun-mk2
     code: 1110
     title: Acid Cannon Mark II
     damage: ['acid', 1.5]
-    damage range: 13
+    damage_range: 13
     spawn: bullets/acid-mk2
     rate: 4
     burst: 4
     speed: 11
-    ammo cost: 0.5
-    shoot emitter: acid puff burst strong
+    ammo_cost: 0.5
+    shoot_emitter: acid puff burst strong
     muzzle: tools/muzzle-flash-gun-acid
   tools/gun-acid-mk3:
     <<: *tools-gun-mk3
     code: 1111
     title: Acid Cannon Mark III
     damage: ['acid', 1.8]
-    damage range: 14
+    damage_range: 14
     spawn: bullets/acid-mk3
     rate: 5
     burst: 5
     speed: 12
-    ammo cost: 0.5
-    shoot emitter: acid puff burst stronger
+    ammo_cost: 0.5
+    shoot_emitter: acid puff burst stronger
     muzzle: tools/muzzle-flash-gun-acid
     glow_sprite: tools/gun-acid-mk3-glow
     color: 22ff55
 
   tools/gun-type-flame: &tools-gun-type-flame
-    ammo cost: 0.1
-    damage range: 12
+    ammo_cost: 0.1
+    damage_range: 12
     sound_loop: flame
 
   tools/gun-flame-pistol:
@@ -10606,9 +10606,9 @@ items:
     spawn: bullets/flame
     speed: 9
     muzzle: tools/muzzle-flash-gun-flame-pistol
-    shoot emitter: fire puff
+    shoot_emitter: fire puff
     ingredients: ['parts/pistol-stock', ['parts/gun-barrel', 2], 'building/brass', ['building/iron', 2], 'ground/crystal-red-1']
-    crafting skill: ['engineering', 5]
+    crafting_skill: ['engineering', 5]
   tools/gun-flame-pistol-mk2:
     <<: *tools-gun-mk2
     <<: *tools-gun-type-flame
@@ -10619,7 +10619,7 @@ items:
     spawn: bullets/flame-mk2
     speed: 10
     muzzle: tools/muzzle-flash-gun-flame-pistol
-    shoot emitter: fire puff strong
+    shoot_emitter: fire puff strong
   tools/gun-flame-pistol-mk3:
     <<: *tools-gun-mk3
     <<: *tools-gun-type-flame
@@ -10630,7 +10630,7 @@ items:
     spawn: bullets/flame-mk3
     speed: 11
     muzzle: tools/muzzle-flash-gun-flame-pistol
-    shoot emitter: fire puff stronger
+    shoot_emitter: fire puff stronger
     color: ff4411
 
   tools/gun-flame:
@@ -10643,9 +10643,9 @@ items:
     rate: 30
     speed: 9
     muzzle: tools/muzzle-flash-gun-flame
-    shoot emitter: fire puff
+    shoot_emitter: fire puff
     ingredients: ['parts/pistol-stock', ['parts/gun-barrel', 2], ['building/brass', 4], ['building/iron', 2], ['ground/crystal-red-1', 3]]
-    crafting skill: ['engineering', 7]
+    crafting_skill: ['engineering', 7]
   tools/gun-flame-mk2:
     <<: *tools-gun-mk2
     <<: *tools-gun-type-flame
@@ -10656,7 +10656,7 @@ items:
     rate: 30
     speed: 10
     muzzle: tools/muzzle-flash-gun-flame
-    shoot emitter: fire puff strong
+    shoot_emitter: fire puff strong
   tools/gun-flame-mk3:
     <<: *tools-gun-mk3
     <<: *tools-gun-type-flame
@@ -10667,13 +10667,13 @@ items:
     rate: 30
     speed: 11
     muzzle: tools/muzzle-flash-gun-flame
-    shoot emitter: fire puff stronger
+    shoot_emitter: fire puff stronger
     glow_sprite: tools/gun-flame-mk3-glow
     color: ff4411
 
   tools/gun-type-frost: &tools-gun-type-frost
-    ammo cost: 0.1
-    damage range: 12
+    ammo_cost: 0.1
+    damage_range: 12
     sound_loop: steam
 
   tools/gun-frost-pistol:
@@ -10686,9 +10686,9 @@ items:
     spawn: bullets/frost
     speed: 9
     muzzle: tools/muzzle-flash-gun-frost-pistol
-    shoot emitter: cold puff
+    shoot_emitter: cold puff
     ingredients: ['parts/pistol-stock', ['parts/gun-barrel', 2], 'building/brass', ['building/iron', 2], 'ground/crystal-red-1']
-    crafting skill: ['engineering', 5]
+    crafting_skill: ['engineering', 5]
   tools/gun-frost-pistol-mk2:
     <<: *tools-gun-mk2
     <<: *tools-gun-type-frost
@@ -10699,7 +10699,7 @@ items:
     spawn: bullets/frost-mk2
     speed: 10
     muzzle: tools/muzzle-flash-gun-frost-pistol
-    shoot emitter: cold puff strong
+    shoot_emitter: cold puff strong
   tools/gun-frost-pistol-mk3:
     <<: *tools-gun-mk3
     <<: *tools-gun-type-frost
@@ -10710,7 +10710,7 @@ items:
     spawn: bullets/frost-mk3
     speed: 11
     muzzle: tools/muzzle-flash-gun-frost-pistol
-    shoot emitter: cold puff stronger
+    shoot_emitter: cold puff stronger
 
   tools/gun-frost:
     <<: *tools-gun
@@ -10722,9 +10722,9 @@ items:
     rate: 30
     speed: 9
     muzzle: tools/muzzle-flash-gun-frost
-    shoot emitter: cold puff
+    shoot_emitter: cold puff
     ingredients: ['parts/pistol-stock', ['parts/gun-barrel', 2], 'building/brass', ['building/iron', 2], ['ground/crystal-red-1', 3]]
-    crafting skill: ['engineering', 7]
+    crafting_skill: ['engineering', 7]
   tools/gun-frost-mk2:
     <<: *tools-gun-mk2
     <<: *tools-gun-type-frost
@@ -10735,7 +10735,7 @@ items:
     rate: 30
     speed: 10
     muzzle: tools/muzzle-flash-gun-frost
-    shoot emitter: cold puff strong
+    shoot_emitter: cold puff strong
   tools/gun-frost-mk3:
     <<: *tools-gun-mk3
     <<: *tools-gun-type-frost
@@ -10746,13 +10746,13 @@ items:
     rate: 30
     speed: 11
     muzzle: tools/muzzle-flash-gun-frost
-    shoot emitter: cold puff stronger
+    shoot_emitter: cold puff stronger
     glow_sprite: tools/gun-frost-mk3-glow
     color: 11aaff
 
   tools/gun-type-energy: &tools-gun-type-energy
-    ammo cost: 0.1
-    damage range: 14
+    ammo_cost: 0.1
+    damage_range: 14
     sound_loop: electricity
 
   tools/gun-energy-pistol:
@@ -10766,9 +10766,9 @@ items:
     spawn: bullets/energy
     speed: 12
     muzzle: tools/muzzle-flash-gun-energy-pistol
-    shoot emitter: electric puff
+    shoot_emitter: electric puff
     ingredients: ['parts/pistol-stock', ['parts/gun-barrel', 2], 'building/brass', ['ground/beryllium-ore', 2], 'ground/crystal-red-1']
-    crafting skill: ['engineering', 6]
+    crafting_skill: ['engineering', 6]
   tools/gun-energy-pistol-mk2:
     <<: *tools-gun-mk2
     <<: *tools-gun-type-energy
@@ -10778,7 +10778,7 @@ items:
     spawn: bullets/energy-mk2
     speed: 15
     muzzle: tools/muzzle-flash-gun-energy-pistol
-    shoot emitter: electric puff strong
+    shoot_emitter: electric puff strong
     title: Energy Pistol Mark II
   tools/gun-energy-pistol-mk3:
     <<: *tools-gun-mk3
@@ -10789,7 +10789,7 @@ items:
     spawn: bullets/energy-mk3
     speed: 16
     muzzle: tools/muzzle-flash-gun-energy-pistol
-    shoot emitter: electric puff stronger
+    shoot_emitter: electric puff stronger
     title: Energy Pistol Mark III
 
   tools/gun-energy:
@@ -10802,21 +10802,21 @@ items:
     rate: 20
     speed: 14
     muzzle: tools/muzzle-flash-gun-energy
-    shoot emitter: electric puff
+    shoot_emitter: electric puff
     ingredients: ['parts/pistol-stock', ['parts/gun-barrel', 2], 'building/brass', ['ground/beryllium-ore', 4], ['ground/crystal-red-1', 3], 'accessories/schematic']
-    crafting skill: ['engineering', 8]
+    crafting_skill: ['engineering', 8]
   tools/gun-energy-mk2:
     <<: *tools-gun-mk2
     <<: *tools-gun-type-energy
     code: 1123
     title: Energy Cannon Mark II
     damage: ['energy', 1.6875]
-    damage range: 14
+    damage_range: 14
     spawn: bullets/energy-mk2
     rate: 20
     speed: 15
     muzzle: tools/muzzle-flash-gun-energy
-    shoot emitter: electric puff strong
+    shoot_emitter: electric puff strong
   tools/gun-energy-mk3:
     <<: *tools-gun-mk3
     <<: *tools-gun-type-energy
@@ -10827,14 +10827,14 @@ items:
     rate: 20
     speed: 16
     muzzle: tools/muzzle-flash-gun-energy
-    shoot emitter: electric puff stronger
+    shoot_emitter: electric puff stronger
     glow_sprite: tools/gun-energy-mk3-glow
     color: ffee00
 
   # Sheilds
   shield: &shield
     action: shield
-    inventory type: accessory
+    inventory_type: accessory
     gui: ['trim', 'scale']
 
   shields/force:
@@ -10847,7 +10847,7 @@ items:
       all: 1.0
     rate: 1.75
     ingredients: ['building/brass', 'building/iron', 'ground/quartz-ore', ['ground/crystal-purple-1', 2], 'accessories/schematic']
-    crafting skill: ['engineering', 6]
+    crafting_skill: ['engineering', 6]
     tooltip: Guard against projectiles.|Activate with 'x' or RMB.
     karma: -10
     rarity: 3
@@ -10862,7 +10862,7 @@ items:
       acid: 1.0
     rate: 1.0
     ingredients: ['building/brass', 'building/iron', 'ground/quartz-ore', 'ground/crystal-purple-1']
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
     tooltip: Guard against acid rain and projectiles.|Activate with 'x' or RMB.
     karma: -4
 
@@ -10877,7 +10877,7 @@ items:
       cold: 1.0
     rate: 1.25
     ingredients: ['building/brass', 'building/iron', 'ground/quartz-ore', ['ground/crystal-purple-1', 2], 'accessories/schematic']
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
     carryable: false
     karma: -7
     wiki: false
@@ -10898,7 +10898,7 @@ items:
 
   # Accessories
   accessory: &accessory
-    inventory type: accessory
+    inventory_type: accessory
 
   charm: &charm
     <<: *accessory
@@ -10930,7 +10930,7 @@ items:
     ingredients: [['building/iron', 5], ['ground/quartz-ore', 5], ['mechanical/friend-parts-gear', 2], ['ground/crystal-purple-1', 1]]
     crafting_helpers: [["furniture/blueprint-clock-brass", 1], ["mechanical/control-panel", 1], ["mechanical/lathe", 1]]
     crafting_events: [["bomb-fire", 0.75, 5]]
-    crafting skill: ["engineering", 4]
+    crafting_skill: ["engineering", 4]
   accessories/pocketwatch:
     <<: *charm-l2
     code: 1047
@@ -10940,7 +10940,7 @@ items:
     ingredients: [['building/brass', 5], ['ground/quartz-ore', 5], ['mechanical/friend-parts-gear', 5], ['ground/diamond-ore', 6]]
     crafting_helpers: [["furniture/blueprint-clock-diamond", 1], ["mechanical/control-panel", 1], ["mechanical/lathe", 2]]
     crafting_events: [["bomb-fire", 0.85, 7]]
-    crafting skill: ["engineering", 6]
+    crafting_skill: ["engineering", 6]
   accessories/pocketwatch-onyx:
     <<: *charm-l3
     code: 1050
@@ -10951,7 +10951,7 @@ items:
     ingredients: [['building/brass', 5], ['ground/quartz-ore', 5], ['mechanical/friend-parts-gear', 15], ['ground/onyx', 4]]
     crafting_helpers: [["furniture/blueprint-clock-onyx", 1], ["mechanical/control-panel", 1], ["mechanical/lathe", 3]]
     crafting_events: [["bomb-fire", 0.95, 9]]
-    crafting skill: ["engineering", 8]
+    crafting_skill: ["engineering", 8]
 
   accessories/clover:
     <<: *charm-l1
@@ -11001,7 +11001,7 @@ items:
     ingredients: [['building/brass', 10], ['ground/quartz-ore', 10], ['ground/crystal-yellow', 1]]
     crafting_helpers: [["furniture/blueprint-knife-brass", 1], ["mechanical/control-panel", 1], ["mechanical/mill", 1]]
     crafting_events: [["bomb-fire", 0.75, 5]]
-    crafting skill: ["engineering", 3]
+    crafting_skill: ["engineering", 3]
   accessories/army-knife-diamond:
     <<: *charm-l2
     code: 1078
@@ -11012,7 +11012,7 @@ items:
     ingredients: [['building/brass', 20], ['ground/quartz-ore', 20], ['ground/crystal-yellow', 3], ['ground/diamond-ore', 5]]
     crafting_helpers: [["furniture/blueprint-knife-diamond", 1], ["mechanical/control-panel", 1], ["mechanical/mill", 2]]
     crafting_events: [["bomb-fire", 0.85, 7]]
-    crafting skill: ["engineering", 6]
+    crafting_skill: ["engineering", 6]
   accessories/army-knife-onyx:
     <<: *charm-l3
     code: 1065
@@ -11023,7 +11023,7 @@ items:
     ingredients: [['building/brass', 30], ['ground/quartz-ore', 30], ['ground/crystal-yellow', 5], ['ground/onyx', 3]]
     crafting_helpers: [["furniture/blueprint-knife-onyx", 1], ["mechanical/control-panel-large", 1], ["mechanical/mill", 3]]
     crafting_events: [["bomb-fire", 0.95, 9]]
-    crafting skill: ["engineering", 9]
+    crafting_skill: ["engineering", 9]
 
   accessories/agility-brass:
     <<: *charm-l1
@@ -11035,7 +11035,7 @@ items:
     ingredients: [['building/brass', 10], ['ground/quartz-ore', 10], ['ground/crystal-yellow', 1]]
     crafting_helpers: [["furniture/blueprint-boot-brass", 1], ["mechanical/control-panel", 1], ["mechanical/lathe", 1]]
     crafting_events: [["bomb-fire", 0.75, 5]]
-    crafting skill: ["engineering", 3]
+    crafting_skill: ["engineering", 3]
   accessories/agility-diamond:
     <<: *charm-l2
     code: 1148
@@ -11046,7 +11046,7 @@ items:
     ingredients: [['building/brass', 20], ['ground/quartz-ore', 20], ['ground/crystal-yellow', 3], ['ground/diamond-ore', 5]]
     crafting_helpers: [["furniture/blueprint-boot-diamond", 1], ["mechanical/control-panel", 1], ["mechanical/lathe", 2]]
     crafting_events: [["bomb-fire", 0.85, 7]]
-    crafting skill: ["engineering", 6]
+    crafting_skill: ["engineering", 6]
   accessories/agility-onyx:
     <<: *charm-l3
     code: 1149
@@ -11057,7 +11057,7 @@ items:
     ingredients: [['building/brass', 30], ['ground/quartz-ore', 30], ['ground/crystal-yellow', 5], ['ground/onyx', 3]]
     crafting_helpers: [["furniture/blueprint-boot-onyx", 1], ["mechanical/control-panel-large", 1], ["mechanical/lathe", 3]]
     crafting_events: [["bomb-fire", 0.95, 9]]
-    crafting skill: ["engineering", 9]
+    crafting_skill: ["engineering", 9]
 
   accessories/scope-brass:
     <<: *charm-l1
@@ -11069,7 +11069,7 @@ items:
     ingredients: [['building/brass', 5], ['ground/quartz-ore', 5], ['ground/crystal-red-1', 3]]
     crafting_helpers: [["furniture/blueprint-scope-brass", 1], ["mechanical/control-panel", 1], ["mechanical/lathe", 1]]
     crafting_events: [["bomb-fire", 0.75, 5]]
-    crafting skill: ["engineering", 4]
+    crafting_skill: ["engineering", 4]
   accessories/scope-diamond:
     <<: *charm-l2
     code: 438
@@ -11080,7 +11080,7 @@ items:
     ingredients: [['building/brass', 5], ['ground/quartz-ore', 5], ['ground/crystal-red-large', 5], ['ground/diamond-ore', 8]]
     crafting_helpers: [["furniture/blueprint-scope-diamond", 1], ["mechanical/control-panel", 1], ["mechanical/lathe", 2]]
     crafting_events: [["bomb-fire", 0.85, 7]]
-    crafting skill: ["engineering", 7]
+    crafting_skill: ["engineering", 7]
   accessories/scope-onyx:
     <<: *charm-l3
     code: 439
@@ -11091,7 +11091,7 @@ items:
     ingredients: [['building/brass', 5], ['ground/quartz-ore', 5], ['ground/crystal-red-large', 10], ['ground/onyx', 5]]
     crafting_helpers: [["furniture/blueprint-scope-onyx", 1], ["mechanical/control-panel-large", 1], ["mechanical/lathe", 3]]
     crafting_events: [["bomb-fire", 0.95, 9]]
-    crafting skill: ["engineering", 10]
+    crafting_skill: ["engineering", 10]
 
   accessories/rake:
     <<: *charm-l1
@@ -11149,7 +11149,7 @@ items:
     ingredients: [['building/brass', 10], ['ground/quartz-ore', 10], ['ground/crystal-yellow', 1]]
     crafting_helpers: [["furniture/blueprint-glove-brass", 1], ["mechanical/control-panel", 1], ["mechanical/loom", 1]]
     crafting_events: [["bomb-fire", 0.75, 5]]
-    crafting skill: ["engineering", 3]
+    crafting_skill: ["engineering", 3]
   accessories/glove-diamond:
     <<: *charm-l2
     code: 1094
@@ -11160,7 +11160,7 @@ items:
     ingredients: [['building/brass', 20], ['ground/quartz-ore', 20], ['ground/crystal-yellow', 3], ['ground/diamond-ore', 5]]
     crafting_helpers: [["furniture/blueprint-glove-diamond", 1], ["mechanical/control-panel", 1], ["mechanical/loom", 2]]
     crafting_events: [["bomb-fire", 0.85, 7]]
-    crafting skill: ["engineering", 6]
+    crafting_skill: ["engineering", 6]
   accessories/glove-onyx:
     <<: *charm-l3
     code: 1067
@@ -11171,7 +11171,7 @@ items:
     ingredients: [['building/brass', 30], ['ground/quartz-ore', 30], ['ground/crystal-yellow', 5], ['ground/onyx', 3]]
     crafting_helpers: [["furniture/blueprint-glove-onyx", 1], ["mechanical/control-panel-large", 1], ["mechanical/loom", 3]]
     crafting_events: [["bomb-fire", 0.95, 9]]
-    crafting skill: ["engineering", 9]
+    crafting_skill: ["engineering", 9]
 
   accessories/t-square:
     <<: *charm-l3
@@ -11197,14 +11197,14 @@ items:
     code: 152
     title: Diamond Android Memory Unit
     karma: -10
-    inventory sprite: accessories/memory
+    inventory_sprite: accessories/memory
     use:
       memory: 1
   accessories/memory-onyx:
     code: 153
     title: Onyx Android Memory Unit
     karma: -15
-    inventory sprite: accessories/memory
+    inventory_sprite: accessories/memory
     use:
       memory: 2
   accessories/interface:
@@ -11243,9 +11243,9 @@ items:
   accessories/battery:
     code: 1073
     karma: -3
-    crafting skill: ['automata', 3]
+    crafting_skill: ['automata', 3]
     ingredients: [['building/brass', 1], ['ground/ectoplasm', 3]]
-    crafting quantity: 5
+    crafting_quantity: 5
 
   accessories/paintbrush:
     code: 1095
@@ -11370,7 +11370,7 @@ items:
     tooltip: Extra steam power
     short_hint: +15 max steam
     ingredients: [['ground/onyx', 4], ['building/brass', 2], ['building/iron', 2], ['ground/quartz-ore', 4], 'ground/crystal-purple-1', 'accessories/schematic']
-    crafting skill: ['engineering', 8]
+    crafting_skill: ['engineering', 8]
     title: Onyx Compressor
     karma: -10
   accessories/compressor:
@@ -11382,7 +11382,7 @@ items:
     tooltip: Extra steam power
     short_hint: +10 max steam
     ingredients: [['building/brass', 4], ['building/iron', 2], ['ground/quartz-ore', 4], 'ground/crystal-purple-1', 'accessories/schematic']
-    crafting skill: ['engineering', 6]
+    crafting_skill: ['engineering', 6]
     title: Power Compressor
     karma: -7
   accessories/compressor-basic:
@@ -11394,7 +11394,7 @@ items:
     tooltip: Extra steam power
     short_hint: +5 max steam
     ingredients: [['building/iron', 4], ['ground/quartz-ore', 4], 'ground/crystal-purple-1']
-    crafting skill: ['engineering', 4]
+    crafting_skill: ['engineering', 4]
     title: Compressor
     karma: -4
   accessories/flashlight-brass:
@@ -11405,7 +11405,7 @@ items:
     tooltip: Extra lighting
     short_hint: +1 lighting
     ingredients: ['building/brass', 'back/glass', ['ground/crystal-blue-1', 2]]
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
     karma: -4
   accessories/flashlight-diamond:
     <<: *accessory
@@ -11415,7 +11415,7 @@ items:
     tooltip: Extra lighting
     short_hint: +2 lighting
     ingredients: [['ground/diamond-ore', 3], 'building/brass', 'back/glass', ['ground/crystal-blue-1', 2]]
-    crafting skill: ['engineering', 5]
+    crafting_skill: ['engineering', 5]
     karma: -7
   accessories/flashlight-onyx:
     <<: *accessory
@@ -11425,7 +11425,7 @@ items:
     tooltip: Extra lighting
     short_hint: +3 lighting
     ingredients: [['ground/onyx', 2], 'building/brass', 'back/glass', 'ground/crystal-purple-1', 'accessories/schematic']
-    crafting skill: ['engineering', 7]
+    crafting_skill: ['engineering', 7]
     karma: -10
 
   accessories/jetpack:
@@ -11455,7 +11455,7 @@ items:
     emitter: steam
     gui: trim
     ingredients: [['building/brass', 4], ['building/iron', 4], 'ground/crystal-purple-1']
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
     title: Power Steampack
     karma: -4
   accessories/jetpack-diamond:
@@ -11471,7 +11471,7 @@ items:
     gui: trim
     title: Diamond Steampack
     ingredients: [['ground/diamond-ore', 6], ['building/brass', 2], ['building/iron', 4], 'ground/crystal-purple-1', 'accessories/schematic']
-    crafting skill: ['engineering', 5]
+    crafting_skill: ['engineering', 5]
     karma: -7
     rarity: 3
   accessories/jetpack-onyx:
@@ -11487,7 +11487,7 @@ items:
     gui: trim
     title: Onyx Steampack
     ingredients: [['ground/onyx', 4], ['building/brass', 2], ['building/iron', 4], 'ground/crystal-purple-1', 'accessories/schematic']
-    crafting skill: ['engineering', 7]
+    crafting_skill: ['engineering', 7]
     karma: -10
     rarity: 3
   accessories/zeppelin:
@@ -11502,7 +11502,7 @@ items:
     emitter: steam
     gui: trim
     ingredients: [['building/iron', 4], ['ground/quartz-ore', 4], ['ground/flax', 8], 'ground/crystal-purple-1']
-    crafting skill: ['engineering', 4]
+    crafting_skill: ['engineering', 4]
     karma: -7
 
   # Aquapacks
@@ -11516,11 +11516,11 @@ items:
     rate: 1.65
     short_hint: +10% propel
     sprite: avatar/aquapack-brass
-    inventory sprite: characters-animated/avatar/aquapack-brass
+    inventory_sprite: characters-animated/avatar/aquapack-brass
     emitter: steam
     gui: trim
     #ingredients: [['building/brass', 4], ['building/iron', 4], 'ground/crystal-purple-1']
-    crafting skill: ['engineering', 4]
+    crafting_skill: ['engineering', 4]
     title: Aquapack
     karma: -4
     tradeable: false
@@ -11533,12 +11533,12 @@ items:
     rate: 1.3
     short_hint: +20% propel
     sprite: avatar/aquapack-diamond
-    inventory sprite: characters-animated/avatar/aquapack-diamond
+    inventory_sprite: characters-animated/avatar/aquapack-diamond
     emitter: steam
     gui: trim
     title: Diamond Aquapack
     #ingredients: [['ground/diamond-ore', 6], ['building/brass', 2], ['building/iron', 4], 'ground/crystal-purple-1', 'accessories/schematic']
-    crafting skill: ['engineering', 6]
+    crafting_skill: ['engineering', 6]
     karma: -7
     tradeable: false
     rarity: 3
@@ -11551,12 +11551,12 @@ items:
     rate: 1
     short_hint: +30% propel
     sprite: avatar/aquapack-onyx
-    inventory sprite: characters-animated/avatar/aquapack-onyx
+    inventory_sprite: characters-animated/avatar/aquapack-onyx
     emitter: shadow steam
     gui: trim
     title: Onyx Aquapack
     #ingredients: [['ground/onyx', 4], ['building/brass', 2], ['building/iron', 4], 'ground/crystal-purple-1', 'accessories/schematic']
-    crafting skill: ['engineering', 8]
+    crafting_skill: ['engineering', 8]
     karma: -10
     tradeable: false
     rarity: 3
@@ -11583,7 +11583,7 @@ items:
     action: heal
     power: 1.0
     ingredients: [['ground/giblets', 3], 'ground/salt']
-    crafting quantity: 3
+    crafting_quantity: 3
   consumables/jerky-power:
     <<: *food
     group: jerky
@@ -11591,8 +11591,8 @@ items:
     action: heal
     power: 2.0
     ingredients: [['ground/giblets', 3], 'ground/fire-salt']
-    crafting quantity: 3
-    crafting skill: ['survival', 3]
+    crafting_quantity: 3
+    crafting_skill: ['survival', 3]
     title: Power Jerky
     karma: -2
   consumables/filet:
@@ -11609,8 +11609,8 @@ items:
     action: heal
     power: 4.0
     ingredients: [['consumables/filet', 2], 'ground/fire-salt']
-    crafting quantity: 2
-    crafting skill: ['survival', 5]
+    crafting_quantity: 2
+    crafting_skill: ['survival', 5]
     sprite: ground/filet-fire
     title: Power Filet
     karma: -4
@@ -11621,7 +11621,7 @@ items:
     code: 1134
     action: refill
     power: 10.0
-    crafting skill: ['engineering', 3]
+    crafting_skill: ['engineering', 3]
     sound: steam_whoosh
     karma: -2
 
@@ -11638,7 +11638,7 @@ items:
     code: 1135
     action: teleport
     title: Portable Teleporter
-    crafting skill: ['engineering', 7]
+    crafting_skill: ['engineering', 7]
     sound: teleport
     karma: -3
 
@@ -11648,7 +11648,7 @@ items:
     action: stealth
     power: 17.0
     power_bonus: ['agility', 3.0]
-    crafting skill: ['engineering', 8]
+    crafting_skill: ['engineering', 8]
     title: Stealth Cloak
     karma: -3
 
@@ -11700,7 +11700,7 @@ items:
     title: Diamond Weapon Kit
     action: convert
     ingredients: [['ground/diamond-ore', 3], ['building/iron', 3], ['ground/beryllium-ore', 3], 'accessories/schematic']
-    crafting skill: ['engineering', 8]
+    crafting_skill: ['engineering', 8]
     karma: -7
     tradeable: leveled
     convert:
@@ -11721,7 +11721,7 @@ items:
     title: Onyx Weapon Kit
     action: convert
     ingredients: [['ground/onyx', 2], ['building/iron', 3], ['ground/beryllium-ore', 3], 'accessories/schematic']
-    crafting skill: ['engineering', 10]
+    crafting_skill: ['engineering', 10]
     karma: -10
     tradeable: leveled
     convert:
@@ -11754,7 +11754,7 @@ items:
     title: Diamond Turret Kit
     action: convert
     #ingredients: [['ground/diamond-ore', 1], ['building/iron', 3], ['ground/beryllium-ore', 2]]
-    crafting skill: ['engineering', 8]
+    crafting_skill: ['engineering', 8]
     karma: -7
     tradeable: leveled
     convert:
@@ -11771,7 +11771,7 @@ items:
     title: Onyx Turret Kit
     action: convert
     #ingredients: [['ground/onyx', 1], ['building/iron', 3], ['ground/beryllium-ore', 2]]
-    crafting skill: ['engineering', 10]
+    crafting_skill: ['engineering', 10]
     karma: -10
     tradeable: leveled
     convert:
@@ -11844,7 +11844,7 @@ items:
     ingredients: [["brain/pipe", 2000], "containers/wine-bottle"]
     crafting_helpers: [["mechanical/wine-press", 4]]
     crafting_events: [["spawn.brains", 0.5, 3]]
-    crafting skill: ["science", 10]
+    crafting_skill: ["science", 10]
 
   # ===== Wardrobe ===== #
 
@@ -13196,7 +13196,7 @@ items:
     use:
       skill bonus: true
     emitter: powered-steam-character
-    inventory type: hidden
+    inventory_type: hidden
     tradeable: false
     craftable: false
     placeable: false
@@ -13239,7 +13239,7 @@ items:
       - prosthetics/onyx-legs
     sprite: prosthetics/brass
     spine_sprite: prosthetics/brass
-    inventory sprite: characters-animated/prosthetics/brass-leg-lower
+    inventory_sprite: characters-animated/prosthetics/brass-leg-lower
     gui: ['trim']
     animations:
       - sprites:
@@ -13309,7 +13309,7 @@ items:
       - prosthetics/onyx-legs
     sprite: prosthetics/diamond
     spine_sprite: prosthetics/diamond
-    inventory sprite: characters-animated/prosthetics/diamond-leg-lower
+    inventory_sprite: characters-animated/prosthetics/diamond-leg-lower
     gui: ['trim']
     animations:
       - sprites:
@@ -13381,7 +13381,7 @@ items:
       - prosthetics/diamond-legs
     sprite: prosthetics/onyx
     spine_sprite: prosthetics/onyx
-    inventory sprite: characters-animated/prosthetics/onyx-leg-lower
+    inventory_sprite: characters-animated/prosthetics/onyx-leg-lower
     gui: ['trim']
     animations:
       - sprites:
@@ -13848,7 +13848,7 @@ items:
     <<: *blueprint
     background: furniture/blueprint-background-small
     mounted: true
-    special placement: framed
+    special_placement: framed
     sprites:
       - frames: furniture/blueprint-frame-brass
         z: -0.1
@@ -13872,7 +13872,7 @@ items:
     <<: *blueprint
     background: furniture/blueprint-background-small
     mounted: true
-    special placement: framed
+    special_placement: framed
     sprites:
       - frames: furniture/blueprint-frame-diamond
         z: -0.1
@@ -13896,7 +13896,7 @@ items:
     <<: *blueprint
     background: furniture/blueprint-background-small
     mounted: true
-    special placement: framed
+    special_placement: framed
     sprites:
       - frames: furniture/blueprint-frame-onyx
         z: -0.1
@@ -13920,7 +13920,7 @@ items:
     <<: *furniture-art
     background: furniture/blueprint-background-large
     mounted: true
-    special placement: framed
+    special_placement: framed
     sprites:
       - frames: furniture/blueprint-large-frame-brass
         z: -0.1
@@ -13944,7 +13944,7 @@ items:
     <<: *furniture-art
     background: furniture/blueprint-background-large
     mounted: true
-    special placement: framed
+    special_placement: framed
     sprites:
       - frames: furniture/blueprint-large-frame-diamond
         z: -0.1
@@ -13968,7 +13968,7 @@ items:
     <<: *furniture-art
     background: furniture/blueprint-background-large
     mounted: true
-    special placement: framed
+    special_placement: framed
     sprites:
       - frames: furniture/blueprint-large-frame-onyx
         z: -0.1
@@ -13993,7 +13993,7 @@ items:
     code: 72
     title: Brass Boot Blueprint
     sprite: furniture/blueprint-boot
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-boot
         gui: true
   furniture/blueprint-boot-diamond:
@@ -14001,7 +14001,7 @@ items:
     code: 73
     title: Diamond Boot Blueprint
     sprite: furniture/blueprint-boot
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-boot
         gui: true
   furniture/blueprint-boot-onyx:
@@ -14009,7 +14009,7 @@ items:
     code: 74
     title: Onyx Boot Blueprint
     sprite: furniture/blueprint-boot
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-boot
         gui: true
 
@@ -14018,7 +14018,7 @@ items:
     code: 75
     title: Brass Butler Bot Blueprint
     sprite: furniture/blueprint-butlerbot
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-butlerbot
         gui: true
   furniture/blueprint-butlerbot-diamond:
@@ -14026,7 +14026,7 @@ items:
     code: 76
     title: Diamond Butler Bot Blueprint
     sprite: furniture/blueprint-butlerbot
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-butlerbot
         gui: true
   furniture/blueprint-butlerbot-onyx:
@@ -14034,7 +14034,7 @@ items:
     code: 77
     title: Onyx Butler Bot Blueprint
     sprite: furniture/blueprint-butlerbot
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-butlerbot
         gui: true
 
@@ -14043,7 +14043,7 @@ items:
     code: 78
     title: Brass Clock Blueprint
     sprite: furniture/blueprint-clock
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-clock
         gui: true
   furniture/blueprint-clock-diamond:
@@ -14051,7 +14051,7 @@ items:
     code: 79
     title: Diamond Clock Blueprint
     sprite: furniture/blueprint-clock
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-clock
         gui: true
   furniture/blueprint-clock-onyx:
@@ -14059,7 +14059,7 @@ items:
     code: 80
     title: Onyx Clock Blueprint
     sprite: furniture/blueprint-clock
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-clock
         gui: true
 
@@ -14068,7 +14068,7 @@ items:
     code: 81
     title: Brass Compressor Blueprint
     sprite: furniture/blueprint-compressor
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-compressor
         gui: true
   furniture/blueprint-compressor-diamond:
@@ -14076,7 +14076,7 @@ items:
     code: 82
     title: Diamond Compressor Blueprint
     sprite: furniture/blueprint-compressor
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-compressor
         gui: true
   furniture/blueprint-compressor-onyx:
@@ -14084,7 +14084,7 @@ items:
     code: 83
     title: Onyx Compressor Blueprint
     sprite: furniture/blueprint-compressor
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-compressor
         gui: true
 
@@ -14093,7 +14093,7 @@ items:
     code: 84
     title: Brass Protector Blueprint
     sprite: furniture/blueprint-dish
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-dish
         gui: true
   furniture/blueprint-dish-diamond:
@@ -14101,7 +14101,7 @@ items:
     code: 85
     title: Diamond Protector Blueprint
     sprite: furniture/blueprint-dish
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-dish
         gui: true
   furniture/blueprint-dish-onyx:
@@ -14109,7 +14109,7 @@ items:
     code: 86
     title: Onyx Protector Blueprint
     sprite: furniture/blueprint-dish
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-dish
         gui: true
 
@@ -14118,7 +14118,7 @@ items:
     code: 87
     title: Brass Exploder Blueprint
     sprite: furniture/blueprint-exploder
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-exploder
         gui: true
   furniture/blueprint-exploder-diamond:
@@ -14126,7 +14126,7 @@ items:
     code: 88
     title: Diamond Exploder Blueprint
     sprite: furniture/blueprint-exploder
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-exploder
         gui: true
   furniture/blueprint-exploder-onyx:
@@ -14134,7 +14134,7 @@ items:
     code: 89
     title: Onyx Exploder Blueprint
     sprite: furniture/blueprint-exploder
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-exploder
         gui: true
 
@@ -14143,7 +14143,7 @@ items:
     code: 90
     title: Brass Glove Blueprint
     sprite: furniture/blueprint-glove
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-glove
         gui: true
   furniture/blueprint-glove-diamond:
@@ -14151,7 +14151,7 @@ items:
     code: 91
     title: Diamond Glove Blueprint
     sprite: furniture/blueprint-glove
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-glove
         gui: true
   furniture/blueprint-glove-onyx:
@@ -14159,7 +14159,7 @@ items:
     code: 92
     title: Onyx Glove Blueprint
     sprite: furniture/blueprint-glove
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-glove
         gui: true
 
@@ -14168,7 +14168,7 @@ items:
     code: 93
     title: Brass Gun Suppressor Blueprint
     sprite: furniture/blueprint-gun-suppressor
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-gun-suppressor
         gui: true
   furniture/blueprint-gun-suppressor-diamond:
@@ -14176,7 +14176,7 @@ items:
     code: 94
     title: Diamond Gun Suppressor Blueprint
     sprite: furniture/blueprint-gun-suppressor
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-gun-suppressor
         gui: true
   furniture/blueprint-gun-suppressor-onyx:
@@ -14184,7 +14184,7 @@ items:
     code: 95
     title: Onyx Gun Suppressor Blueprint
     sprite: furniture/blueprint-gun-suppressor
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-gun-suppressor
         gui: true
 
@@ -14193,7 +14193,7 @@ items:
     code: 96
     title: Brass Holograph Blueprint
     sprite: furniture/blueprint-holograph
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-holograph
         gui: true
   furniture/blueprint-holograph-diamond:
@@ -14201,7 +14201,7 @@ items:
     code: 97
     title: Diamond Holograph Blueprint
     sprite: furniture/blueprint-holograph
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-holograph
         gui: true
   furniture/blueprint-holograph-onyx:
@@ -14209,7 +14209,7 @@ items:
     code: 98
     title: Onyx Holograph Blueprint
     sprite: furniture/blueprint-holograph
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-holograph
         gui: true
 
@@ -14218,7 +14218,7 @@ items:
     code: 160
     title: Brass Knife Blueprint
     sprite: furniture/blueprint-knife
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-knife
         gui: true
   furniture/blueprint-knife-diamond:
@@ -14226,7 +14226,7 @@ items:
     code: 161
     title: Diamond Knife Blueprint
     sprite: furniture/blueprint-knife
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-knife
         gui: true
   furniture/blueprint-knife-onyx:
@@ -14234,7 +14234,7 @@ items:
     code: 162
     title: Onyx Knife Blueprint
     sprite: furniture/blueprint-knife
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-knife
         gui: true
 
@@ -14243,7 +14243,7 @@ items:
     code: 163
     title: Brass Mass Spawner Blueprint
     sprite: furniture/blueprint-mass-spawner
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-mass-spawner
         gui: true
   furniture/blueprint-mass-spawner-diamond:
@@ -14251,7 +14251,7 @@ items:
     code: 164
     title: Diamond Mass Spawner Blueprint
     sprite: furniture/blueprint-mass-spawner
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-mass-spawner
         gui: true
   furniture/blueprint-mass-spawner-onyx:
@@ -14259,7 +14259,7 @@ items:
     code: 165
     title: Onyx Mass Spawner Blueprint
     sprite: furniture/blueprint-mass-spawner
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-mass-spawner
         gui: true
 
@@ -14268,7 +14268,7 @@ items:
     code: 166
     title: Brass Mass Teleporter Blueprint
     sprite: furniture/blueprint-mass-teleporter
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-mass-teleporter
         gui: true
   furniture/blueprint-mass-teleporter-diamond:
@@ -14276,7 +14276,7 @@ items:
     code: 167
     title: Diamond Mass Teleporter Blueprint
     sprite: furniture/blueprint-mass-teleporter
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-mass-teleporter
         gui: true
   furniture/blueprint-mass-teleporter-onyx:
@@ -14284,7 +14284,7 @@ items:
     code: 168
     title: Onyx Mass Teleporter Blueprint
     sprite: furniture/blueprint-mass-teleporter
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-mass-teleporter
         gui: true
 
@@ -14293,7 +14293,7 @@ items:
     code: 169
     title: Brass Scope Blueprint
     sprite: furniture/blueprint-scope
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-scope
         gui: true
   furniture/blueprint-scope-diamond:
@@ -14301,7 +14301,7 @@ items:
     code: 170
     title: Diamond Scope Blueprint
     sprite: furniture/blueprint-scope
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-scope
         gui: true
   furniture/blueprint-scope-onyx:
@@ -14309,7 +14309,7 @@ items:
     code: 191
     title: Onyx Scope Blueprint
     sprite: furniture/blueprint-scope
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-scope
         gui: true
 
@@ -14318,7 +14318,7 @@ items:
     code: 192
     title: Brass Spawner Blueprint
     sprite: furniture/blueprint-spawner
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-spawner
         gui: true
   furniture/blueprint-spawner-diamond:
@@ -14326,7 +14326,7 @@ items:
     code: 157
     title: Diamond Spawner Blueprint
     sprite: furniture/blueprint-spawner
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-spawner
         gui: true
   furniture/blueprint-spawner-onyx:
@@ -14334,7 +14334,7 @@ items:
     code: 194
     title: Onyx Spawner Blueprint
     sprite: furniture/blueprint-spawner
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-spawner
         gui: true
 
@@ -14343,7 +14343,7 @@ items:
     code: 195
     title: Brass Upgrade Blueprint
     sprite: furniture/blueprint-weapon-upgrade
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-weapon-upgrade
         gui: true
   furniture/blueprint-weapon-upgrade-diamond:
@@ -14351,7 +14351,7 @@ items:
     code: 196
     title: Diamond Upgrade Blueprint
     sprite: furniture/blueprint-weapon-upgrade
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-weapon-upgrade
         gui: true
   furniture/blueprint-weapon-upgrade-onyx:
@@ -14359,7 +14359,7 @@ items:
     code: 197
     title: Onyx Upgrade Blueprint
     sprite: furniture/blueprint-weapon-upgrade
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-weapon-upgrade
         gui: true
 
@@ -14368,7 +14368,7 @@ items:
     code: 198
     title: Brass Weather Machine Blueprint
     sprite: furniture/blueprint-weather-machine
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-weather-machine
         gui: true
   furniture/blueprint-weather-machine-diamond:
@@ -14376,7 +14376,7 @@ items:
     code: 28
     title: Diamond Weather Machine Blueprint
     sprite: furniture/blueprint-weather-machine
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-weather-machine
         gui: true
   furniture/blueprint-weather-machine-onyx:
@@ -14384,6 +14384,6 @@ items:
     code: 29
     title: Onyx Weather Machine Blueprint
     sprite: furniture/blueprint-weather-machine
-    sprites+:
+    sprites_plus:
       - frames: furniture/blueprint-weather-machine
         gui: true
